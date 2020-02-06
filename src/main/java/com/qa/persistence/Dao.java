@@ -1,4 +1,4 @@
-package com.qa.sobolinventory;
+package com.qa.persistence;
 
 import java.util.ArrayList;
 

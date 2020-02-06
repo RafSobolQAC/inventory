@@ -3,6 +3,9 @@ package com.qa.sobolinventory;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.qa.persistence.MysqlCustomerDao;
+import com.qa.persistence.domain.Customer;
+
 public class Runner {
 	public static void main(String[] args) throws SQLException {
 		MysqlCustomerDao customerDao = new MysqlCustomerDao();

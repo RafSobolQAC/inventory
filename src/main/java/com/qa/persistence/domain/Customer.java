@@ -1,4 +1,4 @@
-package com.qa.sobolinventory;
+package com.qa.persistence.domain;
 
 public class Customer {
 	private String name;
@@ -17,6 +17,7 @@ public class Customer {
 	}
 	public Customer(String name) {
 		this.name = name;
+		this.id = -1;
 	}
 	public int getId() {
 		return this.id;

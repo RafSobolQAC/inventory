@@ -1,4 +1,4 @@
-package com.qa.sobolinventory;
+package com.qa.persistence;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.qa.persistence.domain.Customer;
 
 public class MysqlCustomerDao implements Dao<Customer>{
 	private Connection connection;
@@ -28,29 +30,26 @@ public class MysqlCustomerDao implements Dao<Customer>{
 }
 
 	public void create(Customer t) {
-		try {
+		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
-			PreparedStatement ps = connection.prepareStatement(INSERT);
 
 			ps.setString(1, t.getName());
 
 			ps.executeUpdate();
-			ps.close();
+//			ps.close();
 
-			System.out.println("Added book: " + t.toString());
+			System.out.println("Added customer: " + t.toString());
 
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-
 		}
-
 		
 	}
 	public Customer readById(int id) {
 		Customer customer = null;
-		try {
-			PreparedStatement ps = connection.prepareStatement(READBYID);
+		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
+//			PreparedStatement ps = connection.prepareStatement(READBYID);
 			
 			
 			ps.setInt(1,id);
@@ -63,8 +62,8 @@ public class MysqlCustomerDao implements Dao<Customer>{
 				
 			}
 			
-			resultSet.close();
-			ps.close();
+//			resultSet.close();
+//			ps.close();
 			
 			
 		} catch (SQLException e) {
@@ -75,9 +74,10 @@ public class MysqlCustomerDao implements Dao<Customer>{
 
 	public ArrayList<Customer> readAll() {
 		ArrayList<Customer> customers = new ArrayList<Customer>();
-		try {
-			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery(READALL);
+		try (Statement statement = connection.createStatement();
+			ResultSet resultSet = statement.executeQuery(READALL)) {
+//			Statement statement = connection.createStatement();
+//			ResultSet resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
@@ -85,21 +85,22 @@ public class MysqlCustomerDao implements Dao<Customer>{
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		} finally {
+			
+		}
 		return customers;
 	}
 
 	public void update(int id, Customer t) {
-		try {
-			PreparedStatement ps = connection.prepareStatement(UPDATE);
+		try (PreparedStatement ps = connection.prepareStatement(UPDATE)){
 
 			ps.setString(1, t.getName());
 			ps.setInt(2, id);
 
 			ps.executeUpdate();
-			ps.close();
+//			ps.close();
 
-			System.out.println("Book with id " + id + " got updated: " + t.toString());
+			System.out.println("Customer with id " + id + " got updated: " + t.toString());
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -108,13 +109,12 @@ public class MysqlCustomerDao implements Dao<Customer>{
 	}
 
 	public void delete(int id) {
-		try {
-			PreparedStatement ps = connection.prepareStatement(DELETE);
+		try (PreparedStatement ps = connection.prepareStatement(DELETE)){
 
 			ps.setInt(1, id);
 
 			ps.executeUpdate();
-			ps.close();
+//			ps.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
