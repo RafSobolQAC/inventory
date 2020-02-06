@@ -1,22 +1,21 @@
 package com.qa.persistence.domain;
-
+import java.math.BigDecimal;
 public class Item {
 	private String name;
-	private double price;
+	private BigDecimal price = new BigDecimal(0);
 	private int id;
 	
 	public Item() {
 		this.name = null;
-		this.price = 0;
 		this.id = -1;
 	}
-	public Item(String name, double price) {
+	public Item(String name, BigDecimal price) {
 		this.name = name;
 		this.price = price;
 		this.id = -1;
 	}
 	
-	public Item(int id, String name, double price) {
+	public Item(int id, String name, BigDecimal price) {
 		this.name = name;
 		this.price = price;
 		this.id = id;
@@ -27,10 +26,10 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	public int getId() {
@@ -38,6 +37,10 @@ public class Item {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	@Override
+	public String toString() {
+		return this.id + " " + this.name + " " + this.price;
 	}
 	
 }

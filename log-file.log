@@ -1,0 +1,72 @@
+2020-02-06 16:48:43 INFO  Runner:46 - Added customer: -1 Chris Testins
+2020-02-06 16:49:03 INFO  Runner:46 - Added customer: -1 Chris Testins
+2020-02-06 17:48:54 INFO  Runner:46 - Added customer: -1 Chris Testins
+2020-02-06 17:59:03 INFO  Loginner:11 - What is your password? 
+2020-02-06 17:59:08 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 17:59:08 INFO  Loginner:11 - What is your password? 
+2020-02-06 17:59:08 INFO  Loginner:11 - What is your password? 
+2020-02-06 17:59:08 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:00:04 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:00:08 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:00:09 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:00:20 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:00:25 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:00:25 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:00:40 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:00:44 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:00:44 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:03:35 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:03:47 INFO  Runner:41 - Added customer: -1 null
+2020-02-06 18:03:47 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:03:47 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:08:05 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:08:16 INFO  Runner:41 - Added customer: -1 null
+2020-02-06 18:08:16 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:08:16 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:08:29 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:08:34 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:08:34 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:10:34 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:10:39 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:10:39 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:15:32 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:15:37 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:15:37 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:15:37 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:15:37 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:16:44 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:16:54 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:16:54 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:16:54 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:16:54 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:17:00 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:17:02 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:17:02 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:17:02 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:17:02 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:17:42 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:17:45 INFO  Runner:41 - Added customer: -1 Chris Testins
+2020-02-06 18:17:45 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:17:45 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:17:45 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:18:29 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:18:32 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:18:32 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:23:25 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:23:33 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:24:13 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:24:17 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:24:42 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:24:47 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:24:47 INFO  Runner:41 - Added customer: -1 Bobby Tables
+2020-02-06 18:24:47 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:25:38 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:25:46 INFO  Runner:41 - Added customer: -1 Bobby T.
+2020-02-06 18:25:46 INFO  Runner:41 - Added customer: -1 One!
+2020-02-06 18:25:47 INFO  Runner:41 - Added customer: -1 Bobby Tables
+2020-02-06 18:25:47 WARN  Runner:64 - Customer with ID does not exist!
+2020-02-06 18:37:26 INFO  Loginner:11 - What is your password? 
+2020-02-06 18:37:33 INFO  Runner:40 - Added customer: -1 Bobby T.
+2020-02-06 18:37:33 INFO  Runner:40 - Added customer: -1 One!
+2020-02-06 18:37:33 INFO  Runner:40 - Added customer: -1 Bobby Tables
+2020-02-06 18:37:33 WARN  Runner:63 - Customer with ID does not exist!

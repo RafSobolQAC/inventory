@@ -1,13 +1,18 @@
-package com.qa.sobolinventory;
+package com.qa;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.qa.persistence.MysqlCustomerDao;
+import org.apache.log4j.Logger;
+
+import com.qa.persistence.dao.MysqlCustomerDao;
 import com.qa.persistence.domain.Customer;
 
 public class Runner {
+	public static final Logger LOGGER = Logger.getLogger(Runner.class);
+
 	public static void main(String[] args) throws SQLException {
+		
 		MysqlCustomerDao customerDao = new MysqlCustomerDao();
 		Customer cust1 = new Customer("Chris Perrins");
 		Customer cust2 = new Customer("Not Chris");
