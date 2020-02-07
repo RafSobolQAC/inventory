@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import com.qa.Runner;
 import com.qa.persistence.domain.Customer;
+import com.qa.sobolinventory.Connector;
 import com.qa.utils.Login;
 
 public class MysqlCustomerDao implements Dao<Customer> {
