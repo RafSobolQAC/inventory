@@ -13,9 +13,9 @@ import org.apache.log4j.Logger;
 
 import com.qa.persistence.domain.Item;
 import com.qa.utils.Login;
+import com.qa.utils.Utils;
 
 public class MysqlItemDao implements Dao<Item> {
-
 
 	public static final Logger LOGGER = Logger.getLogger(MysqlItemDao.class);
 
@@ -26,9 +26,8 @@ public class MysqlItemDao implements Dao<Item> {
 	private static final String DELETE = "DELETE FROM items WHERE id=?";
 	private static final String READALL = "SELECT * FROM items";
 
-	public MysqlItemDao() throws SQLException {
-		this.connection = DriverManager.getConnection("jdbc:mysql://34.89.63.19:3306/inventory", "root",
-				Login.getPassword());
+	public MysqlItemDao(Connection connection) throws SQLException {
+		this.connection = connection;
 	}
 
 	@Override
@@ -51,7 +50,8 @@ public class MysqlItemDao implements Dao<Item> {
 		}
 
 	}
-
+	
+	
 	@Override
 	public Item readById(int id) {
 		Item item = null;

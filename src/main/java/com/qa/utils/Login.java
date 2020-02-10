@@ -7,7 +7,7 @@ public class Login {
 		Login.password = password;
 	}
 	
-	public static String getPassword() {
+	protected static String getPassword() {
 		return password;
 	}
 }

@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 import com.qa.persistence.domain.Customer;
 import com.qa.sobolinventory.Connector;
 import com.qa.utils.Login;
+import com.qa.utils.Utils;
 
 public class MysqlCustomerDao implements Dao<Customer> {
 
@@ -25,9 +26,8 @@ public class MysqlCustomerDao implements Dao<Customer> {
 	private static final String DELETE = "DELETE FROM customers WHERE id=?";
 	private static final String READALL = "SELECT * FROM customers";
 
-	public MysqlCustomerDao() throws SQLException {
-		this.connection = DriverManager.getConnection("jdbc:mysql://34.89.63.19:3306/inventory", "root",
-				Login.getPassword());
+	public MysqlCustomerDao(Connection connection) throws SQLException {
+		this.connection = connection;
 	}
 
 	public boolean create(Customer t) {
@@ -41,8 +41,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			return true;
 
 		} catch (SQLException e) {
-
-			LOGGER.warn(e.getMessage());
+			Utils.exceptionLogger(e, LOGGER);
 			return false;
 		}
 
@@ -65,9 +64,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			}
 
 		} catch (SQLException e) {
-
-			LOGGER.warn(e.getMessage());
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 		}
 		return customer;
 	}
@@ -84,10 +81,8 @@ public class MysqlCustomerDao implements Dao<Customer> {
 				customers.add(new Customer(id, name));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-		}
+			Utils.exceptionLogger(e, LOGGER);
+		} 
 		return customers;
 	}
 
@@ -104,8 +99,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			return true;
 
 		} catch (Exception e) {
-			LOGGER.warn(e.getMessage());
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 			return false;
 		}
 
@@ -120,7 +114,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 //			ps.close();
 			return true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 			return false;
 		}
 
