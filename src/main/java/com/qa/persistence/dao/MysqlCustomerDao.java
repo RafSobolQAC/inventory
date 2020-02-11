@@ -30,7 +30,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 	public Customer readLatest() {
 		Customer customer = new Customer();
 		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT FROM customers ORDER BY id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM customers ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
 				customer.setName(resultSet.getString("name"));
 				customer.setId(resultSet.getInt("id"));

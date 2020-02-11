@@ -124,3 +124,16 @@
 2020-02-11 13:45:37 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
 2020-02-11 13:45:37 WARN  MysqlCustomerDao:60 - Customer with ID does not exist!
 2020-02-11 13:45:44 INFO  Loginner:13 - What is your password? 
+2020-02-11 14:57:18 INFO  Loginner:13 - What is your password? 
+2020-02-11 14:57:26 INFO  MysqlCustomerDao:56 - Added customer: -1 Bobby T.
+2020-02-11 14:57:26 ERROR MysqlCustomerDao:44 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM customers ORDER BY id DESC LIMIT 1' at line 1
+2020-02-11 14:57:26 INFO  MysqlCustomerDao:56 - Added customer: -1 One!
+2020-02-11 14:57:26 ERROR MysqlCustomerDao:44 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM customers ORDER BY id DESC LIMIT 1' at line 1
+2020-02-11 14:57:26 INFO  MysqlCustomerDao:56 - Added customer: -1 Bobby Tables
+2020-02-11 14:57:26 ERROR MysqlCustomerDao:44 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM customers ORDER BY id DESC LIMIT 1' at line 1
+2020-02-11 14:57:26 WARN  MysqlCustomerDao:79 - Customer with ID does not exist!
+2020-02-11 14:58:39 INFO  Loginner:13 - What is your password? 
+2020-02-11 14:58:42 INFO  MysqlCustomerDao:56 - Added customer: -1 Bobby T.
+2020-02-11 14:58:42 INFO  MysqlCustomerDao:56 - Added customer: -1 One!
+2020-02-11 14:58:42 INFO  MysqlCustomerDao:56 - Added customer: -1 Bobby Tables
+2020-02-11 14:58:42 WARN  MysqlCustomerDao:79 - Customer with ID does not exist!
