@@ -1,17 +1,21 @@
 package com.qa.sobolinventory;
 
-import java.sql.Connection;
 import java.io.File;
 import java.net.URL;
-
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Scanner;
+
+import com.qa.utils.Login;
+import com.qa.utils.Loginner;
 
 public class Connector {
 	private Connection connection;
 	private String password;
 	private static final String CONFIG_FILE = "/app.properties";
+	private Loginner loginner;
+	private Login login;
+
 	public File readFileFromClasspath() {
         URL fileUrl = getClass().getResource(CONFIG_FILE);
         return new File(fileUrl.getFile());
@@ -21,9 +25,9 @@ public class Connector {
 	public Connector(String url) throws SQLException {
 		password = System.getenv("env.PWD");
 		if (password == "") {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Password: ");
-		password = scanner.nextLine();
+			login = new Login();
+			loginner = new Loginner(login);
+			password = login.getPassword();
 		}
 		try {
 			this.connection = DriverManager.getConnection(url, "root",

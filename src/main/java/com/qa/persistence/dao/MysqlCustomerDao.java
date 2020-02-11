@@ -1,7 +1,6 @@
 package com.qa.persistence.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,8 +10,6 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.qa.persistence.domain.Customer;
-import com.qa.sobolinventory.Connector;
-import com.qa.utils.Login;
 import com.qa.utils.Utils;
 
 public class MysqlCustomerDao implements Dao<Customer> {

@@ -1,9 +1,9 @@
 package com.qa.sobolinventory;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -14,23 +14,26 @@ import org.junit.Test;
 
 import com.qa.persistence.dao.MysqlCustomerDao;
 import com.qa.persistence.domain.Customer;
-import com.qa.utils.Loginner;
 
 public class CustomerTest {
 	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
 
 	private Customer customer = new Customer();
 	private MysqlCustomerDao custDao;
-	
+	private Connection conn;
+	private Connector connector;
 	@BeforeClass
-	public static void login() {
-		Loginner.LogIn();
+	public void login() throws SQLException {
+		connector = new Connector("jdbc:mysql://34.89.63.19:3306/inventory");
+		conn = connector.getConnection();
+		
 	}
 
 	@Before
 	public void init() throws SQLException {
+		
 		customer = new Customer();
-		custDao = new MysqlCustomerDao();
+		custDao = new MysqlCustomerDao(conn);
 
 
 	}

@@ -1,13 +1,13 @@
 package com.qa.utils;
 
 public class Login {
-	private static String password;
+	private String password;
 	
-	public static void setPassword(String password) {
-		Login.password = password;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
-	protected static String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 }

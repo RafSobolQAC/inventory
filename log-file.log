@@ -70,3 +70,5 @@
 2020-02-06 18:37:33 INFO  Runner:40 - Added customer: -1 One!
 2020-02-06 18:37:33 INFO  Runner:40 - Added customer: -1 Bobby Tables
 2020-02-06 18:37:33 WARN  Runner:63 - Customer with ID does not exist!
+2020-02-11 10:10:16 INFO  Loginner:11 - What is your password? 
+2020-02-11 10:10:37 INFO  Loginner:11 - What is your password? 

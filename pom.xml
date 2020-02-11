@@ -64,7 +64,7 @@
                 <version>2.12.4</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <environment>${env.PWD}</environment>
+                        <env.PWD>${env.PWD}</env.PWD>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
