@@ -102,10 +102,11 @@ public class MysqlOrderDao implements Dao<Order> {
 	@Override
 	public Order readById(int id) {
 		Order order = null;
+		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
 
 			ps.setInt(1, id);
-			ResultSet resultSet = ps.executeQuery();
+			resultSet = ps.executeQuery();
 			if (resultSet.next()) {
 				order = new Order();
 				order.setId(resultSet.getInt("id"));
@@ -120,7 +121,14 @@ public class MysqlOrderDao implements Dao<Order> {
 
 			LOGGER.warn(e.getMessage());
 			e.printStackTrace();
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
 		}
+
 		return order;
 	}
 
