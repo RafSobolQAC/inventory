@@ -7,7 +7,7 @@ import com.qa.services.CrudServices;
 import com.qa.utils.Utils;
 
 public class CustomerController implements CrudController<Customer>{
-
+	
 	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
 	
 	private CrudServices<Customer> customerService;
@@ -30,7 +30,6 @@ public class CustomerController implements CrudController<Customer>{
 	}
 
 	public void update() {
-		
 	}
 
 	public void delete() {

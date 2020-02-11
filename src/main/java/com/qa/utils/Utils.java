@@ -16,4 +16,22 @@ public class Utils {
 		return scanner.nextLine();
 	}
 
+	
+	public static int getIntInput(Logger LOGGER) {
+		boolean done = false;
+		int itemId = 0;
+		do {
+			try {
+				itemId = Integer.parseInt(getInput());
+				if (itemId <= 0) throw new NumberFormatException();
+				done = true;
+			} catch (NumberFormatException e) {
+				LOGGER.warn("Please type in an integer greater than 0!");
+			}
+		} while (!done);
+		return itemId;
+
+		
+		
+	}
 }

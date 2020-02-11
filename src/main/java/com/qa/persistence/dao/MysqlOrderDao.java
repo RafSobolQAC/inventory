@@ -134,7 +134,30 @@ public class MysqlOrderDao implements Dao<Order> {
 
 	@Override
 	public boolean update(int id, Order t) {
-		// TODO Auto-generated method stub
+		HashMap<Item,Integer> itemsQuants;
+		BigDecimal price = t.getPrice();
+		int itemId;
+		int itemQuantity;
+		try(PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);
+				PreparedStatement ps2 = connection.prepareStatement(UPDATEORDERLINE)) {
+			
+			itemsQuants = t.getItems();
+			for (Item item : itemsQuants.keySet()) {
+				itemId = item.getId();
+				itemQuantity = itemsQuants.get(item);
+				ps2.setInt(1, itemQuantity);
+				ps2.setInt(2, id);
+				ps2.setInt(3, itemId);
+				ps2.executeUpdate();
+			}
+			ps.setBigDecimal(1,price);
+			ps.setInt(2, id);
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			Utils.exceptionLogger(e, LOGGER);
+		} 		
+		
 		return false;
 	}
 

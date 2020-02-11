@@ -122,6 +122,7 @@ public class MysqlItemDao implements Dao<Item> {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
+					
 		}
 
 	}

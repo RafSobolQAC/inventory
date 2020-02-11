@@ -22,11 +22,11 @@ public class CustomerServices implements CrudServices<Customer> {
 	}
 
 	public void update(int id, Customer t) {
-		
+		customerDao.update(id, t);
 	}
 
-	public void delete(Customer t) {
-		
+	public void delete(int id) {
+		customerDao.delete(id);
 	}
 
 }

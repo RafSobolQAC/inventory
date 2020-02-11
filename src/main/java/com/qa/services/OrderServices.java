@@ -21,11 +21,11 @@ public class OrderServices {
 	}
 
 	public void update(int id, Order t) {
-		
+		orderDao.update(id, t);
 	}
 
-	public void delete(Order t) {
-		
+	public void delete(int id) {
+		orderDao.delete(id);
 	}
 
 

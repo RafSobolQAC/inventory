@@ -22,11 +22,11 @@ public class ItemServices {
 	}
 
 	public void update(int id, Item t) {
-		
+		itemDao.update(id, t);
 	}
 
-	public void delete(Item t) {
-		
+	public void delete(int id) {
+		itemDao.delete(id);
 	}
 
 }
