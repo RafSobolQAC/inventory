@@ -8,11 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.qa.persistence.domain.Customer;
 import com.qa.persistence.domain.Item;
 import com.qa.persistence.domain.Order;
 import com.qa.utils.Utils;
