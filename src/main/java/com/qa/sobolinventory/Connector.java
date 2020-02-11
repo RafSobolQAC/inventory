@@ -23,10 +23,13 @@ public class Connector {
 	}
 	
 	public Connector(String url) throws SQLException {
-		password = System.getenv("env.PWD");
-		if (password == "") {
+		password = System.getProperty("env.PWD");
+		System.out.println(System.getProperty("env.PWD"));
+		if (password == null) {
+			System.out.println("Null!");
 			login = new Login();
 			loginner = new Loginner(login);
+			loginner.LogIn();
 			password = login.getPassword();
 		}
 		try {
