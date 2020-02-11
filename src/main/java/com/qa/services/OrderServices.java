@@ -5,7 +5,7 @@ import java.util.List;
 import com.qa.persistence.dao.Dao;
 import com.qa.persistence.domain.Order;
 
-public class OrderServices {
+public class OrderServices implements CrudServices<Order>{
 	Dao<Order> orderDao;
 	
 	public OrderServices(Dao<Order> orderDao) {
@@ -16,16 +16,21 @@ public class OrderServices {
 		return orderDao.readAll();
 	}
 
-	public void create(Order order) {
-		orderDao.create(order);
+	public Order create(Order order) {
+		return orderDao.create(order);
 	}
 
-	public void update(int id, Order t) {
-		orderDao.update(id, t);
+	public Order update(int id, Order t) {
+		return orderDao.update(id, t);
 	}
 
-	public void delete(int id) {
-		orderDao.delete(id);
+	public boolean delete(int id) {
+		return orderDao.delete(id);
+	}
+
+	@Override
+	public Order readById(int id) {
+		return orderDao.readById(id);
 	}
 
 

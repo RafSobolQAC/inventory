@@ -83,7 +83,9 @@ public class CustomerTest {
 	@Test
 	public void customerDaoAddTest() throws SQLException {
 		customer.setName("One!");
-		assertTrue(custDao.create(customer));
+		Customer otherCustomer = new Customer("One!");
+		custDao.create(customer);
+		assertEquals(otherCustomer.getName(),custDao.readLatest().getName());
 
 	}
 

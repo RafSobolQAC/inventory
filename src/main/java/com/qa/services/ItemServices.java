@@ -5,7 +5,7 @@ import java.util.List;
 import com.qa.persistence.dao.Dao;
 import com.qa.persistence.domain.Item;
 
-public class ItemServices {
+public class ItemServices implements CrudServices<Item>{
 	
 	Dao<Item> itemDao;
 	
@@ -17,16 +17,21 @@ public class ItemServices {
 		return itemDao.readAll();
 	}
 
-	public void create(Item item) {
-		itemDao.create(item);
+	public Item create(Item item) {
+		return itemDao.create(item);
 	}
 
-	public void update(int id, Item t) {
-		itemDao.update(id, t);
+	public Item update(int id, Item t) {
+		return itemDao.update(id, t);
 	}
 
-	public void delete(int id) {
-		itemDao.delete(id);
+	public boolean delete(int id) {
+		return itemDao.delete(id);
+	}
+
+	@Override
+	public Item readById(int id) {
+		return itemDao.readById(id);
 	}
 
 }

@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.qa.persistence.domain.Customer;
 import com.qa.persistence.domain.Item;
 import com.qa.persistence.domain.Order;
 import com.qa.utils.Utils;
@@ -29,9 +30,26 @@ public class MysqlOrderDao implements Dao<Order> {
 	private static final String READALL = "SELECT * FROM orders";
 	private static final String GETPRICE = "SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?";
 	private static final String GETLASTID = "SELECT(SELECT id FROM orders ORDER BY id DESC LIMIT 1) as id";
+	
+	public Order readLatest() {
+		try (Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery("SELECT FROM orders ORDER BY id DESC LIMIT 1");) {
+			if (resultSet.next()) {
+				int id = resultSet.getInt("id");
+				return readById(id);
+			} else {
+				LOGGER.warn("There is no order yet!");
+			}
+
+		} catch (Exception e) {
+			LOGGER.debug(e.getStackTrace());
+			LOGGER.error(e.getMessage());
+		}
+		return null;
+	}
 
 	@Override
-	public boolean create(Order t) {
+	public Order create(Order t) {
 		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);
@@ -52,10 +70,10 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 
 			LOGGER.info(("Added order: " + t.toString()));
+			return readLatest();
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-			return false;
 		} finally {
 			try {
 				if (resultSet != null)
@@ -64,7 +82,7 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 		}
 
-		return true;
+		return null;
 
 	}
 
@@ -133,7 +151,7 @@ public class MysqlOrderDao implements Dao<Order> {
 	}
 
 	@Override
-	public boolean update(int id, Order t) {
+	public Order update(int id, Order t) {
 		HashMap<Item,Integer> itemsQuants;
 		BigDecimal price = t.getPrice();
 		int itemId;
@@ -154,11 +172,13 @@ public class MysqlOrderDao implements Dao<Order> {
 			ps.setInt(2, id);
 			ps.executeUpdate();
 			
+			return readById(id);
+			
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
 		} 		
 		
-		return false;
+		return null;
 	}
 
 	@Override

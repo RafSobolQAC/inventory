@@ -2,7 +2,6 @@ package com.qa.persistence.dao;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.qa.persistence.domain.Item;
-import com.qa.utils.Login;
 import com.qa.utils.Utils;
 
 public class MysqlItemDao implements Dao<Item> {
@@ -29,9 +27,30 @@ public class MysqlItemDao implements Dao<Item> {
 	public MysqlItemDao(Connection connection) throws SQLException {
 		this.connection = connection;
 	}
+	
+	public Item readLatest() {
+		Item item = new Item();
+		try (Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery("SELECT FROM items ORDER BY id DESC LIMIT 1");) {
+			if (resultSet.next()) {
+				item.setName(resultSet.getString("name"));
+				item.setId(resultSet.getInt("id"));
+				item.setPrice(resultSet.getBigDecimal("price"));
+				return item;
+			} else {
+				LOGGER.warn("There is no order yet!");
+				
+			}
+		} catch (Exception e) {
+			Utils.exceptionLogger(e, LOGGER);
+			
+		}
+		return null;
+	}
+
 
 	@Override
-	public boolean create(Item t) {
+	public Item create(Item t) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
 			ps.setString(1, t.getName());
@@ -41,14 +60,13 @@ public class MysqlItemDao implements Dao<Item> {
 //			ps.close();
 
 			System.out.println("Added item: " + t.toString());
-			return true;
-
+			return readLatest();
+			
 		} catch (SQLException e) {
 
-			e.printStackTrace();
-			return false;
+			Utils.exceptionLogger(e, LOGGER);
 		}
-
+		return null;
 	}
 	
 	
@@ -107,7 +125,7 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
-	public boolean update(int id, Item t) {
+	public Item update(int id, Item t) {
 		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
 
 			ps.setString(1, t.getName());
@@ -117,13 +135,12 @@ public class MysqlItemDao implements Dao<Item> {
 			ps.executeUpdate();
 
 			System.out.println("Item with id " + id + " got updated: " + t.toString());
-			return true;
+			return readById(id);
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-					
+			Utils.exceptionLogger(e, LOGGER);					
 		}
+		return null;
 
 	}
 

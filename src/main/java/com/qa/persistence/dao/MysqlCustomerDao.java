@@ -1,6 +1,7 @@
 package com.qa.persistence.dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,8 +27,26 @@ public class MysqlCustomerDao implements Dao<Customer> {
 	public MysqlCustomerDao(Connection connection) throws SQLException {
 		this.connection = connection;
 	}
+	public Customer readLatest() {
+		Customer customer = new Customer();
+		try (Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery("SELECT FROM customers ORDER BY id DESC LIMIT 1");) {
+			if (resultSet.next()) {
+				customer.setName(resultSet.getString("name"));
+				customer.setId(resultSet.getInt("id"));
+				return customer;
+			} else {
+				LOGGER.warn("There is no customer yet!");
+			}
 
-	public boolean create(Customer t) {
+		} catch (Exception e) {
+			LOGGER.debug(e.getStackTrace());
+			LOGGER.error(e.getMessage());
+		}
+		return null;
+	}
+
+	public Customer create(Customer t) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
 			ps.setString(1, t.getName());
@@ -35,12 +54,12 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			ps.executeUpdate();
 
 			LOGGER.info(("Added customer: " + t.toString()));
-			return true;
+			return readById(readLatest().getId());
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-			return false;
 		}
+		return null;
 
 	}
 
@@ -100,7 +119,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 		return customers;
 	}
 
-	public boolean update(int id, Customer t) {
+	public Customer update(int id, Customer t) {
 		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
 
 			ps.setString(1, t.getName());
@@ -110,13 +129,11 @@ public class MysqlCustomerDao implements Dao<Customer> {
 //			ps.close();
 
 			System.out.println("Customer with id " + id + " got updated: " + t.toString());
-			return true;
-
+			return readById(id);
 		} catch (Exception e) {
 			Utils.exceptionLogger(e, LOGGER);
-			return false;
 		}
-
+		return null;
 	}
 
 	public boolean delete(int id) {
