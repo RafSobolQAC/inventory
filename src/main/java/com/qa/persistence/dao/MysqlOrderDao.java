@@ -29,48 +29,53 @@ public class MysqlOrderDao implements Dao<Order> {
 	private static final String READALL = "SELECT * FROM orders";
 	private static final String GETPRICE = "SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?";
 	private static final String GETLASTID = "SELECT(SELECT id FROM orders ORDER BY id DESC LIMIT 1) as id";
-	
 
 	@Override
 	public boolean create(Order t) {
-		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER); 
+		ResultSet resultSet = null;
+		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);
 				PreparedStatement getLastps = connection.prepareStatement(GETLASTID)) {
 
 			ps.setBigDecimal(1, t.getPrice());
-			
+
 			ps.executeUpdate();
 			int lastId = 0;
-			ResultSet resultSet = getLastps.executeQuery();
+			resultSet = getLastps.executeQuery();
 			if (resultSet.next()) {
 				lastId = resultSet.getInt("id");
 			}
 			for (Item item : t.getItems().keySet()) {
-				ps2.setInt(1,lastId);
+				ps2.setInt(1, lastId);
 				ps2.setInt(2, item.getId());
 				ps2.setInt(3, t.getItems().get(item));
 			}
 
 			LOGGER.info(("Added order: " + t.toString()));
-			
-			
+
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
 			return false;
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
 		}
+
 		return true;
 
-		
-		
 	}
 
 	@Override
 	public ArrayList<Order> readAll() {
+		ResultSet resultSet = null;
 		ArrayList<Order> orders = new ArrayList<Order>();
-		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery(READALL)) {
+		try (Statement statement = connection.createStatement()) {
 //			Statement statement = connection.createStatement();
 //			ResultSet resultSet = statement.executeQuery(READALL);
+					resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				Order order = new Order();
 				int id = resultSet.getInt("id");
@@ -83,7 +88,13 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} 
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
+		}
 		return orders;
 
 	}
@@ -98,9 +109,8 @@ public class MysqlOrderDao implements Dao<Order> {
 			if (resultSet.next()) {
 				order = new Order();
 				order.setId(resultSet.getInt("id"));
-				
-				
-				//needs work!!!!!
+
+				// needs work!!!!!
 			} else {
 				LOGGER.warn("Customer with ID does not exist!");
 				throw new IllegalArgumentException();
@@ -122,16 +132,15 @@ public class MysqlOrderDao implements Dao<Order> {
 
 	@Override
 	public boolean delete(int id) {
-		try (PreparedStatement ps = connection.prepareStatement(DELETE); 
+		try (PreparedStatement ps = connection.prepareStatement(DELETE);
 				PreparedStatement ps2 = connection.prepareStatement(DELETEORDERLINE)) {
 			ps.setInt(1, id);
 			ps2.setInt(1, id);
 			ps.executeUpdate();
 			ps2.executeUpdate();
-			
-			LOGGER.info("Deleted order with ID "+id);
-			
-			
+
+			LOGGER.info("Deleted order with ID " + id);
+
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
 			return false;

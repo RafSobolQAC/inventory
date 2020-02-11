@@ -46,11 +46,12 @@ public class MysqlCustomerDao implements Dao<Customer> {
 
 	public Customer readById(int id) {
 		Customer customer = null;
+		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
 //			PreparedStatement ps = connection.prepareStatement(READBYID);
 
 			ps.setInt(1, id);
-			ResultSet resultSet = ps.executeQuery();
+			resultSet = ps.executeQuery();
 			if (resultSet.next()) {
 				customer = new Customer();
 				customer.setName(resultSet.getString("name"));
@@ -62,16 +63,24 @@ public class MysqlCustomerDao implements Dao<Customer> {
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
+			;
 		}
 		return customer;
 	}
 
 	public ArrayList<Customer> readAll() {
 		ArrayList<Customer> customers = new ArrayList<Customer>();
-		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery(READALL)) {
+		ResultSet resultSet = null;
+		try (Statement statement = connection.createStatement()){
 //			Statement statement = connection.createStatement();
 //			ResultSet resultSet = statement.executeQuery(READALL);
+			resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
@@ -79,7 +88,15 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			}
 		} catch (Exception e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} 
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
+			;
+		}
+
 		return customers;
 	}
 

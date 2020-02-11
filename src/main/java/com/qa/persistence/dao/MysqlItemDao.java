@@ -55,11 +55,12 @@ public class MysqlItemDao implements Dao<Item> {
 	@Override
 	public Item readById(int id) {
 		Item item = null;
+		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
 //			PreparedStatement ps = connection.prepareStatement(READBYID);
 
 			ps.setInt(1, id);
-			ResultSet resultSet = ps.executeQuery();
+			resultSet = ps.executeQuery();
 			if (resultSet.next()) {
 				item = new Item();
 				item.setName(resultSet.getString("name"));
@@ -68,6 +69,13 @@ public class MysqlItemDao implements Dao<Item> {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
+			;
 		}
 		return item;
 	}
@@ -75,10 +83,11 @@ public class MysqlItemDao implements Dao<Item> {
 	@Override
 	public ArrayList<Item> readAll() {
 		ArrayList<Item> items = new ArrayList<Item>();
-		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery(READALL)) {
+		ResultSet resultSet = null;
+		try (Statement statement = connection.createStatement()) {
 //			Statement statement = connection.createStatement();
 //			ResultSet resultSet = statement.executeQuery(READALL);
+					resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
@@ -88,9 +97,13 @@ public class MysqlItemDao implements Dao<Item> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-
-		}
-		return items;
+			try {
+				if (resultSet != null)
+					resultSet.close();
+			} catch (Exception e) {
+			}
+			;
+		}		return items;
 	}
 
 	@Override

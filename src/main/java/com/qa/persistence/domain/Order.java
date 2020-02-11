@@ -38,9 +38,9 @@ public class Order {
 	public BigDecimal getPrice() {
 		BigDecimal runningTotal = new BigDecimal(0);
 		for (Item item : items.keySet()) {
-			runningTotal.add(item.getPrice().multiply(new BigDecimal(items.get(item))));
+			runningTotal = runningTotal.add(item.getPrice().multiply(new BigDecimal(items.get(item))));
 		}
-		this.price = (runningTotal.compareTo(new BigDecimal(10000)) == 1) ? runningTotal.multiply(new BigDecimal(0.9)) : runningTotal; 
+		this.price = (runningTotal.compareTo(new BigDecimal(10000))> 0) ? runningTotal.multiply(BigDecimal.valueOf(0.9)) : runningTotal; 
 		return price;
 	}
 

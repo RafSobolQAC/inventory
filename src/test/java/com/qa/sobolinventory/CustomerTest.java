@@ -89,7 +89,7 @@ public class CustomerTest {
 
 	@Test
 	public void customerDaoReadByIntTest() throws SQLException {
-		assertEquals(null, custDao.readById(100000).getName());
+		assertEquals(null, custDao.readById(1000000).getName());
 	}
 	
 	@Test

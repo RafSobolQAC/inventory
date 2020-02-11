@@ -77,3 +77,43 @@
 2020-02-11 10:42:23 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
 2020-02-11 10:42:23 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
 2020-02-11 10:42:23 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:42:56 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:42:56 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:42:56 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:42:56 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:50:38 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:50:42 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:50:42 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:50:42 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:50:42 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:50:45 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:50:52 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:50:52 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:50:52 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:50:53 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:50:58 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:51:00 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:51:00 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:51:00 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:51:00 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:51:03 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:51:04 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:51:04 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:51:04 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:51:04 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:51:10 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:51:12 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:51:12 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:51:12 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:51:12 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:51:32 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:51:34 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:51:34 WARN  CustomerTest:110 - 31
+2020-02-11 10:51:34 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:51:34 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:51:34 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
+2020-02-11 10:52:40 INFO  Loginner:13 - What is your password? 
+2020-02-11 10:52:43 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby T.
+2020-02-11 10:52:43 INFO  MysqlCustomerDao:37 - Added customer: -1 One!
+2020-02-11 10:52:43 INFO  MysqlCustomerDao:37 - Added customer: -1 Bobby Tables
+2020-02-11 10:52:43 WARN  MysqlCustomerDao:59 - Customer with ID does not exist!
