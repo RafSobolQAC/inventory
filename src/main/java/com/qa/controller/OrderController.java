@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -25,31 +26,21 @@ public class OrderController implements CrudController<Order>{
 		this.orderService = orderService;
 	}
 
-	@Override
-	public List<Order> readAll() {
-		// TODO Auto-generated method stub
-		return new ArrayList<Order>();
+	public String getInput() {
+		return Utils.getInput();
 	}
-
-	@Override
-	public Order create() {
-		// TODO Auto-generated method stub
-		
-		return new Order();
-		
+	
+	public Integer getIntInput() {
+		return Utils.getIntInput(LOGGER);
 	}
-
-	@Override
-	public Order update() {
+	
+	public HashMap<Item, Integer> createItemHashMap() {
 		HashMap<Item,Integer> itemQuants = new HashMap<>(); 
 		Item itemToAdd;
-		LOGGER.info("Which order would you like to update? (ID)");
-		int orderId = Utils.getIntInput(LOGGER);
-		LOGGER.info("Which customer made the order? (ID)");
-		int customerId = Utils.getIntInput(LOGGER);
+
 		boolean breaker = true;
 		while(breaker) {
-			LOGGER.info("Type in an item's ID, or type in (Q)uit to finish.");
+			LOGGER.info("Which item ID to add? ");
 			String input = Utils.getInput();
 			if (input.toLowerCase().startsWith("Q")) {
 				breaker = false;
@@ -70,8 +61,39 @@ public class OrderController implements CrudController<Order>{
 			int itemQuant = Utils.getIntInput(LOGGER);
 			itemQuants.put(itemToAdd,itemQuant);
 		}
+		return itemQuants;
+
+	}
+	
+	@Override
+	public List<Order> readAll() {
+		// TODO Auto-generated method stub
+		return new ArrayList<Order>();
+	}
+
+	@Override
+	public Order create() {
+		LOGGER.info("Please enter the customer's ID. ");
+		int customerId = getIntInput();
+		boolean breaker = false;
+		LOGGER.info("At any point, type in (Q) to Quit.");
+		while (!breaker) {
+			LOGGER.info("What item ID would you like to add?");
+		}
 		
-		return new Order(orderId,customerId,itemQuants);
+		return new Order();
+		
+	}
+
+	@Override
+	public Order update() {
+		LOGGER.info("Which order would you like to update? (ID)");
+		int orderId = Utils.getIntInput(LOGGER);
+		LOGGER.info("Which customer made the order? (ID)");
+		int customerId = Utils.getIntInput(LOGGER);
+		LOGGER.info("At any point, type in (Q)uit to finish.");
+		Map<Item,Integer> itemQuants = createItemHashMap();
+		return new Order(orderId, customerId,itemQuants);
 		
 	}
 

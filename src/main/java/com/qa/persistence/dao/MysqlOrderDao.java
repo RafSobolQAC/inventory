@@ -157,7 +157,7 @@ public class MysqlOrderDao implements Dao<Order> {
 		try(PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);
 				PreparedStatement ps2 = connection.prepareStatement(UPDATEORDERLINE)) {
 			
-			itemsQuants = t.getItems();
+			itemsQuants = (HashMap<Item,Integer>) t.getItems();
 			for (Item item : itemsQuants.keySet()) {
 				itemId = item.getId();
 				itemQuantity = itemsQuants.get(item);
