@@ -20,10 +20,10 @@ public class CustomerTest {
 
 	private Customer customer = new Customer();
 	private MysqlCustomerDao custDao;
-	private Connection conn;
-	private Connector connector;
+	private static Connection conn;
+	private static Connector connector;
 	@BeforeClass
-	public void login() throws SQLException {
+	public static void login() throws SQLException {
 		connector = new Connector("jdbc:mysql://34.89.63.19:3306/inventory");
 		conn = connector.getConnection();
 		
