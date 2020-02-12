@@ -18,7 +18,7 @@ import com.qa.services.ItemServices;
 import com.qa.utils.Utils;
 
 public class OrderController implements CrudController<Order>{
-	public static final Logger LOGGER = Logger.getLogger(MysqlOrderDao.class);
+	public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 	private Connection connection;
 	private CrudServices<Order> orderService;
 	
@@ -34,16 +34,16 @@ public class OrderController implements CrudController<Order>{
 		return Utils.getIntInput(LOGGER);
 	}
 	
-	public HashMap<Item, Integer> createItemHashMap() {
+	public Map<Item, Integer> createItemHashMap() {
 		HashMap<Item,Integer> itemQuants = new HashMap<>(); 
 		Item itemToAdd;
+		LOGGER.info("At any point, type in (Q) to Quit.");
 
 		boolean breaker = true;
 		while(breaker) {
 			LOGGER.info("Which item ID to add? ");
 			String input = Utils.getInput();
 			if (input.toLowerCase().startsWith("Q")) {
-				breaker = false;
 				break;
 			}
 
@@ -53,7 +53,8 @@ public class OrderController implements CrudController<Order>{
 				itemToAdd = itemService.readById(itemId);
 			} catch (SQLException e) {
 				Utils.exceptionLogger(e, LOGGER);
-				break;
+				breaker=false;
+				return null;
 			}
 			
 			
@@ -67,21 +68,20 @@ public class OrderController implements CrudController<Order>{
 	
 	@Override
 	public List<Order> readAll() {
-		// TODO Auto-generated method stub
-		return new ArrayList<Order>();
+		List<Order> orders = orderService.readAll();
+		for (Order order : orders) {
+			LOGGER.info(order.toString());
+		}
+		return orders;
 	}
 
 	@Override
 	public Order create() {
 		LOGGER.info("Please enter the customer's ID. ");
 		int customerId = getIntInput();
-		boolean breaker = false;
-		LOGGER.info("At any point, type in (Q) to Quit.");
-		while (!breaker) {
-			LOGGER.info("What item ID would you like to add?");
-		}
-		
-		return new Order();
+		Map<Item,Integer> itemQuants = createItemHashMap();		
+		Order order = orderService.create(new Order(customerId,itemQuants));
+		return order;
 		
 	}
 
@@ -91,16 +91,18 @@ public class OrderController implements CrudController<Order>{
 		int orderId = Utils.getIntInput(LOGGER);
 		LOGGER.info("Which customer made the order? (ID)");
 		int customerId = Utils.getIntInput(LOGGER);
-		LOGGER.info("At any point, type in (Q)uit to finish.");
 		Map<Item,Integer> itemQuants = createItemHashMap();
-		return new Order(orderId, customerId,itemQuants);
+		Order order = orderService.create(new Order(orderId,customerId,itemQuants));
+		return order;
 		
 	}
 
 	@Override
 	public boolean delete() {
-		// TODO Auto-generated method stub
-		return false;
+		LOGGER.info("Which order would you like to delete? (ID)");
+		int orderId = Utils.getIntInput(LOGGER);
+		boolean wasRemoved = orderService.delete(orderId);
+		return wasRemoved;
 	}
 
 	@Override

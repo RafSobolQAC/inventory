@@ -13,9 +13,9 @@ public class Order {
 	
 	public Order(int id, int customerId, Map<Item,Integer> items) {
 		this.id = id;
-		this.price = new BigDecimal(0); //add method of calculating price!
 		this.customerId = customerId;
 		this.items = items;
+		this.price = getPrice(); 
 	}
 	
 	public Order() {
@@ -23,6 +23,12 @@ public class Order {
 		this.customerId = 0;
 		this.price = new BigDecimal(0);
 		this.items = new HashMap<Item,Integer>();
+	}
+	public Order(int customerId, Map<Item,Integer> items) {
+		this.customerId = customerId;
+		this.items = items;
+		this.price = getPrice();
+		this.id = -1;
 	}
 	
 
