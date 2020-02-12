@@ -2,7 +2,6 @@ package com.qa.controller;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +9,6 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import com.qa.persistence.dao.MysqlItemDao;
-import com.qa.persistence.dao.MysqlOrderDao;
 import com.qa.persistence.domain.Item;
 import com.qa.persistence.domain.Order;
 import com.qa.services.CrudServices;
@@ -38,29 +36,29 @@ public class OrderController implements CrudController<Order>{
 		HashMap<Item,Integer> itemQuants = new HashMap<>(); 
 		Item itemToAdd;
 		LOGGER.info("At any point, type in (Q) to Quit.");
-
 		boolean breaker = true;
 		while(breaker) {
 			LOGGER.info("Which item ID to add? ");
 			String input = Utils.getInput();
 			if (input.toLowerCase().startsWith("Q")) {
-				break;
+				breaker = false;
 			}
 
 			int itemId = Utils.getIntInput(LOGGER);
-			try {
-				ItemServices itemService = new ItemServices(new MysqlItemDao(connection));
-				itemToAdd = itemService.readById(itemId);
-			} catch (SQLException e) {
-				Utils.exceptionLogger(e, LOGGER);
-				breaker=false;
-				return null;
+			if(breaker) {
+				try {
+					ItemServices itemService = new ItemServices(new MysqlItemDao(connection));
+					itemToAdd = itemService.readById(itemId);
+				} catch (SQLException e) {
+					Utils.exceptionLogger(e, LOGGER);
+					return null;
+				}
+				
+				
+				LOGGER.info("How many of this item? ");
+				int itemQuant = Utils.getIntInput(LOGGER);
+				itemQuants.put(itemToAdd,itemQuant);
 			}
-			
-			
-			LOGGER.info("How many of this item? ");
-			int itemQuant = Utils.getIntInput(LOGGER);
-			itemQuants.put(itemToAdd,itemQuant);
 		}
 		return itemQuants;
 
@@ -81,6 +79,7 @@ public class OrderController implements CrudController<Order>{
 		int customerId = getIntInput();
 		Map<Item,Integer> itemQuants = createItemHashMap();		
 		Order order = orderService.create(new Order(customerId,itemQuants));
+		LOGGER.info("Order was created.");
 		return order;
 		
 	}
@@ -92,7 +91,8 @@ public class OrderController implements CrudController<Order>{
 		LOGGER.info("Which customer made the order? (ID)");
 		int customerId = Utils.getIntInput(LOGGER);
 		Map<Item,Integer> itemQuants = createItemHashMap();
-		Order order = orderService.create(new Order(orderId,customerId,itemQuants));
+		Order order = orderService.update(orderId, new Order(customerId,itemQuants));
+		LOGGER.info("Order was updated.");
 		return order;
 		
 	}
@@ -102,6 +102,7 @@ public class OrderController implements CrudController<Order>{
 		LOGGER.info("Which order would you like to delete? (ID)");
 		int orderId = Utils.getIntInput(LOGGER);
 		boolean wasRemoved = orderService.delete(orderId);
+		LOGGER.info("Order "+orderId+" was removed.");
 		return wasRemoved;
 	}
 
