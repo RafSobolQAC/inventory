@@ -12,9 +12,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.qa.persistence.dao.MysqlCustomerDao;
-import com.qa.persistence.domain.Customer;
-import com.qa.sobolinventory.Connector;
+import com.qa.imssobol.persistence.dao.MysqlCustomerDao;
+import com.qa.imssobol.persistence.domain.Customer;
+import com.qa.imssobol.utils.Connector;
 
 public class CustomerTest {
 	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
