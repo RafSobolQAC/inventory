@@ -12,7 +12,7 @@ public class Loginner {
 
 		LOGGER.info("What is your password? ");
 
-		String password = Utils.getInput();
+		String password = Utils.getPassword();
 		login.setPassword(password);
 	}
 }

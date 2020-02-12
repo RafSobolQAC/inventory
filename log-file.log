@@ -1682,3 +1682,116 @@
 2020-02-12 11:25:53 INFO  CustomerController:39 - Please enter a first name
 2020-02-12 11:25:53 INFO  CustomerController:41 - Customer being created. 
 2020-02-12 11:25:53 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:30:52 INFO  CustomerController:33 - -1 Chris
+2020-02-12 11:30:52 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 11:30:52 INFO  CustomerController:33 - -1 Nic
+2020-02-12 11:30:52 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 11:30:52 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 11:30:52 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 11:30:52 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 11:30:52 INFO  CustomerController:53 - Update complete!
+2020-02-12 11:30:52 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:30:52 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 11:30:52 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:30:52 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:30:59 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 11:31:00 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 11:31:00 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 11:31:00 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 11:42:23 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:43:36 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:43:38 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:43:38 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:43:38 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:43:38 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:43:38 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:43:41 INFO  Ims:45 - What would you like to do with customer:
+2020-02-12 11:43:41 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:43:41 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:43:41 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:43:41 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:43:41 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:43:41 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:43:42 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:43:52 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 11:43:52 INFO  MysqlCustomerDao:55 - Added customer: -1 thomas
+2020-02-12 11:43:52 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:43:52 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:43:52 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:43:52 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:43:52 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:43:52 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:45:01 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:45:05 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-12 11:45:05 ERROR Connector:23 - Access denied for user 'root'@'164.39.75.108' (using password: YES)
+2020-02-12 11:45:05 ERROR Connector:24 - 
+2020-02-12 11:45:05 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:45:07 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-12 11:45:07 ERROR Connector:23 - Access denied for user 'root'@'164.39.75.108' (using password: YES)
+2020-02-12 11:45:07 ERROR Connector:24 - 
+2020-02-12 11:45:07 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:45:12 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:45:12 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:45:12 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:45:12 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:45:12 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:45:14 INFO  Ims:45 - What would you like to do with customer:
+2020-02-12 11:45:14 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:45:14 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:45:14 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:45:14 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:45:14 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:45:14 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:45:15 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:45:20 INFO  Utils:48 - Please only use alphanumerics and full stop.
+2020-02-12 11:45:22 INFO  Utils:48 - Please only use alphanumerics and full stop.
+2020-02-12 11:45:23 INFO  Utils:48 - Please only use alphanumerics and full stop.
+2020-02-12 11:45:24 INFO  Utils:48 - Please only use alphanumerics and full stop.
+2020-02-12 11:45:29 INFO  Utils:48 - Please only use alphanumerics and full stop.
+2020-02-12 11:46:01 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:46:03 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:46:03 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:46:03 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:46:03 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:46:03 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:46:04 INFO  Ims:45 - What would you like to do with customer:
+2020-02-12 11:46:04 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:46:04 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:46:04 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:46:04 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:46:04 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:46:04 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:46:06 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:46:08 INFO  Utils:48 - Please only use alphanumerics, spaces, and full stops.
+2020-02-12 11:46:09 INFO  Utils:48 - Please only use alphanumerics, spaces, and full stops.
+2020-02-12 11:46:09 INFO  Utils:48 - Please only use alphanumerics, spaces, and full stops.
+2020-02-12 11:46:12 INFO  Utils:48 - Please only use alphanumerics, spaces, and full stops.
+2020-02-12 11:46:16 INFO  Utils:48 - Please only use alphanumerics, spaces, and full stops.
+2020-02-12 11:46:38 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:46:39 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:46:39 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:46:39 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:46:39 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:46:39 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:46:40 INFO  Ims:45 - What would you like to do with customer:
+2020-02-12 11:46:40 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:46:40 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:46:40 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:46:40 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:46:40 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:46:40 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:46:41 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:46:43 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 11:46:43 INFO  MysqlCustomerDao:55 - Added customer: -1 Thomas Cook
+2020-02-12 11:46:43 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:46:43 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:46:43 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:46:43 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:46:43 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:46:43 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:48:11 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:48:18 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:48:18 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:48:18 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:48:18 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:48:18 INFO  Domain:28 - STOP: To close the application
