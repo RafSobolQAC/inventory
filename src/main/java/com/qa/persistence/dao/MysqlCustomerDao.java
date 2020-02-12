@@ -1,7 +1,6 @@
 package com.qa.persistence.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -54,7 +53,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			ps.executeUpdate();
 
 			LOGGER.info(("Added customer: " + t.toString()));
-			return readById(readLatest().getId());
+			return readLatest();
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);

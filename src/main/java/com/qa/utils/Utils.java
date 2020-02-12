@@ -12,6 +12,7 @@ public class Utils {
 		LOGGER.warn(e.getCause());
 		LOGGER.warn(e.getStackTrace());
 	}
+	
 	public static String getInput() {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);

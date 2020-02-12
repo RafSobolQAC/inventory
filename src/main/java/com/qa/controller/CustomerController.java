@@ -18,6 +18,15 @@ public class CustomerController implements CrudController<Customer>{
 		this.customerService = customerService;
 	}
 	
+	public String getInput() {
+		return Utils.getInput();
+	}
+	
+	public int getIntInput() {
+		return Utils.getIntInput(LOGGER);
+	}
+	
+	
 	public List<Customer> readAll() {
 		List<Customer> customers = customerService.readAll();
 		for(Customer customer: customers) {
@@ -28,7 +37,7 @@ public class CustomerController implements CrudController<Customer>{
 
 	public Customer create() {
 		LOGGER.info("Please enter a first name");
-		String name = Utils.getInput();
+		String name = getInput();
 		LOGGER.info("Customer being created. ");
 		Customer customer = customerService.create(new Customer(name));
 		LOGGER.info("Creation complete!");
@@ -37,9 +46,9 @@ public class CustomerController implements CrudController<Customer>{
 
 	public Customer update() {
 		LOGGER.info("Which customer to update? (ID)");
-		int id = Utils.getIntInput(LOGGER);
+		Integer id = getIntInput();
 		LOGGER.info("What's their new name? ");
-		String newName = Utils.getInput();
+		String newName = getInput();
 		Customer customer = customerService.update(id, new Customer(newName));
 		LOGGER.info("Update complete!");
 		return customer;
@@ -47,7 +56,7 @@ public class CustomerController implements CrudController<Customer>{
 
 	public boolean delete() {
 		LOGGER.info("Please enter the id of the customer you would like to delete");
-		int id = Utils.getIntInput(LOGGER);
+		int id = getIntInput();
 		boolean wasDeleted = customerService.delete(id);
 		return wasDeleted;
 
@@ -56,7 +65,7 @@ public class CustomerController implements CrudController<Customer>{
 	@Override
 	public Customer readById() {
 		LOGGER.info("Which customer ID to access? ");
-		int id = Utils.getIntInput(LOGGER);
+		int id = getIntInput();
 		Customer customer = customerService.readById(id);
 		LOGGER.info(customer.toString());
 		return customer;

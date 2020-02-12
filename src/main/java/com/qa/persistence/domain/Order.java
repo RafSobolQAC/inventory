@@ -1,7 +1,6 @@
 package com.qa.persistence.domain;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,13 +9,13 @@ public class Order {
 	private int id;
 	private BigDecimal price;
 	private int customerId;
-	private HashMap<Item,Integer> items;
+	private Map<Item,Integer> items;
 	
-	public Order(int id, int customerId, HashMap<Item,Integer> items) {
+	public Order(int id, int customerId, Map<Item,Integer> items) {
 		this.id = id;
-		this.price = new BigDecimal(0); //add method of calculating price!
 		this.customerId = customerId;
 		this.items = items;
+		this.price = getPrice(); 
 	}
 	
 	public Order() {
@@ -24,6 +23,12 @@ public class Order {
 		this.customerId = 0;
 		this.price = new BigDecimal(0);
 		this.items = new HashMap<Item,Integer>();
+	}
+	public Order(int customerId, Map<Item,Integer> items) {
+		this.customerId = customerId;
+		this.items = items;
+		this.price = getPrice();
+		this.id = -1;
 	}
 	
 
@@ -56,11 +61,11 @@ public class Order {
 		this.customerId = customerId;
 	}
 
-	public HashMap<Item,Integer> getItems() {
+	public Map<Item,Integer> getItems() {
 		return items;
 	}
 
-	public void setItems(HashMap<Item,Integer> items) {
+	public void setItems(Map<Item,Integer> items) {
 		this.items = items;
 	}
 	

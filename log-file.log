@@ -137,3 +137,295 @@
 2020-02-11 14:58:42 INFO  MysqlCustomerDao:56 - Added customer: -1 One!
 2020-02-11 14:58:42 INFO  MysqlCustomerDao:56 - Added customer: -1 Bobby Tables
 2020-02-11 14:58:42 WARN  MysqlCustomerDao:79 - Customer with ID does not exist!
+2020-02-11 15:37:50 INFO  CustomerController:29 - -1 Chris
+2020-02-11 15:37:50 INFO  CustomerController:29 - -1 Rhys
+2020-02-11 15:37:50 INFO  CustomerController:29 - -1 Nic
+2020-02-11 15:37:50 INFO  CustomerController:35 - Please enter a first name
+2020-02-11 15:39:26 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:39:26 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:39:26 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:39:26 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:39:30 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:39:35 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:39:35 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:41:48 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:41:48 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:41:48 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:41:48 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:41:50 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:41:53 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:42:00 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:42:00 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:42:00 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:42:00 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:42:01 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:42:02 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:42:16 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:42:16 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:42:16 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:42:16 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:42:20 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:42:21 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:43:06 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:43:06 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:43:06 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:43:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:43:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:43:06 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:43:06 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:43:06 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:43:06 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:43:06 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:43:06 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:45:10 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:45:10 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:45:10 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:45:10 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:45:10 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:45:10 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:45:10 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:45:10 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:45:10 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:45:10 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:45:10 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:45:17 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:45:17 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:45:17 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:45:17 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:45:17 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:45:17 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:45:17 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:45:17 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:45:17 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:45:17 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:45:17 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:47:06 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:47:06 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:47:06 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:47:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:47:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:47:06 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:47:06 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:47:06 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:47:06 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:47:06 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:47:06 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:48:42 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:48:42 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:48:42 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:48:42 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:48:42 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:48:42 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:48:42 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:48:42 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:48:42 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:48:42 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:48:42 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:49:45 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:49:45 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:49:45 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:49:45 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:49:45 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:49:45 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:49:45 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:49:45 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:49:45 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:49:45 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:49:45 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:52:25 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:52:25 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:52:25 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:52:25 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:52:25 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:52:25 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:52:25 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:52:25 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:52:25 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:52:25 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:52:25 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:54:51 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:54:51 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:54:51 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:54:51 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:54:51 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:54:51 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:54:51 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:54:51 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:54:51 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:54:51 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:54:51 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:55:19 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:55:19 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:55:19 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:55:19 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:55:19 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:55:19 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:55:19 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:55:19 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:55:19 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:55:19 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:55:19 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:57:26 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:57:26 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:57:26 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:57:26 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:57:26 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:57:26 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:57:26 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:57:26 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:57:26 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:57:26 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:57:26 INFO  CustomerController:43 - Creation complete!
+2020-02-11 15:59:20 INFO  CustomerController:33 - -1 Chris
+2020-02-11 15:59:20 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 15:59:20 INFO  CustomerController:33 - -1 Nic
+2020-02-11 15:59:20 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:59:20 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 15:59:20 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 15:59:20 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 15:59:20 INFO  CustomerController:53 - Update complete!
+2020-02-11 15:59:20 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 15:59:20 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 15:59:20 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:18:36 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:18:36 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:18:36 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:18:36 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:18:36 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:18:36 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:18:36 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:18:36 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:18:36 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:18:36 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:18:36 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:22:31 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:22:31 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:22:31 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:22:31 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:22:31 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:22:31 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:22:31 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:22:31 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:22:31 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:22:31 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:22:31 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:22:43 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:22:43 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:22:43 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:22:43 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:22:43 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:22:43 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:22:43 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:22:43 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:22:43 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:22:43 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:22:43 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:26:48 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:26:48 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:26:48 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:26:48 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:26:48 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:26:48 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:26:48 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:26:48 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:26:48 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:26:48 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:26:48 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:28:30 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:28:30 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:28:30 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:28:30 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:28:30 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:28:30 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:28:30 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:28:30 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:28:47 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:28:47 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:28:47 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:28:47 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:28:47 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:28:47 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:29:29 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:29:29 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:29:29 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:29:29 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:29:29 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:29:29 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:29:29 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:29:29 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:29:29 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:29:29 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:29:29 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:33:11 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:33:11 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:33:11 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:33:11 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:33:11 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:33:11 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 16:33:11 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 16:33:11 INFO  CustomerController:53 - Update complete!
+2020-02-11 16:33:11 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:33:11 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:33:11 INFO  CustomerController:43 - Creation complete!
+2020-02-11 16:33:30 INFO  CustomerController:33 - -1 Chris
+2020-02-11 16:33:30 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 16:33:30 INFO  CustomerController:33 - -1 Nic
+2020-02-11 16:33:30 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:33:30 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 16:33:30 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 16:33:30 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 16:33:30 INFO  CustomerController:43 - Creation complete!
+2020-02-11 17:39:59 INFO  CustomerController:33 - -1 Chris
+2020-02-11 17:39:59 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 17:39:59 INFO  CustomerController:33 - -1 Nic
+2020-02-11 17:39:59 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 17:39:59 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 17:39:59 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 17:39:59 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 17:39:59 INFO  CustomerController:53 - Update complete!
+2020-02-11 17:39:59 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 17:39:59 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 17:39:59 INFO  CustomerController:43 - Creation complete!
+2020-02-11 17:42:38 INFO  CustomerController:33 - -1 Chris
+2020-02-11 17:42:38 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 17:42:38 INFO  CustomerController:33 - -1 Nic
+2020-02-11 17:42:38 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 17:42:38 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-11 17:42:38 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 17:42:38 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 17:42:38 INFO  CustomerController:53 - Update complete!
+2020-02-11 17:42:38 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 17:42:38 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 17:42:38 INFO  CustomerController:43 - Creation complete!
+2020-02-11 17:46:35 INFO  CustomerController:33 - -1 Chris
+2020-02-11 17:46:35 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 17:46:35 INFO  CustomerController:33 - -1 Nic
+2020-02-11 17:46:35 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:46:35 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:46:35 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 17:46:35 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 17:46:35 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 17:46:35 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 17:46:35 INFO  CustomerController:43 - Creation complete!
+2020-02-11 17:47:18 INFO  CustomerController:33 - -1 Chris
+2020-02-11 17:47:18 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 17:47:18 INFO  CustomerController:33 - -1 Nic
+2020-02-11 17:47:18 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:47:18 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:47:18 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 17:47:18 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 17:47:18 INFO  CustomerController:54 - Update complete!
+2020-02-11 17:47:18 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 17:47:18 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 17:47:18 INFO  CustomerController:43 - Creation complete!
+2020-02-11 17:48:29 INFO  CustomerController:33 - -1 Chris
+2020-02-11 17:48:29 INFO  CustomerController:33 - -1 Rhys
+2020-02-11 17:48:29 INFO  CustomerController:33 - -1 Nic
+2020-02-11 17:48:29 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:48:29 INFO  CustomerController:59 - Please enter the id of the customer you would like to delete
+2020-02-11 17:48:29 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-11 17:48:29 INFO  CustomerController:50 - What's their new name? 
+2020-02-11 17:48:29 INFO  CustomerController:54 - Update complete!
+2020-02-11 17:48:29 INFO  CustomerController:39 - Please enter a first name
+2020-02-11 17:48:29 INFO  CustomerController:41 - Customer being created. 
+2020-02-11 17:48:29 INFO  CustomerController:43 - Creation complete!

@@ -1,4 +1,4 @@
-package com.qa.sobolinventory;
+package com.qa.persistence.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import com.qa.persistence.dao.MysqlCustomerDao;
 import com.qa.persistence.domain.Customer;
+import com.qa.sobolinventory.Connector;
 
 public class CustomerTest {
 	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
