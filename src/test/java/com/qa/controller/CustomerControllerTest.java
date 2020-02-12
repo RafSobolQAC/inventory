@@ -13,8 +13,9 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.persistence.domain.Customer;
-import com.qa.services.CustomerServices;
+import com.qa.imssobol.controller.CustomerController;
+import com.qa.imssobol.persistence.domain.Customer;
+import com.qa.imssobol.services.CustomerServices;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CustomerControllerTest {
