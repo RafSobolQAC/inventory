@@ -18,22 +18,29 @@ import com.qa.imssobol.utils.Utils;
 public class MysqlOrderDao implements Dao<Order> {
 	public static final Logger LOGGER = Logger.getLogger(MysqlOrderDao.class);
 	private Connection connection;
-	private static final String INSERTORDER = "INSERT INTO orders (total_price) VALUES (?)";
+	private static final String INSERTORDER = "INSERT INTO orders (customer_id_fk,total_price) VALUES (?,?)";
 	private static final String INSERTORDERLINE = "INSERT INTO orders_items (order_id_fk, item_id_fk, quantity) VALUES (?,?,?)";
 	private static final String UPDATEPRICE = "UPDATE orders SET total_price=? WHERE id=?";
 	private static final String UPDATEORDERLINE = "UPDATE orders_items SET quantity=? WHERE order_id_fk=? AND item_id_fk=?";
-	private static final String READBYID = "select orders.id as order_id, customer_id_fk as customer_id, item_id_fk as item_id, quantity from orders  inner join orders_items on orders.id = orders_items.order_id_fk where orders.id = ?";
+	private static final String READBYID = "select `id` as order_id, `customer_id_fk` as customer_id, `item_id_fk` as item_id, `quantity` from orders inner join orders_items on orders.`id` = orders_items.`order_id_fk` where orders.`id` = ?";
 	private static final String DELETE = "DELETE FROM orders WHERE id=?";
 	private static final String DELETEORDERLINE = "DELETE FROM orders_items WHERE order_id_fk=?";
 	private static final String READALL = "SELECT * FROM orders";
 	private static final String GETPRICE = "SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?";
 	private static final String GETLASTID = "SELECT(SELECT id FROM orders ORDER BY id DESC LIMIT 1) as id";
 	
+	public MysqlOrderDao(Connection connection) {
+		this.connection = connection;
+	}
+	public Connection getConnection() {
+		return this.connection;
+	}
 	public Order readLatest() {
 		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT FROM orders ORDER BY id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
 				int id = resultSet.getInt("id");
+				LOGGER.info("Debugger ID: "+id);
 				return readById(id);
 			} else {
 				LOGGER.warn("There is no order yet!");
@@ -53,7 +60,8 @@ public class MysqlOrderDao implements Dao<Order> {
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);
 				PreparedStatement getLastps = connection.prepareStatement(GETLASTID)) {
 
-			ps.setBigDecimal(1, t.getPrice());
+			ps.setInt(1, t.getCustomerId());
+			ps.setBigDecimal(2, t.getPrice());
 
 			ps.executeUpdate();
 			int lastId = 0;
@@ -65,6 +73,7 @@ public class MysqlOrderDao implements Dao<Order> {
 				ps2.setInt(1, lastId);
 				ps2.setInt(2, item.getId());
 				ps2.setInt(3, t.getItems().get(item));
+				ps2.executeUpdate();
 			}
 
 			LOGGER.info(("Added order: " + t.toString()));
@@ -129,7 +138,7 @@ public class MysqlOrderDao implements Dao<Order> {
 
 				// needs work!!!!!
 			} else {
-				LOGGER.warn("Customer with ID does not exist!");
+				LOGGER.warn("Order with ID does not exist!");
 				throw new IllegalArgumentException();
 			}
 

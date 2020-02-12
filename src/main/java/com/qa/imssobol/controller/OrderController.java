@@ -1,7 +1,6 @@
 package com.qa.imssobol.controller;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,39 +12,41 @@ import com.qa.imssobol.persistence.domain.Item;
 import com.qa.imssobol.persistence.domain.Order;
 import com.qa.imssobol.services.CrudServices;
 import com.qa.imssobol.services.ItemServices;
+import com.qa.imssobol.services.OrderServices;
 import com.qa.imssobol.utils.Utils;
 
-public class OrderController implements CrudController<Order>{
+public class OrderController implements CrudController<Order> {
 	public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 	private Connection connection;
 	private CrudServices<Order> orderService;
-	
-	public OrderController(CrudServices<Order> orderService) {
+
+	public OrderController(OrderServices orderService) {
 		this.orderService = orderService;
+		this.connection = orderService.getConnection();
 	}
 
 	public String getInput() {
 		return Utils.getInput();
 	}
-	
+
 	public Integer getIntInput() {
 		return Utils.getIntInput(LOGGER);
 	}
-	
+
 	public Map<Item, Integer> createItemHashMap() {
-		HashMap<Item,Integer> itemQuants = new HashMap<>(); 
+		HashMap<Item, Integer> itemQuants = new HashMap<>();
 		Item itemToAdd;
 		LOGGER.info("At any point, type in (Q) to Quit.");
 		boolean breaker = true;
-		while(breaker) {
-			LOGGER.info("Which item ID to add? ");
+		while (breaker) {
+			LOGGER.info("To continue, press any key. To quit, (Q)uit.");
 			String input = Utils.getInput();
-			if (input.toLowerCase().startsWith("Q")) {
+			if (input.toLowerCase().startsWith("q")) {
 				breaker = false;
 			}
-
-			int itemId = Utils.getIntInput(LOGGER);
-			if(breaker) {
+			if (breaker) {
+				LOGGER.info("Item ID: ");
+				int itemId = Utils.getIntInput(LOGGER);
 				try {
 					ItemServices itemService = new ItemServices(new MysqlItemDao(connection));
 					itemToAdd = itemService.readById(itemId);
@@ -53,17 +54,16 @@ public class OrderController implements CrudController<Order>{
 					Utils.exceptionLogger(e, LOGGER);
 					return null;
 				}
-				
-				
+
 				LOGGER.info("How many of this item? ");
 				int itemQuant = Utils.getIntInput(LOGGER);
-				itemQuants.put(itemToAdd,itemQuant);
+				itemQuants.put(itemToAdd, itemQuant);
 			}
 		}
 		return itemQuants;
 
 	}
-	
+
 	@Override
 	public List<Order> readAll() {
 		List<Order> orders = orderService.readAll();
@@ -77,11 +77,11 @@ public class OrderController implements CrudController<Order>{
 	public Order create() {
 		LOGGER.info("Please enter the customer's ID. ");
 		int customerId = getIntInput();
-		Map<Item,Integer> itemQuants = createItemHashMap();		
-		Order order = orderService.create(new Order(customerId,itemQuants));
+		Map<Item, Integer> itemQuants = createItemHashMap();
+		Order order = orderService.create(new Order(customerId, itemQuants));
 		LOGGER.info("Order was created.");
 		return order;
-		
+
 	}
 
 	@Override
@@ -90,11 +90,11 @@ public class OrderController implements CrudController<Order>{
 		int orderId = Utils.getIntInput(LOGGER);
 		LOGGER.info("Which customer made the order? (ID)");
 		int customerId = Utils.getIntInput(LOGGER);
-		Map<Item,Integer> itemQuants = createItemHashMap();
-		Order order = orderService.update(orderId, new Order(customerId,itemQuants));
+		Map<Item, Integer> itemQuants = createItemHashMap();
+		Order order = orderService.update(orderId, new Order(customerId, itemQuants));
 		LOGGER.info("Order was updated.");
 		return order;
-		
+
 	}
 
 	@Override
@@ -102,7 +102,7 @@ public class OrderController implements CrudController<Order>{
 		LOGGER.info("Which order would you like to delete? (ID)");
 		int orderId = Utils.getIntInput(LOGGER);
 		boolean wasRemoved = orderService.delete(orderId);
-		LOGGER.info("Order "+orderId+" was removed.");
+		LOGGER.info("Order " + orderId + " was removed.");
 		return wasRemoved;
 	}
 

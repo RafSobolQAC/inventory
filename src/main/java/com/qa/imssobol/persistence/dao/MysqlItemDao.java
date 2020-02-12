@@ -31,7 +31,7 @@ public class MysqlItemDao implements Dao<Item> {
 	public Item readLatest() {
 		Item item = new Item();
 		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT FROM items ORDER BY id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM items ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
 				item.setName(resultSet.getString("name"));
 				item.setId(resultSet.getInt("id"));
@@ -78,6 +78,7 @@ public class MysqlItemDao implements Dao<Item> {
 				item = new Item();
 				item.setName(resultSet.getString("name"));
 				item.setId(resultSet.getInt("id"));
+				item.setPrice(resultSet.getBigDecimal("price"));
 			}
 
 		} catch (SQLException e) {

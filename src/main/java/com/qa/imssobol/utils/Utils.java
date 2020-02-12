@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 
 public class Utils {
 	public static void exceptionLogger(Exception e, Logger LOGGER) {
+		LOGGER.error("Error in Utils.exceptionLogger: ");
 		LOGGER.error(e.getMessage());
 		LOGGER.error(e.getCause());
 		LOGGER.debug(e.getStackTrace());
@@ -21,6 +22,7 @@ public class Utils {
 
 	
 	public static int getIntInput(Logger LOGGER) {
+		LOGGER.debug("Your number: ");
 		boolean done = false;
 		int intRet = 0;
 		do {

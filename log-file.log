@@ -429,3 +429,814 @@
 2020-02-11 17:48:29 INFO  CustomerController:39 - Please enter a first name
 2020-02-11 17:48:29 INFO  CustomerController:41 - Customer being created. 
 2020-02-11 17:48:29 INFO  CustomerController:43 - Creation complete!
+2020-02-12 09:54:35 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:54:47 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:54:47 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:54:47 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:54:47 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:54:47 INFO  Domain:28 - STOP: To close the application
+2020-02-12 09:54:50 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 09:54:50 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 09:54:50 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 09:54:50 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 09:54:50 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 09:54:50 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 09:54:50 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 09:54:52 INFO  ItemController:30 - Please enter the name of the item.
+2020-02-12 09:54:55 INFO  ItemController:32 - What price should it have? 
+2020-02-12 09:55:01 ERROR MysqlItemDao:11 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM items ORDER BY id DESC LIMIT 1' at line 1
+2020-02-12 09:55:01 ERROR MysqlItemDao:12 - 
+2020-02-12 09:55:01 INFO  ItemController:35 - Item created.
+2020-02-12 09:55:25 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:55:31 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:55:31 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:55:31 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:55:31 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:55:31 INFO  Domain:28 - STOP: To close the application
+2020-02-12 09:55:34 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 09:55:34 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 09:55:34 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 09:55:34 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 09:55:34 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 09:55:34 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 09:55:34 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 09:55:36 INFO  ItemController:30 - Please enter the name of the item.
+2020-02-12 09:55:39 INFO  ItemController:32 - What price should it have? 
+2020-02-12 09:55:40 INFO  ItemController:35 - Item created.
+2020-02-12 09:55:44 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:55:47 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:55:47 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:55:47 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:55:47 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:55:47 INFO  Domain:28 - STOP: To close the application
+2020-02-12 09:55:48 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 09:55:48 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 09:55:48 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 09:55:48 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 09:55:48 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 09:55:48 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 09:55:48 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 09:55:53 INFO  ItemController:24 - 1 Coke 0.99
+2020-02-12 09:55:53 INFO  ItemController:24 - 2 Coke 0.99
+2020-02-12 09:56:00 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:56:02 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:56:02 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:56:02 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:56:02 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:56:02 INFO  Domain:28 - STOP: To close the application
+2020-02-12 09:56:03 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 09:56:03 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 09:56:03 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 09:56:03 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 09:56:03 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 09:56:03 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 09:56:03 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 09:56:04 INFO  ItemController:30 - Please enter the name of the item.
+2020-02-12 09:56:05 INFO  ItemController:32 - What price should it have? 
+2020-02-12 09:56:07 INFO  ItemController:35 - Item created.
+2020-02-12 09:56:10 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:56:12 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:56:12 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:56:12 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:56:12 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:56:12 INFO  Domain:28 - STOP: To close the application
+2020-02-12 09:56:15 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 09:56:15 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 09:56:15 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 09:56:15 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 09:56:15 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 09:56:15 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 09:56:15 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 09:56:16 INFO  ItemController:24 - 1 Coke 0.99
+2020-02-12 09:56:16 INFO  ItemController:24 - 2 Coke 0.99
+2020-02-12 09:56:16 INFO  ItemController:24 - 3 pepsi 0.99
+2020-02-12 09:56:22 INFO  Loginner:13 - What is your password? 
+2020-02-12 09:56:23 ERROR Connector:11 - Access denied for user 'root'@'164.39.75.108' (using password: YES)
+2020-02-12 09:56:23 ERROR Connector:12 - 
+2020-02-12 09:56:23 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 09:56:23 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 09:56:23 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 09:56:23 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 09:56:23 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:08:30 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:08:33 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:08:33 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:08:33 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:08:33 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:08:33 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:08:37 INFO  Ims:44 - What would you like to do with customer:
+2020-02-12 10:08:37 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:08:37 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:08:37 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:08:37 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:08:37 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:08:37 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:08:39 INFO  CustomerController:33 - 2 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 3 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 5 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 6 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 8 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 9 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 11 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 12 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 14 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 15 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 17 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 18 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 20 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 21 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 22 Bobby T.
+2020-02-12 10:08:39 INFO  CustomerController:33 - 23 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 24 Bobby Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 25 Bobby T.
+2020-02-12 10:08:39 INFO  CustomerController:33 - 26 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 27 Bobby Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 29 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 30 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 32 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 33 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 35 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 36 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 38 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 39 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 41 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 42 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 44 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 45 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 47 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 48 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 50 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 51 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 53 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 54 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 56 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 57 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 59 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 60 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 62 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 63 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 65 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 66 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 68 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 69 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 71 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 72 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 74 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 75 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 77 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 78 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 80 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 81 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 83 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 84 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 86 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 87 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 89 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 90 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 92 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 93 Billy Tables
+2020-02-12 10:08:39 INFO  CustomerController:33 - 95 One!
+2020-02-12 10:08:39 INFO  CustomerController:33 - 96 Billy Tables
+2020-02-12 10:08:50 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:08:53 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:08:53 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:08:53 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:08:53 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:08:53 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:08:59 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:08:59 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:08:59 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:08:59 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:08:59 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:08:59 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:08:59 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:09:01 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:09:04 INFO  OrderController:38 - At any point, type in (Q) to Quit.
+2020-02-12 10:09:04 INFO  OrderController:41 - Which item ID to add? 
+2020-02-12 10:09:11 WARN  OrderController:32 - Please type in an integer greater than 0!
+2020-02-12 10:09:13 ERROR OrderController:11 - 
+2020-02-12 10:09:13 ERROR OrderController:12 - 
+2020-02-12 10:11:10 INFO  Runner:17 - 5
+2020-02-12 10:11:18 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:11:21 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:11:21 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:11:21 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:11:21 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:11:21 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:11:23 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:11:23 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:11:23 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:11:23 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:11:23 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:11:23 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:11:23 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:11:24 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:11:27 INFO  OrderController:38 - At any point, type in (Q) to Quit.
+2020-02-12 10:11:27 INFO  OrderController:41 - Which item ID to add? 
+2020-02-12 10:12:57 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:13:10 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:13:12 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:13:12 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:13:12 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:13:12 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:13:12 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:13:14 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:13:14 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:13:14 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:13:14 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:13:14 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:13:14 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:13:14 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:13:15 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:13:17 INFO  OrderController:38 - At any point, type in (Q) to Quit.
+2020-02-12 10:13:17 INFO  OrderController:41 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:13:20 INFO  OrderController:46 - Item ID: 
+2020-02-12 10:13:21 ERROR OrderController:11 - 
+2020-02-12 10:13:21 ERROR OrderController:12 - 
+2020-02-12 10:18:49 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:18:54 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:18:54 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:18:54 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:18:54 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:18:54 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:18:54 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:18:54 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:18:54 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:18:54 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:18:54 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:18:54 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:18:54 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:18:56 INFO  OrderController:79 - Please enter the customer's ID. 
+2020-02-12 10:18:58 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:18:58 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:18:59 INFO  OrderController:47 - Item ID: 
+2020-02-12 10:19:01 INFO  OrderController:59 - How many of this item? 
+2020-02-12 10:19:03 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:19:05 INFO  OrderController:47 - Item ID: 
+2020-02-12 10:19:06 INFO  OrderController:59 - How many of this item? 
+2020-02-12 10:19:08 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:19:10 INFO  OrderController:47 - Item ID: 
+2020-02-12 10:19:42 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:19:44 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:19:44 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:19:44 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:19:44 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:19:44 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:19:46 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:19:46 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:19:46 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:19:46 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:19:46 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:19:46 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:19:46 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:19:47 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:19:49 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:19:49 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:19:50 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:19:51 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:19:52 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:19:53 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:19:54 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:19:55 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:19:56 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:20:00 WARN  OrderController:33 - Please type in an integer greater than 0!
+2020-02-12 10:20:00 WARN  OrderController:33 - Please type in an integer greater than 0!
+2020-02-12 10:20:03 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:20:04 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:20:07 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:20:21 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:20:23 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:20:23 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:20:23 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:20:23 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:20:23 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:20:24 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:20:24 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:20:24 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:20:24 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:20:24 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:20:24 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:20:24 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:20:24 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:20:26 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:20:26 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:20:27 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:20:28 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:20:29 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:20:30 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:20:31 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:20:33 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:20:34 ERROR MysqlOrderDao:11 - Field 'customer_id_fk' doesn't have a default value
+2020-02-12 10:20:34 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:20:34 INFO  OrderController:82 - Order was created.
+2020-02-12 10:20:42 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:20:44 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:20:44 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:20:44 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:20:44 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:20:44 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:20:45 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:20:45 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:20:45 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:20:45 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:20:45 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:20:45 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:20:45 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:21:12 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:21:15 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:21:15 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:21:15 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:21:15 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:21:15 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:21:16 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:21:16 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:21:16 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:21:16 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:21:16 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:21:16 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:21:16 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:21:16 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:21:18 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:21:18 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:21:20 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:21:21 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:21:22 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:21:22 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:21:23 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:21:24 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:21:26 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:21:30 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:21:30 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:21:31 ERROR MysqlOrderDao:11 - Field 'customer_id_fk' doesn't have a default value
+2020-02-12 10:21:31 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:21:31 INFO  OrderController:82 - Order was created.
+2020-02-12 10:23:13 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:23:15 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:23:15 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:23:15 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:23:15 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:23:15 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:23:17 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:23:17 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:23:17 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:23:17 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:23:17 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:23:17 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:23:17 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:23:19 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:23:20 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:23:20 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:22 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:23:23 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:23:24 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:25 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:23:25 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:23:27 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:28 INFO  MysqlOrderDao:77 - Added order: com.qa.imssobol.persistence.domain.Order@351d0846
+2020-02-12 10:23:28 WARN  MysqlOrderDao:139 - Customer with ID does not exist!
+2020-02-12 10:23:28 ERROR MysqlOrderDao:50 - 
+2020-02-12 10:23:28 INFO  OrderController:82 - Order was created.
+2020-02-12 10:23:33 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:23:36 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:23:36 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:23:36 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:23:36 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:23:36 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:23:37 INFO  Ims:44 - What would you like to do with customer:
+2020-02-12 10:23:37 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:23:37 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:23:37 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:23:37 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:23:37 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:23:37 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:23:38 INFO  CustomerController:33 - 2 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 3 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 5 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 6 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 8 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 9 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 11 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 12 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 14 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 15 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 17 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 18 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 20 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 21 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 22 Bobby T.
+2020-02-12 10:23:38 INFO  CustomerController:33 - 23 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 24 Bobby Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 25 Bobby T.
+2020-02-12 10:23:38 INFO  CustomerController:33 - 26 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 27 Bobby Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 29 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 30 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 32 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 33 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 35 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 36 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 38 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 39 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 41 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 42 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 44 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 45 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 47 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 48 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 50 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 51 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 53 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 54 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 56 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 57 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 59 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 60 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 62 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 63 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 65 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 66 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 68 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 69 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 71 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 72 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 74 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 75 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 77 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 78 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 80 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 81 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 83 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 84 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 86 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 87 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 89 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 90 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 92 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 93 Billy Tables
+2020-02-12 10:23:38 INFO  CustomerController:33 - 95 One!
+2020-02-12 10:23:38 INFO  CustomerController:33 - 96 Billy Tables
+2020-02-12 10:23:44 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:23:46 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:23:46 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:23:46 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:23:46 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:23:46 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:23:47 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:23:47 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:23:47 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:23:47 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:23:47 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:23:47 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:23:47 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:23:48 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:23:50 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:23:50 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:51 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:23:51 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:23:52 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:53 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:23:53 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:23:54 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:54 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:23:56 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:23:56 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:23:57 INFO  MysqlOrderDao:77 - Added order: com.qa.imssobol.persistence.domain.Order@35fc6dc4
+2020-02-12 10:23:57 WARN  MysqlOrderDao:139 - Customer with ID does not exist!
+2020-02-12 10:23:57 ERROR MysqlOrderDao:50 - 
+2020-02-12 10:23:57 INFO  OrderController:82 - Order was created.
+2020-02-12 10:24:57 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:25:03 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:25:03 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:25:03 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:25:03 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:25:03 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:25:05 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:25:05 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:25:05 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:25:05 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:25:05 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:25:05 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:25:05 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:25:05 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:25:07 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:25:07 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:25:08 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:25:09 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:25:10 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:25:10 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:25:11 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:25:12 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:25:13 INFO  MysqlOrderDao:78 - Added order: com.qa.imssobol.persistence.domain.Order@351d0846
+2020-02-12 10:25:13 INFO  MysqlOrderDao:43 - Debugger ID: 3
+2020-02-12 10:25:13 WARN  MysqlOrderDao:140 - Customer with ID does not exist!
+2020-02-12 10:25:13 ERROR MysqlOrderDao:51 - 
+2020-02-12 10:25:13 INFO  OrderController:82 - Order was created.
+2020-02-12 10:45:07 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:45:09 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:45:09 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:45:09 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:45:09 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:45:09 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:45:11 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:45:11 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:45:11 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:45:11 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:45:11 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:45:11 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:45:11 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:45:14 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:45:20 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:45:22 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:45:22 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:45:22 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:45:22 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:45:22 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:45:23 INFO  Ims:44 - What would you like to do with customer:
+2020-02-12 10:45:23 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:45:23 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:45:23 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:45:23 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:45:23 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:45:23 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:45:24 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 10:45:29 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 10:45:29 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby
+2020-02-12 10:45:29 INFO  CustomerController:43 - Creation complete!
+2020-02-12 10:45:34 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:45:36 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:45:36 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:45:36 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:45:36 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:45:36 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:45:37 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 10:45:37 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:45:37 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:45:37 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:45:37 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:45:37 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:45:37 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:45:37 INFO  ItemController:30 - Please enter the name of the item.
+2020-02-12 10:45:40 INFO  ItemController:32 - What price should it have? 
+2020-02-12 10:45:41 INFO  ItemController:35 - Item created.
+2020-02-12 10:45:43 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:45:45 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:45:45 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:45:45 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:45:45 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:45:45 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:45:46 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:45:46 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:45:46 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:45:46 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:45:46 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:45:46 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:45:46 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:45:48 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:45:49 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:45:49 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:45:50 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:45:51 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:45:52 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:45:53 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:45:53 INFO  MysqlOrderDao:43 - Debugger ID: 1
+2020-02-12 10:45:53 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:45:53 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:45:53 INFO  OrderController:82 - Order was created.
+2020-02-12 10:47:47 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:48:01 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:48:01 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:48:01 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:48:01 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:48:01 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:48:03 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:48:03 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:48:03 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:48:03 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:48:03 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:48:03 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:48:03 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:48:09 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@6b1274d2
+2020-02-12 10:48:13 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:48:14 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:48:14 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:48:14 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:48:14 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:48:14 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:48:18 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:48:18 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:48:18 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:48:18 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:48:18 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:48:18 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:48:18 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:48:20 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:48:21 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:48:21 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:48:22 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:48:22 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:48:24 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:48:25 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:48:25 INFO  MysqlOrderDao:43 - Debugger ID: 2
+2020-02-12 10:48:25 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:48:25 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:48:25 INFO  OrderController:82 - Order was created.
+2020-02-12 10:52:50 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:52:52 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:52:52 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:52:52 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:52:52 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:52:52 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:52:54 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:52:54 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:52:54 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:52:54 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:52:54 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:52:54 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:52:54 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:52:56 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:52:57 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:52:57 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:52:57 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:52:58 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:53:00 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:53:01 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:53:01 INFO  MysqlOrderDao:43 - Debugger ID: 3
+2020-02-12 10:53:01 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:53:01 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:53:01 INFO  OrderController:82 - Order was created.
+2020-02-12 10:55:05 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:55:07 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:55:07 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:55:07 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:55:07 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:55:07 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:55:09 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:55:09 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:55:09 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:55:09 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:55:09 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:55:09 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:55:09 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:55:10 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:55:11 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:55:11 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:55:11 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:55:12 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:55:13 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:55:14 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:55:14 INFO  MysqlOrderDao:43 - Debugger ID: 4
+2020-02-12 10:55:14 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:55:14 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:55:14 INFO  OrderController:82 - Order was created.
+2020-02-12 10:56:34 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:56:36 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:56:36 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:56:36 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:56:36 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:56:36 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:56:37 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:56:37 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:56:37 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:56:37 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:56:37 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:56:37 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:56:37 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:56:38 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:56:39 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:56:39 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:56:39 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:56:40 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:56:41 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:56:42 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:56:42 INFO  MysqlOrderDao:43 - Debugger ID: 5
+2020-02-12 10:56:42 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:56:42 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:56:42 INFO  OrderController:82 - Order was created.
+2020-02-12 10:57:12 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:57:27 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:57:27 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:57:27 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:57:27 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:57:27 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:57:29 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:57:29 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:57:29 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:57:29 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:57:29 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:57:29 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:57:29 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:57:31 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 10:57:32 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:57:32 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:57:32 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:57:33 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:57:34 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:57:35 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 10:57:35 INFO  MysqlOrderDao:43 - Debugger ID: 6
+2020-02-12 10:57:35 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:57:35 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:57:35 INFO  OrderController:82 - Order was created.
+2020-02-12 10:59:24 INFO  Loginner:13 - What is your password? 
+2020-02-12 10:59:26 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 10:59:26 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 10:59:26 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 10:59:26 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 10:59:26 INFO  Domain:28 - STOP: To close the application
+2020-02-12 10:59:27 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 10:59:27 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 10:59:27 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 10:59:27 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 10:59:27 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 10:59:27 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 10:59:27 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 10:59:29 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-12 10:59:29 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-12 10:59:32 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 10:59:32 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:59:33 INFO  OrderController:48 - Item ID: 
+2020-02-12 10:59:35 INFO  OrderController:58 - How many of this item? 
+2020-02-12 10:59:38 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 10:59:39 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 10:59:39 ERROR MysqlOrderDao:12 - 
+2020-02-12 10:59:39 INFO  OrderController:95 - Order was updated.
+2020-02-12 11:00:49 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:00:51 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:00:51 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:00:51 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:00:51 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:00:51 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:00:52 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 11:00:52 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:00:52 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:00:52 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:00:52 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:00:52 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:00:52 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:00:53 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 11:00:54 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 11:00:54 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 11:00:55 INFO  OrderController:48 - Item ID: 
+2020-02-12 11:00:55 INFO  OrderController:58 - How many of this item? 
+2020-02-12 11:00:56 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 11:00:58 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 11:00:58 INFO  MysqlOrderDao:43 - Debugger ID: 7
+2020-02-12 11:00:58 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 11:00:58 ERROR MysqlOrderDao:12 - 
+2020-02-12 11:00:58 INFO  OrderController:82 - Order was created.
+2020-02-12 11:02:30 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:02:32 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:02:32 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:02:32 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:02:32 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:02:32 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:02:34 INFO  Ims:44 - What would you like to do with item:
+2020-02-12 11:02:34 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:02:34 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:02:34 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:02:34 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:02:34 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:02:34 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:02:36 INFO  ItemController:30 - Please enter the name of the item.
+2020-02-12 11:02:38 INFO  ItemController:32 - What price should it have? 
+2020-02-12 11:02:40 INFO  ItemController:35 - Item created.
+2020-02-12 11:02:41 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:02:43 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:02:43 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:02:43 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:02:43 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:02:43 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:02:44 INFO  Ims:44 - What would you like to do with customer:
+2020-02-12 11:02:44 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:02:44 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:02:44 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:02:44 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:02:44 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:02:44 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:02:46 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:02:48 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 11:02:48 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby
+2020-02-12 11:02:48 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:02:50 INFO  Loginner:13 - What is your password? 
+2020-02-12 11:02:53 INFO  Ims:40 - Which entity would you like to use? 
+2020-02-12 11:02:53 INFO  Domain:28 - CUSTOMER: Information about customers
+2020-02-12 11:02:53 INFO  Domain:28 - ITEM: Individual Items
+2020-02-12 11:02:53 INFO  Domain:28 - ORDER: Purchases of items
+2020-02-12 11:02:53 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:02:55 INFO  Ims:44 - What would you like to do with order:
+2020-02-12 11:02:55 INFO  Action:39 - CREATE: To save a new item into the database
+2020-02-12 11:02:55 INFO  Action:39 - READALL: To read all items from the database
+2020-02-12 11:02:55 INFO  Action:39 - READ: To read an item from the database
+2020-02-12 11:02:55 INFO  Action:39 - UPDATE: To change an item already in the database
+2020-02-12 11:02:55 INFO  Action:39 - DELETE: To remove an item from the database
+2020-02-12 11:02:55 INFO  Action:39 - RETURN: To return to domain selection
+2020-02-12 11:02:55 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-12 11:02:57 INFO  OrderController:39 - At any point, type in (Q) to Quit.
+2020-02-12 11:02:57 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 11:02:57 INFO  OrderController:48 - Item ID: 
+2020-02-12 11:02:58 INFO  OrderController:58 - How many of this item? 
+2020-02-12 11:03:00 INFO  OrderController:42 - To continue, press any key. To quit, (Q)uit.
+2020-02-12 11:03:01 INFO  MysqlOrderDao:79 - Added order: com.qa.imssobol.persistence.domain.Order@4450d156
+2020-02-12 11:03:01 INFO  MysqlOrderDao:43 - Debugger ID: 1
+2020-02-12 11:03:01 ERROR MysqlOrderDao:11 - Column 'id' not found.
+2020-02-12 11:03:01 ERROR MysqlOrderDao:12 - 
+2020-02-12 11:03:01 INFO  OrderController:82 - Order was created.

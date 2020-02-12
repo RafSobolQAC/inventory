@@ -23,7 +23,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 	private static final String DELETE = "DELETE FROM customers WHERE id=?";
 	private static final String READALL = "SELECT * FROM customers";
 
-	public MysqlCustomerDao(Connection connection) throws SQLException {
+	public MysqlCustomerDao(Connection connection) {
 		this.connection = connection;
 	}
 	public Customer readLatest() {
