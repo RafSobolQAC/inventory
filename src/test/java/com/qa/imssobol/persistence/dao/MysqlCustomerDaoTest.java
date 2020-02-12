@@ -20,9 +20,9 @@ import org.mockito.junit.MockitoJUnitRunner;
 import com.qa.imssobol.persistence.domain.Customer;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CustomerDaoTest {
+public class MysqlCustomerDaoTest {
 	
-	public static final Logger LOGGER = Logger.getLogger(CustomerDaoTest.class);
+	public static final Logger LOGGER = Logger.getLogger(MysqlCustomerDaoTest.class);
 
 	private Customer customer;
 	private static Connection conn;
@@ -49,7 +49,7 @@ public class CustomerDaoTest {
 	}
 
 	@Test
-	public void customerDaoAddTest() throws SQLException {
+	public void customerDaoAddTest() {
 		customer.setName("One!");
 		Customer otherCustomer = new Customer("One!");
 		custDao.create(customer);
@@ -58,12 +58,12 @@ public class CustomerDaoTest {
 	}
 
 	@Test
-	public void customerDaoReadByIntTest() throws SQLException {
+	public void customerDaoReadByIdTest() {
 		assertEquals(null, custDao.readById(1000000).getName());
 	}
 	
 	@Test
-	public void customerUpdateTest() {
+	public void customerDaoUpdateTest() {
 		custDao.create(new Customer("Bobby Tables"));
 		ArrayList<Customer> customers = custDao.readAll();
 		int idLast = customers.get(customers.size()-1).getId();
@@ -73,11 +73,12 @@ public class CustomerDaoTest {
 	
 	
 	@Test
-	public void customerDeleteTest() {
+	public void customerDaoDeleteTest() {
 		custDao.create(new Customer("Bobby T."));
 		ArrayList<Customer> customers = custDao.readAll();
 		int idLast = customers.get(customers.size()-1).getId();
 		assertTrue(custDao.delete(idLast));
 	}
+	
 
 }

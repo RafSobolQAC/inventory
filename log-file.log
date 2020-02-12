@@ -2283,3 +2283,81 @@
 2020-02-12 15:48:24 INFO  CustomerController:39 - Please enter a first name
 2020-02-12 15:48:24 INFO  CustomerController:41 - Customer being created. 
 2020-02-12 15:48:24 INFO  CustomerController:43 - Creation complete!
+2020-02-12 15:50:28 INFO  CustomerController:33 - -1 Chris
+2020-02-12 15:50:28 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 15:50:28 INFO  CustomerController:33 - -1 Nic
+2020-02-12 15:50:28 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 15:50:28 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 15:50:28 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 15:50:28 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 15:50:28 INFO  CustomerController:53 - Update complete!
+2020-02-12 15:50:28 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 15:50:28 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 15:50:28 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:35:37 INFO  CustomerController:33 - -1 Chris
+2020-02-12 16:35:37 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 16:35:37 INFO  CustomerController:33 - -1 Nic
+2020-02-12 16:35:37 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:35:37 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:35:37 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 16:35:37 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 16:35:37 INFO  CustomerController:53 - Update complete!
+2020-02-12 16:35:37 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 16:35:37 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 16:35:37 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:36:44 INFO  CustomerController:33 - -1 Chris
+2020-02-12 16:36:44 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 16:36:44 INFO  CustomerController:33 - -1 Nic
+2020-02-12 16:36:44 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:36:44 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:36:44 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 16:36:44 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 16:36:44 INFO  CustomerController:53 - Update complete!
+2020-02-12 16:36:44 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 16:36:44 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 16:36:44 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:36:51 INFO  CustomerController:33 - -1 Chris
+2020-02-12 16:36:51 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 16:36:51 INFO  CustomerController:33 - -1 Nic
+2020-02-12 16:36:51 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:36:51 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:36:51 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 16:36:51 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 16:36:51 INFO  CustomerController:53 - Update complete!
+2020-02-12 16:36:51 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 16:36:51 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 16:36:51 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:36:52 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 16:36:52 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 16:36:52 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 16:36:52 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 16:51:18 INFO  CustomerController:33 - -1 Chris
+2020-02-12 16:51:18 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 16:51:18 INFO  CustomerController:33 - -1 Nic
+2020-02-12 16:51:18 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:51:18 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:51:18 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 16:51:18 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 16:51:18 INFO  CustomerController:53 - Update complete!
+2020-02-12 16:51:18 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 16:51:18 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 16:51:18 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:51:19 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 16:51:19 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 16:51:19 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 16:51:19 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 16:54:08 INFO  CustomerController:33 - -1 Chris
+2020-02-12 16:54:08 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 16:54:08 INFO  CustomerController:33 - -1 Nic
+2020-02-12 16:54:08 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:54:08 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 16:54:08 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 16:54:08 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 16:54:08 INFO  CustomerController:53 - Update complete!
+2020-02-12 16:54:08 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 16:54:08 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 16:54:08 INFO  CustomerController:43 - Creation complete!
+2020-02-12 16:54:09 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 16:54:09 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 16:54:09 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 16:54:09 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables

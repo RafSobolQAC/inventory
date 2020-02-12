@@ -35,6 +35,11 @@ public class CustomerControllerTest {
 	private CustomerController customerController;
 
 	@Test
+	public void getInputTest() {
+		Mockito.doReturn("TestInput").when(customerController).getInput();
+		assertEquals("TestInput",customerController.getInput());
+	}
+	@Test
 	public void readAllTest() {
 		CustomerController customerController = new CustomerController(customerService);
 		List<Customer> customers = new ArrayList<>();
