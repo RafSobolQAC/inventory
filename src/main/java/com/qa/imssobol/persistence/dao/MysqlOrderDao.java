@@ -36,9 +36,11 @@ public class MysqlOrderDao implements Dao<Order> {
 		return this.connection;
 	}
 	public Order readLatest() {
+		System.out.println("Here!");
 		try (Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
+				System.out.println("Next?");
 				int id = resultSet.getInt("id");
 				LOGGER.info("Debugger ID: "+id);
 				return readById(id);
@@ -64,11 +66,7 @@ public class MysqlOrderDao implements Dao<Order> {
 			ps.setBigDecimal(2, t.getPrice());
 
 			ps.executeUpdate();
-			int lastId = 0;
-			resultSet = getLastps.executeQuery();
-			if (resultSet.next()) {
-				lastId = resultSet.getInt("id");
-			}
+			int lastId = readLatest().getId();
 			for (Item item : t.getItems().keySet()) {
 				ps2.setInt(1, lastId);
 				ps2.setInt(2, item.getId());
@@ -89,18 +87,14 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 		}
 
-		return null;
+		return t;
 
 	}
 
 	@Override
 	public ArrayList<Order> readAll() {
-		ResultSet resultSet = null;
 		ArrayList<Order> orders = new ArrayList<Order>();
-		try (Statement statement = connection.createStatement()) {
-//			Statement statement = connection.createStatement();
-//			ResultSet resultSet = statement.executeQuery(READALL);
-					resultSet = statement.executeQuery(READALL);
+		try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(READALL);) {
 			while (resultSet.next()) {
 				Order order = new Order();
 				int id = resultSet.getInt("id");
@@ -113,12 +107,6 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} finally {
-			try {
-				if (resultSet != null)
-					resultSet.close();
-			} catch (Exception e) {
-			}
 		}
 		return orders;
 
