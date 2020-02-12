@@ -1,4 +1,4 @@
-package com.qa.sobolinventory;
+package com.qa.persistence.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import com.qa.persistence.dao.MysqlCustomerDao;
 import com.qa.persistence.domain.Customer;
+import com.qa.sobolinventory.Connector;
 
 public class CustomerTest {
 	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
@@ -83,13 +84,15 @@ public class CustomerTest {
 	@Test
 	public void customerDaoAddTest() throws SQLException {
 		customer.setName("One!");
-		assertTrue(custDao.create(customer));
+		Customer otherCustomer = new Customer("One!");
+		custDao.create(customer);
+		assertEquals(otherCustomer.getName(),custDao.readLatest().getName());
 
 	}
 
 	@Test
 	public void customerDaoReadByIntTest() throws SQLException {
-		assertEquals(null, custDao.readById(100000).getName());
+		assertEquals(null, custDao.readById(1000000).getName());
 	}
 	
 	@Test

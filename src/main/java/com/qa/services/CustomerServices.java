@@ -17,16 +17,21 @@ public class CustomerServices implements CrudServices<Customer> {
 		return customerDao.readAll();
 	}
 
-	public void create(Customer customer) {
-		customerDao.create(customer);
+	public Customer create(Customer customer) {
+		return customerDao.create(customer);
 	}
 
-	public void update(int id, Customer t) {
-		
+	public Customer update(int id, Customer t) {
+		return customerDao.update(id, t);
 	}
 
-	public void delete(Customer t) {
-		
+	public boolean delete(int id) {
+		return customerDao.delete(id);
+	}
+
+	@Override
+	public Customer readById(int id) {
+		return customerDao.readById(id);
 	}
 
 }
