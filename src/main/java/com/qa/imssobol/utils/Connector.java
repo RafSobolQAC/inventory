@@ -12,6 +12,14 @@ public class Connector {
 	private Loginner loginner;
 	private Login login;
 	public static final Logger LOGGER = Logger.getLogger(Connector.class);
+	
+	public Connector() throws SQLException {
+		try {
+			this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
+		} catch (SQLException e) {
+			Utils.exceptionLogger(e, LOGGER);
+		}
+	}
 
 	public Connector(String url) throws SQLException {
 		password = System.getProperty("env.PWD");
@@ -19,7 +27,7 @@ public class Connector {
 			if (password == null) {
 				login = new Login();
 				loginner = new Loginner(login);
-				loginner.LogIn();
+				loginner.logIn();
 				password = login.getPassword();
 			}
 			try {

@@ -1795,3 +1795,236 @@
 2020-02-12 11:48:18 INFO  Domain:28 - ITEM: Individual Items
 2020-02-12 11:48:18 INFO  Domain:28 - ORDER: Purchases of items
 2020-02-12 11:48:18 INFO  Domain:28 - STOP: To close the application
+2020-02-12 11:55:54 INFO  CustomerController:33 - -1 Chris
+2020-02-12 11:55:54 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 11:55:54 INFO  CustomerController:33 - -1 Nic
+2020-02-12 11:55:54 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 11:55:54 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 11:55:54 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 11:55:54 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 11:55:54 INFO  CustomerController:53 - Update complete!
+2020-02-12 11:55:54 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 11:55:54 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 11:55:54 INFO  CustomerController:43 - Creation complete!
+2020-02-12 11:55:54 INFO  Loginner:13 - What is your password? 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:43 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:23 - No database selected
+2020-02-12 13:30:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:03 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:03 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:40 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:38:40 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:38:40 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:03 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:03 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:03 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:55 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:40:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:40:55 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:41:55 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:41:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:41:55 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:24 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:23 - Parameter index out of range (1 > number of parameters, which is 0).
+2020-02-12 13:44:24 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:24 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:33 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:44:33 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:44:33 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:47:32 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:47:32 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:47:32 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:47 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:47 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:47 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:55 WARN  MysqlCustomerDao:38 - There is no customer yet!
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:22 - Error in Utils.exceptionLogger: 
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:23 - Unknown column 'name' in 'field list'
+2020-02-12 13:48:55 ERROR MysqlCustomerDao:24 - 
+2020-02-12 13:48:55 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:52:29 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 13:52:29 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 13:52:29 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 13:52:29 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:52:47 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 13:52:47 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 13:52:47 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 13:52:47 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:52:47 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:52:47 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:52:47 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:52:47 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:52:47 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:52:47 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:52:47 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:52:47 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:52:47 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:52:47 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:52:47 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:52:47 INFO  Loginner:13 - What is your password? 
+2020-02-12 13:53:06 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 13:53:06 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 13:53:06 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 13:53:06 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:53:06 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:53:06 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:53:06 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:53:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:53:06 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:53:06 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:53:06 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:53:06 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:53:06 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:53:06 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:53:06 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:53:06 INFO  Loginner:13 - What is your password? 
+2020-02-12 13:54:47 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:54:47 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:54:47 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:54:50 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:54:50 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:54:50 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:54:50 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:54:50 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:54:50 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:54:50 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:54:50 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:54:50 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:54:50 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:54:50 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:54:55 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:54:55 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:54:55 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:54:55 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:54:55 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:54:55 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:54:55 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:54:55 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:54:55 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:54:55 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:54:55 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:55:03 INFO  Loginner:13 - What is your password? 
+2020-02-12 13:55:49 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 13:55:49 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 13:55:49 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 13:55:49 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:55:49 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:55:49 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:55:49 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:55:49 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:55:49 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:55:49 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:55:49 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:55:49 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:55:49 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:55:49 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:55:49 INFO  CustomerController:43 - Creation complete!
+2020-02-12 13:56:34 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby T.
+2020-02-12 13:56:34 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-12 13:56:34 INFO  MysqlCustomerDao:55 - Added customer: -1 Bobby Tables
+2020-02-12 13:56:34 WARN  MysqlCustomerDao:77 - Customer with ID does not exist!
+2020-02-12 13:56:34 INFO  CustomerController:33 - -1 Chris
+2020-02-12 13:56:34 INFO  CustomerController:33 - -1 Rhys
+2020-02-12 13:56:34 INFO  CustomerController:33 - -1 Nic
+2020-02-12 13:56:34 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:56:34 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-12 13:56:34 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-12 13:56:34 INFO  CustomerController:50 - What's their new name? 
+2020-02-12 13:56:34 INFO  CustomerController:53 - Update complete!
+2020-02-12 13:56:34 INFO  CustomerController:39 - Please enter a first name
+2020-02-12 13:56:34 INFO  CustomerController:41 - Customer being created. 
+2020-02-12 13:56:34 INFO  CustomerController:43 - Creation complete!

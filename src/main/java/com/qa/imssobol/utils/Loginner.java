@@ -8,7 +8,7 @@ public class Loginner {
 	public Loginner(Login login) {
 		this.login = login;
 	}
-	public void LogIn() {
+	public void logIn() {
 
 		LOGGER.info("What is your password? ");
 
