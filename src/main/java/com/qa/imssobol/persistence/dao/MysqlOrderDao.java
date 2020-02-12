@@ -134,9 +134,7 @@ public class MysqlOrderDao implements Dao<Order> {
 			}
 
 		} catch (SQLException e) {
-
-			LOGGER.warn(e.getMessage());
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 		} finally {
 			try {
 				if (resultSet != null)
