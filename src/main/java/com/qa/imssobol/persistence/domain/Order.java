@@ -15,7 +15,7 @@ public class Order {
 		this.id = id;
 		this.customerId = customerId;
 		this.items = items;
-		this.price = getPrice(); 
+		this.price = calcPrice(); 
 	}
 	
 	public Order() {
@@ -27,7 +27,7 @@ public class Order {
 	public Order(int customerId, Map<Item,Integer> items) {
 		this.customerId = customerId;
 		this.items = items;
-		this.price = getPrice();
+		this.price = calcPrice();
 		this.id = -1;
 	}
 	
@@ -40,13 +40,17 @@ public class Order {
 		this.id = id;
 	}
 
-	public BigDecimal getPrice() {
+	public BigDecimal calcPrice() {
 		BigDecimal runningTotal = new BigDecimal(0);
 		for (Item item : items.keySet()) {
 			
 			runningTotal = runningTotal.add(item.getPrice().multiply(new BigDecimal(items.get(item))));
 		}
-		this.price = (runningTotal.compareTo(new BigDecimal(10000))> 0) ? runningTotal.multiply(BigDecimal.valueOf(0.9)) : runningTotal; 
+		runningTotal = (runningTotal.compareTo(new BigDecimal(10000))> 0) ? runningTotal.multiply(BigDecimal.valueOf(0.9)) : runningTotal; 
+		return runningTotal;
+	}
+	
+	public BigDecimal getPrice() {
 		return price;
 	}
 
@@ -68,6 +72,43 @@ public class Order {
 
 	public void setItems(Map<Item,Integer> items) {
 		this.items = items;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + customerId;
+		result = prime * result + id;
+		result = prime * result + ((items == null) ? 0 : items.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		if (customerId != other.customerId)
+			return false;
+		if (id != other.id)
+			return false;
+		if (items == null) {
+			if (other.items != null)
+				return false;
+		} else if (!items.equals(other.items))
+			return false;
+		if (price == null) {
+			if (other.price != null)
+				return false;
+		} else if (!price.equals(other.price))
+			return false;
+		return true;
 	}
 	
 	

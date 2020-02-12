@@ -6,12 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
 
-import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
 public class ItemTest {
-	public static final Logger LOGGER = Logger.getLogger(ItemTest.class);
 	
 	private Item item;
 	private Item other;

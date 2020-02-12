@@ -6,14 +6,10 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.sql.SQLException;
-
-import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CustomerTest {
-	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
 
 	private Customer customer;
 	private Customer other;
