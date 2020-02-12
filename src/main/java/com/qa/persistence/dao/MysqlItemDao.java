@@ -24,10 +24,10 @@ public class MysqlItemDao implements Dao<Item> {
 	private static final String DELETE = "DELETE FROM items WHERE id=?";
 	private static final String READALL = "SELECT * FROM items";
 
-	public MysqlItemDao(Connection connection) throws SQLException {
+	public MysqlItemDao(Connection connection) {
 		this.connection = connection;
 	}
-	
+
 	public Item readLatest() {
 		Item item = new Item();
 		try (Statement statement = connection.createStatement();
@@ -39,15 +39,14 @@ public class MysqlItemDao implements Dao<Item> {
 				return item;
 			} else {
 				LOGGER.warn("There is no order yet!");
-				
+
 			}
 		} catch (Exception e) {
 			Utils.exceptionLogger(e, LOGGER);
-			
+
 		}
 		return null;
 	}
-
 
 	@Override
 	public Item create(Item t) {
@@ -57,25 +56,21 @@ public class MysqlItemDao implements Dao<Item> {
 			ps.setBigDecimal(2, t.getPrice());
 
 			ps.executeUpdate();
-//			ps.close();
 
-			System.out.println("Added item: " + t.toString());
 			return readLatest();
-			
+
 		} catch (SQLException e) {
 
 			Utils.exceptionLogger(e, LOGGER);
 		}
 		return null;
 	}
-	
-	
+
 	@Override
 	public Item readById(int id) {
 		Item item = null;
 		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
-//			PreparedStatement ps = connection.prepareStatement(READBYID);
 
 			ps.setInt(1, id);
 			resultSet = ps.executeQuery();
@@ -86,26 +81,25 @@ public class MysqlItemDao implements Dao<Item> {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 		} finally {
 			try {
 				if (resultSet != null)
 					resultSet.close();
 			} catch (Exception e) {
+				Utils.exceptionLogger(e, LOGGER);
 			}
-			;
+			
 		}
 		return item;
 	}
 
 	@Override
 	public ArrayList<Item> readAll() {
-		ArrayList<Item> items = new ArrayList<Item>();
+		ArrayList<Item> items = new ArrayList<>();
 		ResultSet resultSet = null;
 		try (Statement statement = connection.createStatement()) {
-//			Statement statement = connection.createStatement();
-//			ResultSet resultSet = statement.executeQuery(READALL);
-					resultSet = statement.executeQuery(READALL);
+			resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
@@ -113,15 +107,16 @@ public class MysqlItemDao implements Dao<Item> {
 				items.add(new Item(id, name, price));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 		} finally {
 			try {
 				if (resultSet != null)
 					resultSet.close();
 			} catch (Exception e) {
+				Utils.exceptionLogger(e, LOGGER);
 			}
-			;
-		}		return items;
+		}
+		return items;
 	}
 
 	@Override
@@ -134,11 +129,10 @@ public class MysqlItemDao implements Dao<Item> {
 
 			ps.executeUpdate();
 
-			System.out.println("Item with id " + id + " got updated: " + t.toString());
 			return readById(id);
 
 		} catch (Exception e) {
-			Utils.exceptionLogger(e, LOGGER);					
+			Utils.exceptionLogger(e, LOGGER);
 		}
 		return null;
 
@@ -151,10 +145,9 @@ public class MysqlItemDao implements Dao<Item> {
 			ps.setInt(1, id);
 
 			ps.executeUpdate();
-//			ps.close();
 			return true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			Utils.exceptionLogger(e, LOGGER);
 			return false;
 		}
 

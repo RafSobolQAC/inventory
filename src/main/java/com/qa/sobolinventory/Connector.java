@@ -6,8 +6,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.apache.log4j.Logger;
+
 import com.qa.utils.Login;
 import com.qa.utils.Loginner;
+import com.qa.utils.Utils;
 
 public class Connector {
 	private Connection connection;
@@ -15,6 +18,7 @@ public class Connector {
 	private static final String CONFIG_FILE = "/app.properties";
 	private Loginner loginner;
 	private Login login;
+	public static final Logger LOGGER = Logger.getLogger(Connector.class);
 
 	public File readFileFromClasspath() {
         URL fileUrl = getClass().getResource(CONFIG_FILE);
@@ -24,9 +28,7 @@ public class Connector {
 	
 	public Connector(String url) throws SQLException {
 		password = System.getProperty("env.PWD");
-		System.out.println(System.getProperty("env.PWD"));
 		if (password == null) {
-			System.out.println("Null!");
 			login = new Login();
 			loginner = new Loginner(login);
 			loginner.LogIn();
@@ -36,7 +38,7 @@ public class Connector {
 			this.connection = DriverManager.getConnection(url, "root",
 					password);
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			Utils.exceptionLogger(e, LOGGER);
 			
 		}
 
