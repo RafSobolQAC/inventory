@@ -1,6 +1,7 @@
-package com.qa.controller;
+package com.qa.imssobol.controller;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,6 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.imssobol.controller.CustomerController;
 import com.qa.imssobol.persistence.domain.Customer;
 import com.qa.imssobol.services.CustomerServices;
 
@@ -62,8 +62,6 @@ public class CustomerControllerTest {
 		Mockito.doReturn(id).when(customerController).getIntInput();
 		Mockito.doReturn(name).when(customerController).getInput();
 		Customer customer = new Customer(name);
-//		Mockito.doReturn(customer).when(customerService).update(id,customer);
-//		customerService.update(id, new Customer(newName));
 		Mockito.when(customerService.update(id, customer)).thenReturn(customer);
 		assertEquals(customer, customerController.update());
 	}
@@ -86,7 +84,7 @@ public class CustomerControllerTest {
 		Mockito.doReturn(id).when(customerController).getIntInput();
 		customerController.delete();
 		Mockito.when(customerService.delete(id)).thenReturn(true);
-		assertEquals(true,customerController.delete());
+		assertTrue(customerController.delete());
 	}
 	
 }

@@ -66,7 +66,6 @@ public class MysqlCustomerDao implements Dao<Customer> {
 		Customer customer = null;
 		ResultSet resultSet = null;
 		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
-//			PreparedStatement ps = connection.prepareStatement(READBYID);
 
 			ps.setInt(1, id);
 			resultSet = ps.executeQuery();
@@ -86,18 +85,16 @@ public class MysqlCustomerDao implements Dao<Customer> {
 				if (resultSet != null)
 					resultSet.close();
 			} catch (Exception e) {
+				Utils.exceptionLogger(e, LOGGER);
 			}
-			;
 		}
 		return customer;
 	}
 
 	public ArrayList<Customer> readAll() {
-		ArrayList<Customer> customers = new ArrayList<Customer>();
+		ArrayList<Customer> customers = new ArrayList<>();
 		ResultSet resultSet = null;
 		try (Statement statement = connection.createStatement()){
-//			Statement statement = connection.createStatement();
-//			ResultSet resultSet = statement.executeQuery(READALL);
 			resultSet = statement.executeQuery(READALL);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
@@ -111,8 +108,8 @@ public class MysqlCustomerDao implements Dao<Customer> {
 				if (resultSet != null)
 					resultSet.close();
 			} catch (Exception e) {
+				Utils.exceptionLogger(e, LOGGER);
 			}
-			;
 		}
 
 		return customers;
@@ -125,9 +122,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			ps.setInt(2, id);
 
 			ps.executeUpdate();
-//			ps.close();
 
-			System.out.println("Customer with id " + id + " got updated: " + t.toString());
 			return readById(id);
 		} catch (Exception e) {
 			Utils.exceptionLogger(e, LOGGER);
@@ -141,7 +136,6 @@ public class MysqlCustomerDao implements Dao<Customer> {
 			ps.setInt(1, id);
 
 			ps.executeUpdate();
-//			ps.close();
 			return true;
 		} catch (Exception e) {
 			Utils.exceptionLogger(e, LOGGER);

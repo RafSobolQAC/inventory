@@ -1,4 +1,4 @@
-package com.qa.persistence.domain;
+package com.qa.imssobol.persistence.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

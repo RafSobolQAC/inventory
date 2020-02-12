@@ -32,39 +32,40 @@ public class Ims {
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
 		}
-
 	}
 
 	public void imsRunner() {
+		boolean breaker = true;
+		while (breaker) {
+			LOGGER.info("Which entity would you like to use? ");
+			Domain.printDomains();
 
-		LOGGER.info("Which entity would you like to use? ");
-		Domain.printDomains();
-
-		Domain domain = Domain.getDomain();
-		LOGGER.info("What would you like to do with " + domain.name().toLowerCase() + ":");
-
-		Action.printActions();
-		Action action = Action.getAction();
-		switch (domain) {
-		case CUSTOMER:
-			CustomerController customerController = new CustomerController(
-					new CustomerServices(new MysqlCustomerDao(connection)));
-			doAction(customerController, action);
-			break;
-		case ITEM:
-			ItemController itemController = new ItemController(
-					new ItemServices(new MysqlItemDao(connection)));
-			doAction(itemController, action);
-			break;
-		case ORDER:
-			OrderController orderController = new OrderController(
-					new OrderServices(new MysqlOrderDao(connection)));
-			doAction(orderController, action);
-			break;
-		case STOP:
-			break;
-		default:
-			break;
+			Domain domain = Domain.getDomain();
+			if (domain.name().equals("STOP")) System.exit(0);
+			LOGGER.info("What would you like to do with " + domain.name().toLowerCase() + ":");
+			Action.printActions();
+			Action action = Action.getAction();
+			
+			switch (domain) {
+			case CUSTOMER:
+				CustomerController customerController = new CustomerController(
+						new CustomerServices(new MysqlCustomerDao(connection)));
+				doAction(customerController, action);
+				break;
+			case ITEM:
+				ItemController itemController = new ItemController(new ItemServices(new MysqlItemDao(connection)));
+				doAction(itemController, action);
+				break;
+			case ORDER:
+				OrderController orderController = new OrderController(new OrderServices(new MysqlOrderDao(connection)));
+				doAction(orderController, action);
+				break;
+			case STOP:
+				breaker = false;
+				break;
+			default:
+				break;
+			}
 		}
 	}
 

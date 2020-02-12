@@ -8,33 +8,33 @@ import org.apache.log4j.Logger;
 
 public class Connector {
 	private Connection connection;
-	private String password;
+	private String password = "";
 	private Loginner loginner;
 	private Login login;
 	public static final Logger LOGGER = Logger.getLogger(Connector.class);
 
-	
 	public Connector(String url) throws SQLException {
 		password = System.getProperty("env.PWD");
-		if (password == null) {
-			login = new Login();
-			loginner = new Loginner(login);
-			loginner.LogIn();
-			password = login.getPassword();
+		while (true) {
+			if (password == null) {
+				login = new Login();
+				loginner = new Loginner(login);
+				loginner.LogIn();
+				password = login.getPassword();
+			}
+			try {
+				this.connection = DriverManager.getConnection(url, "root", password);
+				password = null;
+				break;
+			} catch (SQLException e) {
+				Utils.exceptionLogger(e, LOGGER);
+				password = null;
+			}
 		}
-		try {
-			this.connection = DriverManager.getConnection(url, "root",
-					password);
-		} catch (SQLException e) {
-			Utils.exceptionLogger(e, LOGGER);
-			
-		}
-
 	}
-	
+
 	public Connection getConnection() {
 		return this.connection;
 	}
-	
-	
+
 }
