@@ -1,40 +1,28 @@
 package com.qa.imssobol.persistence.domain;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.qa.imssobol.persistence.dao.MysqlCustomerDao;
 
 public class CustomerTest {
 	public static final Logger LOGGER = Logger.getLogger(CustomerTest.class);
 
-	private Customer customer = new Customer();
-	private MysqlCustomerDao custDao;
-	private static Connection conn;
-	@BeforeClass
-	public static void login() throws SQLException {
-		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ims", "root", "root");
-		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage());
-		}
-		
-	}
+	private Customer customer;
+	private Customer other;
 
 	@Before
-	public void init() throws SQLException {
+	public void init() {
 		
 		customer = new Customer();
-		custDao = new MysqlCustomerDao(conn);
-
+		other = new Customer();
 
 	}
 
@@ -42,19 +30,107 @@ public class CustomerTest {
 	public void customerAddTest() {
 		customer.setId(2);
 		customer.setName("TestName");
-		Customer customer2 = new Customer(2, "TestName");
-		assertEquals(customer.getId(), customer2.getId());
-		assertEquals(customer.getName(), customer2.getName());
+		other = new Customer(2,"TestName");
+		assertEquals(customer.getId(), other.getId());
+		assertEquals(customer.getName(), other.getName());
 
 	}
 
 	@Test
 	public void customerToStringTest() {
-		Customer customer2 = new Customer("NoIDTest");
-		customer2.setId(1);
-		assertEquals("1 NoIDTest", customer2.toString());
+		other = new Customer("NoIDTest");
+		other.setId(1);
+		assertEquals("1 NoIDTest", other.toString());
+	}
+	@Test
+	public void settersTest() {		
+		customer.setId(-1);
+		assertEquals(-1,customer.getId());
+		customer.setName(null);
+		assertNull(customer.getName());
+
+		
+	}
+	
+	@Test
+	public void equalsWithNull() {
+		assertFalse(customer.equals(null));
+	}
+	
+	@Test
+	public void equalsWithDifferentObject() {
+		assertFalse(customer.equals(new Object()));
+	}
+	
+
+	
+	@Test
+	public void checkEquality() {
+		assertTrue(customer.equals(customer));
+	}
+	
+	@Test
+	public void checkEqualityBetweenDifferentObjects() {
+		assertTrue(customer.equals(other));
+	}
+	
+	
+	@Test
+	public void customerNamesNotEqual() {
+		other.setName("rhys");
+		assertFalse(customer.equals(other));
+	}
+	
+	@Test
+	public void checkEqualityBetweenDifferentObjectsNullName() {
+		customer.setName(null);
+		assertTrue(customer.equals(other));
+	}
+	
+	@Test
+	public void someId() {
+		customer.setId(100);
+		assertFalse(customer.equals(other));
+	}
+	
+	@Test
+	public void zeroIdOnBoth() {
+		customer.setId(0);
+		other.setId(0);
+		assertTrue(customer.equals(other));
+	}
+		
+	
+	@Test
+	public void constructorWithoutId() {
+		Customer customer = new Customer("Chris");
+		assertNotNull(customer.getName());
+	}
+	
+	@Test
+	public void hashCodeTest() {
+		assertEquals(customer.hashCode(), other.hashCode());
+	}
+	@Test
+	public void hashCodeTestWithNull() {
+		customer = new Customer(0, null);
+		other = new Customer(0, null);
+		assertEquals(customer.hashCode(), other.hashCode());
+	}
+	
+	@Test
+	public void equalsOneNull() {
+		customer = new Customer(0,null);
+		other = new Customer(0,"NotNull");
+		assertFalse(customer.equals(other));
 	}
 
+	@Test
+	public void equalsBothDifferent() {
+		customer = new Customer(0,"A");
+		other = new Customer(0,"B");
+		assertFalse(customer.equals(other));
+	}
 //	@Test
 //	public void customerDaoTest() {
 //		try {
