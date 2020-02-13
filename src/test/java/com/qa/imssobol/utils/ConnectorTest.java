@@ -15,6 +15,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.powermock.api.mockito.PowerMockito;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ConnectorTest {
@@ -56,14 +57,26 @@ public class ConnectorTest {
 				Mockito.<String>any());
 	}
 	
-//	@Test
-//	public void setUpConnectorNullPwdTest() throws SQLException {
-//		Mockito.when(mockConnector.getSystemPwd()).thenReturn(null);
-//		Mockito.doReturn("PWD").when(mockLoginner).logIn();
-//		
-//		mockConnector.setUpConnector();
-//		Mockito.verify(mockConnector,Mockito.times(1)).setUpConnection(Mockito.<String>any(), Mockito.<String>any(),
-//				Mockito.<String>any());
-//
-//	}
+	
+	@Test
+	public void setUpConnectorNullPwdTest() throws Exception {
+		Mockito.when(mockConnector.getSystemPwd()).thenReturn(null);
+		Mockito.doReturn(mockLoginner).when(mockConnector).getLoginner();
+		Mockito.doReturn("PWD").when(mockLoginner).logIn();
+		Mockito.doReturn(mockConn).when(mockConnector).setUpConnection(Mockito.<String>any(), Mockito.<String>any(),
+				Mockito.<String>any());
+
+		mockConnector.setUpConnector();
+		Mockito.verify(mockConnector,Mockito.times(1)).setUpConnector();
+
+	}
+	@Test(expected = SQLException.class)
+	public void setUpConnectorSQLExceptionTest() throws SQLException {
+		Mockito.when(mockConnector.getSystemPwd()).thenReturn("PWD");
+		Mockito.doThrow(SQLException.class).when(mockConnector).setUpConnection(Mockito.<String>any(), Mockito.<String>any(),
+				Mockito.<String>any());
+
+		mockConnector.setUpConnector();
+	}
+
 }
