@@ -55,7 +55,7 @@ public class MysqlOrderDao implements Dao<Order> {
 				LOGGER.warn("There is no order yet!");
 			}
 
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
 		}
@@ -150,9 +150,7 @@ public class MysqlOrderDao implements Dao<Order> {
 						itemQuants.put(itemToAdd, resultSet2.getInt("quantity"));
 					}
 					order = order.setItems(itemQuants);
-				} catch (SQLException e) {
-					throw e;
-				}
+				} 
 			} else {
 				LOGGER.warn("Order with ID does not exist!");
 				throw new IllegalArgumentException();

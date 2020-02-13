@@ -49,6 +49,9 @@ public class ItemControllerTest {
 		ItemController itemController = new ItemController(itemService);
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("A",price));
+		items.add(new Item("B",price));
+		items.add(new Item("C",price));
+		items.add(new Item("D",price));
 		Mockito.when(itemService.readAll()).thenReturn(items);
 		assertEquals(items, itemController.readAll());
 	}

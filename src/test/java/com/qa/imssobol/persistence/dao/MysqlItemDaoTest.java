@@ -100,6 +100,13 @@ public class MysqlItemDaoTest {
 		itemDaoMock.readLatest();
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
+	@Test
+	public void itemDaoReadLatestNoItemTest() throws SQLException {
+		when(mockRs.next()).thenReturn(false);
+		itemDaoMock.readLatest();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+
+	}
 
 	@Test
 	public void itemDaoReadAllTest() throws SQLException {
@@ -115,7 +122,8 @@ public class MysqlItemDaoTest {
 
 	@Test
 	public void itemDaoUpdateTest() {
-		assertEquals(other,itemDaoMock.update(1, other));
+		
+		assertEquals(other,itemDaoMock.update(1, item));
 		
 	}
 	@Test

@@ -18,6 +18,10 @@ public class Connector {
 		return System.getProperty("env.PWD");
 	}
 
+	public Loginner getLoginner() {
+		return new Loginner();
+	}
+	
 	public Connector(String url) {
 		this.url = url;
 	}
@@ -31,7 +35,7 @@ public class Connector {
 		pd = getSystemPwd();
 		while (true) {
 			if (pd == null) {
-				loginner = new Loginner();
+				loginner = getLoginner();
 				pd = loginner.logIn();
 			}
 			try {
@@ -41,6 +45,7 @@ public class Connector {
 			} catch (SQLException e) {
 				Utils.exceptionLogger(e, LOGGER);
 				pd = null;
+				throw e;
 			}
 		}
 

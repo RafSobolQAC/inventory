@@ -134,4 +134,10 @@ public class OrderTest {
 		other.setId(1);
 		assertEquals(order,other);
 	}
+	
+	@Test
+	public void toStringTest() {
+		order = new Order(1,1,new HashMap<Item,Integer>());
+		assertEquals("Order [id=1, price=0, customerId=1, items={}]",order.toString());
+	}
 }

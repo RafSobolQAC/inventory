@@ -134,6 +134,12 @@ public class MysqlOrderDaoTest {
 		orderDaoMock.readLatest();
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
+	@Test
+	public void orderDaoReadLatestNoOrderTest() throws SQLException {
+		Mockito.doReturn(false).when(mockRs).next();
+		orderDaoMock.readLatest();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
 
 	@Test
 	public void orderDaoReadByIdTest() throws SQLException {

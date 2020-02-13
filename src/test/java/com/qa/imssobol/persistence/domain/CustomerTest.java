@@ -9,6 +9,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.qa.ims.persistence.domain.Customer;
+
 public class CustomerTest {
 
 	private Customer customer;
@@ -109,8 +111,8 @@ public class CustomerTest {
 	}
 	@Test
 	public void hashCodeTestWithNull() {
-		customer = new Customer(0, null);
-		other = new Customer(0, null);
+		Customer customer = new Customer(-1, null);
+		Customer other = new Customer(-1, null);
 		assertEquals(customer.hashCode(), other.hashCode());
 	}
 	
