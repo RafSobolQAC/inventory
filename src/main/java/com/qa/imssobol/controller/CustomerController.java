@@ -58,6 +58,7 @@ public class CustomerController implements CrudController<Customer>{
 		LOGGER.info("Please enter the id of the customer you would like to delete");
 		int id = getIntInput();
 		boolean wasDeleted = customerService.delete(id);
+		LOGGER.info("Customer was deleted!");
 		return wasDeleted;
 
 	}

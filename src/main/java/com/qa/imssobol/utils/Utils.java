@@ -6,16 +6,18 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.qa.imssobol.persistence.dao.MysqlCustomerDao;
-
 public class Utils {
-	
-	
+
 	public static final Logger LOGGER = Logger.getLogger(Utils.class);
+
+	private Utils() {
+		throw new IllegalStateException("Utility class");
+	}
 
 	/**
 	 * Returns standard messages in case of an exception.
-	 * @param e exception
+	 * 
+	 * @param e      exception
 	 * @param LOGGER logger of class in which this method is ran
 	 */
 	public static void exceptionLogger(Exception e, Logger LOGGER) {
@@ -24,17 +26,17 @@ public class Utils {
 		LOGGER.error(e.getCause());
 		LOGGER.debug(e.getStackTrace());
 	}
-	
-	
+
 	public static String getPassword() {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		return scanner.nextLine();
 	}
-	
+
 	/**
-	 * Takes in user input of a string and returns it.
-	 * Only accepts alphanumerics and .
+	 * Takes in user input of a string and returns it. Only accepts alphanumerics
+	 * and .
+	 * 
 	 * @return string, alphanumerics and .
 	 */
 	public static String getInput() {
@@ -52,6 +54,7 @@ public class Utils {
 
 	/**
 	 * Takes in user input of an integer and returns it.
+	 * 
 	 * @param LOGGER logger of class in which this method is ran
 	 * @return an integer
 	 */
@@ -62,17 +65,20 @@ public class Utils {
 		do {
 			try {
 				intRet = Integer.parseInt(getInput());
-				if (intRet <= 0) throw new NumberFormatException();
+				if (intRet <= 0)
+					throw new NumberFormatException();
 				done = true;
 			} catch (NumberFormatException e) {
 				LOGGER.warn("Please type in an integer greater than 0!");
 			}
 		} while (!done);
-		return intRet;	
+		return intRet;
 	}
-	
+
 	/**
-	 * Takes in user input of a decimal number and returns it, scaled up/down to 2 decimal points.
+	 * Takes in user input of a decimal number and returns it, scaled up/down to 2
+	 * decimal points.
+	 * 
 	 * @param LOGGER logger of class in which this method is ran
 	 * @return a decimal BigDecimal
 	 */
@@ -82,13 +88,14 @@ public class Utils {
 		do {
 			try {
 				price = BigDecimal.valueOf(Double.valueOf(getInput()));
-				if (price.compareTo(BigDecimal.valueOf(0))<=0) throw new NumberFormatException();
+				if (price.compareTo(BigDecimal.valueOf(0)) <= 0)
+					throw new NumberFormatException();
 				done = true;
 			} catch (NumberFormatException e) {
 				LOGGER.warn("Please type in a decimal number greater than 0!");
 			}
 		} while (!done);
-		return price.setScale(2,RoundingMode.HALF_UP);	
+		return price.setScale(2, RoundingMode.HALF_UP);
 
 	}
 }

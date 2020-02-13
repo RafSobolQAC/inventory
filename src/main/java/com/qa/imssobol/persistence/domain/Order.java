@@ -22,7 +22,7 @@ public class Order {
 		this.id = 0;
 		this.customerId = 0;
 		this.price = new BigDecimal(0);
-		this.items = new HashMap<Item,Integer>();
+		this.items = new HashMap<>();
 	}
 	public Order(int customerId, Map<Item,Integer> items) {
 		this.customerId = customerId;

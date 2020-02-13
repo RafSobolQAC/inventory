@@ -53,21 +53,20 @@ public class MysqlOrderDao implements Dao<Order> {
 	}
 
 	@Override
-	public Order create(Order t) {
-		ResultSet resultSet = null;
+	public Order create(Order order) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);
 				PreparedStatement getLastps = connection.prepareStatement(GETLASTID)) {
 
-			ps.setInt(1, t.getCustomerId());
-			ps.setBigDecimal(2, t.getPrice());
+			ps.setInt(1, order.getCustomerId());
+			ps.setBigDecimal(2, order.getPrice());
 
 			ps.executeUpdate();
 			int lastId = readLatest().getId();
-			for (Item item : t.getItems().keySet()) {
+			for (Item item : order.getItems().keySet()) {
 				ps2.setInt(1, lastId);
 				ps2.setInt(2, item.getId());
-				ps2.setInt(3, t.getItems().get(item));
+				ps2.setInt(3, order.getItems().get(item));
 				ps2.executeUpdate();
 			}
 
@@ -75,21 +74,14 @@ public class MysqlOrderDao implements Dao<Order> {
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} finally {
-			try {
-				if (resultSet != null)
-					resultSet.close();
-			} catch (Exception e) {
-			}
-		}
-
-		return t;
+		} 
+		return order;
 
 	}
 
 	@Override
 	public ArrayList<Order> readAll() {
-		ArrayList<Order> orders = new ArrayList<Order>();
+		ArrayList<Order> orders = new ArrayList<>();
 		try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(READALL);) {
 			while (resultSet.next()) {
 				Order order = new Order();
@@ -135,6 +127,7 @@ public class MysqlOrderDao implements Dao<Order> {
 				if (resultSet != null)
 					resultSet.close();
 			} catch (Exception e) {
+				Utils.exceptionLogger(e, LOGGER);
 			}
 		}
 
@@ -142,15 +135,15 @@ public class MysqlOrderDao implements Dao<Order> {
 	}
 
 	@Override
-	public Order update(int id, Order t) {
+	public Order update(int id, Order order) {
 		HashMap<Item,Integer> itemsQuants;
-		BigDecimal price = t.getPrice();
+		BigDecimal price = order.getPrice();
 		int itemId;
 		int itemQuantity;
 		try(PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);
 				PreparedStatement ps2 = connection.prepareStatement(UPDATEORDERLINE)) {
 			
-			itemsQuants = (HashMap<Item,Integer>) t.getItems();
+			itemsQuants = (HashMap<Item,Integer>) order.getItems();
 			for (Item item : itemsQuants.keySet()) {
 				itemId = item.getId();
 				itemQuantity = itemsQuants.get(item);

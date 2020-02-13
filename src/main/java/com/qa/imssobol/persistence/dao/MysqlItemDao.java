@@ -49,11 +49,11 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
-	public Item create(Item t) {
+	public Item create(Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
-			ps.setString(1, t.getName());
-			ps.setBigDecimal(2, t.getPrice());
+			ps.setString(1, item.getName());
+			ps.setBigDecimal(2, item.getPrice());
 
 			ps.executeUpdate();
 
@@ -121,11 +121,11 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
-	public Item update(int id, Item t) {
+	public Item update(int id, Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
 
-			ps.setString(1, t.getName());
-			ps.setBigDecimal(2, t.getPrice());
+			ps.setString(1, item.getName());
+			ps.setBigDecimal(2, item.getPrice());
 			ps.setInt(3, id);
 
 			ps.executeUpdate();

@@ -18,7 +18,6 @@ import com.qa.imssobol.services.CustomerServices;
 import com.qa.imssobol.services.ItemServices;
 import com.qa.imssobol.services.OrderServices;
 import com.qa.imssobol.utils.Connector;
-import com.qa.imssobol.utils.Utils;
 
 public class Ims {
 	protected Connector connector;
@@ -28,16 +27,8 @@ public class Ims {
 	public Ims(Connector connector) {
 		if (this.connector == null)	this.connector = connector;
 	}
-//	public Ims(String url) {
-//		try {
-//			connector = makeConnector(url);
-//			connection = connector.getConnection();
-//		} catch (SQLException e) {
-//			Utils.exceptionLogger(e, LOGGER);
-//		}
-//	}
 	
-	public Connector makeConnector(String url) throws SQLException {
+	public Connector makeConnector(String url)  {
 		return new Connector(url);
 	}
 	public Domain getDomain() {

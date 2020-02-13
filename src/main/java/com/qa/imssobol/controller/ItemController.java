@@ -64,6 +64,7 @@ public class ItemController implements CrudController<Item>{
 		LOGGER.info("Please enter the id of the item you would like to delete: ");
 		int id = getIntInput();
 		boolean wasDeleted = itemService.delete(id);
+		LOGGER.info("Item was deleted!");
 		return wasDeleted;
 
 	}
