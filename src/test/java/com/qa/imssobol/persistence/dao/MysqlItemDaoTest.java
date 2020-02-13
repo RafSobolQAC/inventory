@@ -2,94 +2,103 @@ package com.qa.imssobol.persistence.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
+import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import com.qa.imssobol.persistence.domain.Item;
 
+@RunWith(MockitoJUnitRunner.class)
 public class MysqlItemDaoTest {
-	public static final Logger LOGGER = Logger.getLogger(MysqlItemDaoTest.class);
+	public static final Logger LOGGER = Logger.getLogger(MysqlCustomerDaoTest.class);
 
 	private Item item;
 	private Item other;
-	private static Connection conn;
-	private final BigDecimal price = BigDecimal.valueOf(5);
+	private BigDecimal price = BigDecimal.valueOf(5.0);
+	
+	@Mock
+	private PreparedStatement mockPs;
+	
+	@Mock
+	private Statement mockStmt;
+	
+	@Mock
+	private ResultSet mockRs;
+	
+	@Mock
+	private Connection mockConn;
+
 	
 	@Spy
 	@InjectMocks
-	private MysqlItemDao itemDao;
+	private MysqlItemDao itemDaoMock;
 
-	
-	@BeforeClass
-	public static void login() throws SQLException {
-
-		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ims", "root", "root");
-		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage());
-		}
-	}
-	
+		
 	@Before
-	public void setUpItem() {
-		item = new Item();
-		other = new Item();
-		itemDao = new MysqlItemDao(conn);
+	public void setUpItem() throws SQLException {
+        MockitoAnnotations.initMocks(this);
+        when(mockConn.prepareStatement(Mockito.anyString())).thenReturn(mockPs);
+		when(mockConn.createStatement()).thenReturn(mockStmt);
+		when(mockStmt.executeQuery(Mockito.anyString())).thenReturn(mockRs);
+		when(mockPs.executeQuery()).thenReturn(mockRs);
+		when(mockRs.getString("name")).thenReturn("TestItem1");
+		when(mockRs.getInt("id")).thenReturn(1);
+
+		item = new Item("TestItem1",price);
 	}
 
-	
 	@Test
-	public void itemDaoAddTest() {
+	public void itemDaoCreateTest() {
 		item.setName("One!");
-		item.setPrice(price);
-		other = new Item("One!",price);
-		itemDao.create(item);
-		assertEquals(other.getName(), itemDao.readLatest().getName());
+		Mockito.doReturn(item).when(itemDaoMock).readLatest();
+		assertEquals("One!",itemDaoMock.create(item).getName());
+		
+	}
 
+	@Test
+	public void itemDaoReadByIdTest() throws SQLException {
+		when(mockRs.next()).thenReturn(true);
+		assertEquals(item.getName(),itemDaoMock.readById(Mockito.anyInt()).getName());
 	}
 	
 	@Test
-	public void itemDaoReadByIdTest() {
-		itemDao.create(item);
-		item = itemDao.readLatest();
-		assertEquals(item,itemDao.readById(item.getId()));
+	public void itemDaoReadLatestTest() throws SQLException {
+		when(mockRs.next()).thenReturn(true);
+		assertEquals(item.getName(),itemDaoMock.readLatest().getName());
 	}
-
+	
 	@Test
-	public void itemDaoDeleteTest() {
-		itemDao.create(item);
-		assertTrue(itemDao.delete(itemDao.readLatest().getId()));
+	public void itemDaoReadAllTest() throws SQLException {
+		Mockito.doReturn(true).doReturn(true).doReturn(false).when(mockRs).next();
+		assertEquals(2,itemDaoMock.readAll().size());
 	}
 	
 	@Test
 	public void itemDaoUpdateTest() {
-		itemDao.create(item);
-		item.setName("TestName");
-		item.setPrice(price);
-		itemDao.update(itemDao.readLatest().getId(), item);
-		assertEquals(item.getName(), itemDao.readLatest().getName());
-		assertEquals(0,item.getPrice().compareTo(itemDao.readLatest().getPrice()));
+		assertEquals(other,itemDaoMock.update(1, other));
+		
 	}
+	
 	
 	@Test
-	public void itemDaoReadAllTest() {
-		item.setName("TestName");
-		item.setPrice(price);
-		itemDao.create(item);
-		List<Item> items = itemDao.readAll();
-		assertEquals(item.getName(),items.get(items.size()-1).getName());
-		assertEquals(0,item.getPrice().compareTo(items.get(items.size()-1).getPrice()));
+	public void itemDaoDeleteTest() {
+		assertTrue(itemDaoMock.delete(Mockito.anyInt()));
 	}
-	
+
 }

@@ -40,13 +40,13 @@ public class OrderController implements CrudController<Order> {
 		boolean breaker = true;
 		while (breaker) {
 			LOGGER.info("To continue, press any key. To quit, (Q)uit.");
-			String input = Utils.getInput();
+			String input = getInput();
 			if (input.toLowerCase().startsWith("q")) {
 				breaker = false;
 			}
 			if (breaker) {
 				LOGGER.info("Item ID: ");
-				int itemId = Utils.getIntInput(LOGGER);
+				int itemId = getIntInput();
 				try {
 					ItemServices itemService = new ItemServices(new MysqlItemDao(connection));
 					itemToAdd = itemService.readById(itemId);
@@ -56,7 +56,7 @@ public class OrderController implements CrudController<Order> {
 				}
 
 				LOGGER.info("How many of this item? ");
-				int itemQuant = Utils.getIntInput(LOGGER);
+				int itemQuant = getIntInput();
 				itemQuants.put(itemToAdd, itemQuant);
 			}
 		}
@@ -87,9 +87,9 @@ public class OrderController implements CrudController<Order> {
 	@Override
 	public Order update() {
 		LOGGER.info("Which order would you like to update? (ID)");
-		int orderId = Utils.getIntInput(LOGGER);
+		int orderId = getIntInput();
 		LOGGER.info("Which customer made the order? (ID)");
-		int customerId = Utils.getIntInput(LOGGER);
+		int customerId = getIntInput();
 		Map<Item, Integer> itemQuants = createItemHashMap();
 		Order order = orderService.update(orderId, new Order(customerId, itemQuants));
 		LOGGER.info("Order was updated.");
@@ -100,7 +100,7 @@ public class OrderController implements CrudController<Order> {
 	@Override
 	public boolean delete() {
 		LOGGER.info("Which order would you like to delete? (ID)");
-		int orderId = Utils.getIntInput(LOGGER);
+		int orderId = getIntInput();
 		boolean wasRemoved = orderService.delete(orderId);
 		LOGGER.info("Order " + orderId + " was removed.");
 		return wasRemoved;
@@ -109,7 +109,7 @@ public class OrderController implements CrudController<Order> {
 	@Override
 	public Order readById() {
 		LOGGER.info("Which order ID to access? ");
-		int id = Utils.getIntInput(LOGGER);
+		int id = getIntInput();
 		Order order = orderService.readById(id);
 		LOGGER.info(order.toString());
 		return order;

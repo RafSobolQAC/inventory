@@ -2759,3 +2759,196 @@
 2020-02-13 13:11:31 INFO  ItemController:46 - Item created.
 2020-02-13 13:11:31 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
 2020-02-13 13:11:31 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:22:15 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:22:15 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:22:34 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:22:34 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:23:20 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:23:20 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:23:20 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:23:20 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:23:20 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:23:20 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:23:20 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:23:20 INFO  OrderController:82 - Order was created.
+2020-02-13 13:23:20 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:23:20 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:23:20 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:23:20 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:24:35 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:24:35 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:24:35 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:24:35 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:24:35 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:24:35 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:24:35 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:24:35 INFO  OrderController:82 - Order was created.
+2020-02-13 13:24:35 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:24:35 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:24:35 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:24:35 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:24:48 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:24:48 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:24:48 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:24:48 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:24:48 INFO  OrderController:82 - Order was created.
+2020-02-13 13:24:48 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:24:48 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:24:48 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:24:48 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:01 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:01 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:25:01 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:25:01 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:25:01 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:25:01 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:01 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:25:01 INFO  OrderController:82 - Order was created.
+2020-02-13 13:25:01 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:01 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:01 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:01 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:39 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:39 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:25:39 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:25:39 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:25:39 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:25:39 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:39 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:25:39 INFO  OrderController:82 - Order was created.
+2020-02-13 13:25:39 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:39 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:39 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:39 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:54 INFO  CustomerController:33 - -1 Chris
+2020-02-13 13:25:54 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 13:25:54 INFO  CustomerController:33 - -1 Nic
+2020-02-13 13:25:54 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 13:25:54 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 13:25:54 INFO  CustomerController:53 - Update complete!
+2020-02-13 13:25:54 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 13:25:54 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 13:25:54 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 13:25:54 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 13:25:54 INFO  CustomerController:43 - Creation complete!
+2020-02-13 13:25:54 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:25:54 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:25:54 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 13:25:55 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 13:25:55 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 13:25:55 INFO  ItemController:53 - What's their new name? 
+2020-02-13 13:25:55 INFO  ItemController:55 - What's their new price? 
+2020-02-13 13:25:55 INFO  ItemController:59 - Update complete!
+2020-02-13 13:25:55 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 13:25:55 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 13:25:55 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 13:25:55 INFO  ItemController:43 - What price should it have? 
+2020-02-13 13:25:55 INFO  ItemController:46 - Item created.
+2020-02-13 13:25:55 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:25:55 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:25:55 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:55 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:25:55 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:25:55 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:25:55 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:25:55 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:25:55 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:25:55 INFO  OrderController:82 - Order was created.
+2020-02-13 13:25:55 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:55 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:25:55 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:25:55 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:26:45 INFO  CustomerController:33 - -1 Chris
+2020-02-13 13:26:45 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 13:26:45 INFO  CustomerController:33 - -1 Nic
+2020-02-13 13:26:45 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 13:26:45 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 13:26:45 INFO  CustomerController:53 - Update complete!
+2020-02-13 13:26:45 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 13:26:45 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 13:26:45 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 13:26:45 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 13:26:45 INFO  CustomerController:43 - Creation complete!
+2020-02-13 13:26:45 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:26:45 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:26:45 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 13:26:45 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 13:26:45 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 13:26:45 INFO  ItemController:53 - What's their new name? 
+2020-02-13 13:26:45 INFO  ItemController:55 - What's their new price? 
+2020-02-13 13:26:45 INFO  ItemController:59 - Update complete!
+2020-02-13 13:26:45 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 13:26:45 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 13:26:45 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 13:26:45 INFO  ItemController:43 - What price should it have? 
+2020-02-13 13:26:45 INFO  ItemController:46 - Item created.
+2020-02-13 13:26:45 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:26:45 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:26:45 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:26:45 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:26:45 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:26:45 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:26:45 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:26:45 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:26:45 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:26:45 INFO  OrderController:82 - Order was created.
+2020-02-13 13:26:45 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:26:45 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:26:45 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:26:45 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:29:37 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:29:37 ERROR MysqlItemDao:23 - 
+2020-02-13 13:29:37 ERROR MysqlItemDao:24 - 
+2020-02-13 13:30:09 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:30:09 ERROR MysqlItemDao:23 - 
+2020-02-13 13:30:09 ERROR MysqlItemDao:24 - 
+2020-02-13 13:30:22 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:30:22 ERROR MysqlItemDao:23 - 
+2020-02-13 13:30:22 ERROR MysqlItemDao:24 - 
+2020-02-13 13:30:31 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:30:31 ERROR MysqlItemDao:23 - 
+2020-02-13 13:30:31 ERROR MysqlItemDao:24 - 
+2020-02-13 13:30:37 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:30:37 ERROR MysqlItemDao:23 - 
+2020-02-13 13:30:37 ERROR MysqlItemDao:24 - 
+2020-02-13 13:31:17 INFO  CustomerController:33 - -1 Chris
+2020-02-13 13:31:17 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 13:31:17 INFO  CustomerController:33 - -1 Nic
+2020-02-13 13:31:17 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 13:31:17 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 13:31:17 INFO  CustomerController:53 - Update complete!
+2020-02-13 13:31:17 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 13:31:17 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 13:31:17 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 13:31:17 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 13:31:17 INFO  CustomerController:43 - Creation complete!
+2020-02-13 13:31:17 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:31:17 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:31:17 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 13:31:17 ERROR MysqlItemDao:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:31:17 ERROR MysqlItemDao:23 - 
+2020-02-13 13:31:17 ERROR MysqlItemDao:24 - 
+2020-02-13 13:31:17 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 13:31:17 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 13:31:17 INFO  ItemController:53 - What's their new name? 
+2020-02-13 13:31:17 INFO  ItemController:55 - What's their new price? 
+2020-02-13 13:31:17 INFO  ItemController:59 - Update complete!
+2020-02-13 13:31:17 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 13:31:17 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 13:31:17 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 13:31:17 INFO  ItemController:43 - What price should it have? 
+2020-02-13 13:31:17 INFO  ItemController:46 - Item created.
+2020-02-13 13:31:17 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:31:17 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:31:17 INFO  OrderController:71 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:31:17 INFO  OrderController:89 - Which order would you like to update? (ID)
+2020-02-13 13:31:17 INFO  OrderController:91 - Which customer made the order? (ID)
+2020-02-13 13:31:17 INFO  OrderController:95 - Order was updated.
+2020-02-13 13:31:17 INFO  OrderController:111 - Which order ID to access? 
+2020-02-13 13:31:17 INFO  OrderController:114 - com.qa.imssobol.persistence.domain.Order@ccd45b7a
+2020-02-13 13:31:17 INFO  OrderController:78 - Please enter the customer's ID. 
+2020-02-13 13:31:17 INFO  OrderController:82 - Order was created.
+2020-02-13 13:31:17 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:31:18 INFO  OrderController:105 - Order 1 was removed.
+2020-02-13 13:31:18 INFO  OrderController:102 - Which order would you like to delete? (ID)
+2020-02-13 13:31:18 INFO  OrderController:105 - Order 1 was removed.
