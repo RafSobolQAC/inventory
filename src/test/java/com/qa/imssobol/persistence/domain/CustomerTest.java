@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.qa.ims.persistence.domain.Customer;
+import com.qa.imssobol.persistence.domain.Customer;
 
 public class CustomerTest {
 
