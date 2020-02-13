@@ -40,7 +40,14 @@ public class Ims {
 	public Connector makeConnector(String url) throws SQLException {
 		return new Connector(url);
 	}
-
+	public Domain getDomain() {
+		return Domain.getDomain();
+	}
+	
+	public Action getAction() {
+		return Action.getAction();
+	}
+	
 	public void imsRunner() throws SQLException {
 		connector.setUpConnector();
 		this.connection = connector.getConnection();
@@ -49,12 +56,11 @@ public class Ims {
 			LOGGER.info("Which entity would you like to use? ");
 			Domain.printDomains();
 
-			Domain domain = Domain.getDomain();
-			if (domain.name().equals("STOP")) System.exit(0);
+			Domain domain = getDomain();
+			if (domain.name().equals("STOP")) break;
 			LOGGER.info("What would you like to do with " + domain.name().toLowerCase() + ":");
 			Action.printActions();
-			Action action = Action.getAction();
-			
+			Action action = getAction();
 			switch (domain) {
 			case CUSTOMER:
 				CustomerController customerController = new CustomerController(

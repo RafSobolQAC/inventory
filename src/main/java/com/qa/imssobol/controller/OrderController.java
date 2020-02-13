@@ -1,6 +1,7 @@
 package com.qa.imssobol.controller;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ public class OrderController implements CrudController<Order> {
 	public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 	private Connection connection;
 	private CrudServices<Order> orderService;
-
+	private ItemServices itemService;
 	public OrderController(OrderServices orderService) {
 		this.orderService = orderService;
 		this.connection = orderService.getConnection();
@@ -35,6 +36,7 @@ public class OrderController implements CrudController<Order> {
 
 	public Map<Item, Integer> createItemHashMap() {
 		HashMap<Item, Integer> itemQuants = new HashMap<>();
+		if (itemService == null) itemService = new ItemServices(new MysqlItemDao(connection));
 		Item itemToAdd;
 		LOGGER.info("At any point, type in (Q) to Quit.");
 		boolean breaker = true;
@@ -47,13 +49,7 @@ public class OrderController implements CrudController<Order> {
 			if (breaker) {
 				LOGGER.info("Item ID: ");
 				int itemId = getIntInput();
-				try {
-					ItemServices itemService = new ItemServices(new MysqlItemDao(connection));
-					itemToAdd = itemService.readById(itemId);
-				} catch (Exception e) {
-					Utils.exceptionLogger(e, LOGGER);
-					return null;
-				}
+				itemToAdd = itemService.readById(itemId);
 
 				LOGGER.info("How many of this item? ");
 				int itemQuant = getIntInput();

@@ -1,9 +1,12 @@
 package com.qa.imssobol.controller;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +22,10 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import com.qa.imssobol.persistence.dao.MysqlItemDao;
 import com.qa.imssobol.persistence.domain.Item;
 import com.qa.imssobol.persistence.domain.Order;
+import com.qa.imssobol.services.ItemServices;
 import com.qa.imssobol.services.OrderServices;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -28,6 +33,14 @@ public class OrderControllerTest {
 	private Map<Item,Integer> itemQuants;
 	private Order order;
 	
+	@Mock
+	private ItemServices itemService;
+	
+	@Mock
+	private MysqlItemDao mockItemDao;
+	
+	@Mock
+	private Connection connection;
 	/**
 	 *  The thing I want to fake functionality for
 	 */
@@ -90,6 +103,15 @@ public class OrderControllerTest {
 		orderController.delete();
 		Mockito.when(orderService.delete(id)).thenReturn(true);
 		assertTrue(orderController.delete());
+	}
+	
+	@Test
+	public void createItemHashMapTest() {
+		Item item = new Item(1,"TestItem",BigDecimal.valueOf(5.0));
+		Mockito.doReturn(" ").doReturn("q").when(orderController).getInput();
+		Mockito.doReturn(1).doReturn(2).when(orderController).getIntInput();
+		assertNotNull(orderController.createItemHashMap());
+		
 	}
 
 }
