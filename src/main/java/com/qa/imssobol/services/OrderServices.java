@@ -1,17 +1,22 @@
 package com.qa.imssobol.services;
 
+import java.sql.Connection;
 import java.util.List;
 
 import com.qa.imssobol.persistence.dao.Dao;
+import com.qa.imssobol.persistence.dao.MysqlOrderDao;
 import com.qa.imssobol.persistence.domain.Order;
 
 public class OrderServices implements CrudServices<Order>{
 	Dao<Order> orderDao;
-	
-	public OrderServices(Dao<Order> orderDao) {
+	private Connection connection;
+	public OrderServices(MysqlOrderDao orderDao) {
 		this.orderDao = orderDao;
+		this.connection = orderDao.getConnection();
 	}
-	
+	public Connection getConnection() {
+		return connection;
+	}
 	public List<Order> readAll() {
 		return orderDao.readAll();
 	}

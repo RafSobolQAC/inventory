@@ -28,10 +28,15 @@ public class MysqlItemDao implements Dao<Item> {
 		this.connection = connection;
 	}
 
+	/**
+	 * Reads the latest Item from the database (one with the highest ID).
+	 * 
+	 * @return the latest Item
+	 */
 	public Item readLatest() {
 		Item item = new Item();
 		try (Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT FROM items ORDER BY id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM items ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
 				item.setName(resultSet.getString("name"));
 				item.setId(resultSet.getInt("id"));
@@ -48,12 +53,18 @@ public class MysqlItemDao implements Dao<Item> {
 		return null;
 	}
 
+	/**
+	 * Sends an Item to the database.
+	 * 
+	 * @param item the item to be created
+	 * @return the Item created
+	 */
 	@Override
-	public Item create(Item t) {
+	public Item create(Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
-			ps.setString(1, t.getName());
-			ps.setBigDecimal(2, t.getPrice());
+			ps.setString(1, item.getName());
+			ps.setBigDecimal(2, item.getPrice());
 
 			ps.executeUpdate();
 
@@ -66,6 +77,12 @@ public class MysqlItemDao implements Dao<Item> {
 		return null;
 	}
 
+	/**
+	 * Reads an Item with the given ID from the database.
+	 * 
+	 * @param id item's ID (in the database)
+	 * @return the Item
+	 */
 	@Override
 	public Item readById(int id) {
 		Item item = null;
@@ -78,6 +95,7 @@ public class MysqlItemDao implements Dao<Item> {
 				item = new Item();
 				item.setName(resultSet.getString("name"));
 				item.setId(resultSet.getInt("id"));
+				item.setPrice(resultSet.getBigDecimal("price"));
 			}
 
 		} catch (SQLException e) {
@@ -89,11 +107,16 @@ public class MysqlItemDao implements Dao<Item> {
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
 			}
-			
+
 		}
 		return item;
 	}
 
+	/**
+	 * Reads all items from the database, and stores them in an arraylist.
+	 * 
+	 * @return an arraylist of Items
+	 */
 	@Override
 	public ArrayList<Item> readAll() {
 		ArrayList<Item> items = new ArrayList<>();
@@ -119,12 +142,20 @@ public class MysqlItemDao implements Dao<Item> {
 		return items;
 	}
 
+	/**
+	 * Updates an item with the provided id, changing their details into those from
+	 * the new item.
+	 * 
+	 * @param id   item's id in the database to be modified
+	 * @param item new item's details (the ID of that item doesn't affect anything)
+	 * @return the new Item
+	 */
 	@Override
-	public Item update(int id, Item t) {
+	public Item update(int id, Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
 
-			ps.setString(1, t.getName());
-			ps.setBigDecimal(2, t.getPrice());
+			ps.setString(1, item.getName());
+			ps.setBigDecimal(2, item.getPrice());
 			ps.setInt(3, id);
 
 			ps.executeUpdate();
@@ -138,6 +169,12 @@ public class MysqlItemDao implements Dao<Item> {
 
 	}
 
+	/**
+	 * Deletes an item with the specified ID.
+	 * 
+	 * @param id the item's id
+	 * @return true if no exceptions (whether deleted or not), false otherwise
+	 */
 	@Override
 	public boolean delete(int id) {
 		try (PreparedStatement ps = connection.prepareStatement(DELETE)) {

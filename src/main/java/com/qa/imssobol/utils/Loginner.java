@@ -4,15 +4,24 @@ import org.apache.log4j.Logger;
 
 public class Loginner {
 	public static final Logger LOGGER = Logger.getLogger(Loginner.class);
-	private Login login;
-	public Loginner(Login login) {
-		this.login = login;
+
+	private String password; 
+	
+	public String setPassword() {
+		return Utils.getPassword();
 	}
-	public void LogIn() {
+	
+/**
+ * Gets an user-input password.
+ * @return the password
+ */
+	protected String logIn() {
 
-		LOGGER.info("What is your password? ");
+		if (this.password == null) {
+			LOGGER.info("What is your password? ");
 
-		String password = Utils.getInput();
-		login.setPassword(password);
+			this.password = setPassword();
+		}
+		return this.password;
 	}
 }

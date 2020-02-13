@@ -8,7 +8,7 @@ import com.qa.imssobol.persistence.domain.Item;
 public class ItemServices implements CrudServices<Item>{
 	
 	Dao<Item> itemDao;
-	
+		
 	public ItemServices(Dao<Item> itemDao) {
 		this.itemDao = itemDao;
 	}
@@ -33,5 +33,4 @@ public class ItemServices implements CrudServices<Item>{
 	public Item readById(int id) {
 		return itemDao.readById(id);
 	}
-
 }
