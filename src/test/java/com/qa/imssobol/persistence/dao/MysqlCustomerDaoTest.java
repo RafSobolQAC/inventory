@@ -100,6 +100,11 @@ public class MysqlCustomerDaoTest {
 		custDaoMock.readLatest();
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
+	@Test
+	public void customerDaoReadLatestNoCustomerTest() throws SQLException {
+		when(mockRs.next()).thenReturn(false);
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
 
 	@Test
 	public void customerDaoReadAllTest() throws SQLException {
