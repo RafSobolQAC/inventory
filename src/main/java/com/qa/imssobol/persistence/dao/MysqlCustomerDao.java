@@ -103,6 +103,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 					resultSet.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
+				return new Customer();
 			}
 		}
 		return customer;
@@ -131,6 +132,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 					resultSet.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
+				return new ArrayList<>();
 			}
 		}
 

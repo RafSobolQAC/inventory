@@ -115,7 +115,5 @@ public class OrderControllerTest {
 		Mockito.doReturn(" ").doReturn("q").when(orderController).getInput();
 		Mockito.doReturn(1).doReturn(2).when(orderController).getIntInput();
 		assertNotNull(orderController.createItemHashMap());
-		
 	}
-
 }

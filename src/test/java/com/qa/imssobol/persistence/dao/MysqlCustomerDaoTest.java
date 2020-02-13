@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
@@ -88,6 +89,16 @@ public class MysqlCustomerDaoTest {
 		custDaoMock.readById(1);
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
+	@Test
+	public void customerDaoReadByIdNoSuchCustomerTest() throws SQLException {
+		when(mockRs.next()).thenReturn(false);
+		assertEquals(new Customer(),custDaoMock.readById(1));
+	}
+	@Test
+	public void customerDaoReadByIdRSExceptionTest() throws SQLException {
+		Mockito.doThrow(SQLException.class).when(mockRs).close();
+		assertEquals(new Customer(),custDaoMock.readById(1));
+	}
 
 	@Test
 	public void customerDaoReadLatestTest() throws SQLException {
@@ -118,6 +129,12 @@ public class MysqlCustomerDaoTest {
 		custDaoMock.readAll();
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
+	@Test
+	public void customerDaoReadAllRSExceptionTest() throws SQLException {
+		Mockito.doThrow(SQLException.class).when(mockRs).close();
+		assertEquals(new ArrayList<Customer>(),custDaoMock.readAll());
+	}
+
 
 	@Test
 	public void customerDaoUpdateTest() {
