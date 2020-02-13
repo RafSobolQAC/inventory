@@ -120,7 +120,6 @@ public class MysqlOrderDao implements Dao<Order> {
 	public Order readById(int id) {
 		Order order = null;
 		ResultSet resultSet = null;
-		ResultSet resultSet2 = null;
 		Map<Item, Integer> itemQuants = new HashMap<>();
 		Item itemToAdd = new Item();
 		try (PreparedStatement ps = connection.prepareStatement(READORDER);
@@ -135,7 +134,7 @@ public class MysqlOrderDao implements Dao<Order> {
 				order.setPrice(resultSet.getBigDecimal("total_price"));
 
 				ps2.setInt(1, id);
-				resultSet2 = ps2.executeQuery();
+				try (ResultSet resultSet2 = ps2.executeQuery()) {
 				while (resultSet2.next()) {
 					itemToAdd.setId(resultSet2.getInt("item_id"));
 					itemToAdd.setName(resultSet2.getString("item_name"));
@@ -143,6 +142,9 @@ public class MysqlOrderDao implements Dao<Order> {
 					itemQuants.put(itemToAdd, resultSet2.getInt("quantity"));
 				}
 				order = order.setItems(itemQuants);
+				} catch (SQLException e) {
+					throw e;
+				}
 			} else {
 				LOGGER.warn("Order with ID does not exist!");
 				throw new IllegalArgumentException();
@@ -154,8 +156,6 @@ public class MysqlOrderDao implements Dao<Order> {
 			try {
 				if (resultSet != null)
 					resultSet.close();
-				if (resultSet2 != null)
-					resultSet2.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
 			}
