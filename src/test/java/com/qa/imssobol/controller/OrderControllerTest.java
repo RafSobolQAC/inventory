@@ -68,6 +68,10 @@ public class OrderControllerTest {
 		OrderController orderController = new OrderController(orderService);
 		List<Order> orders = new ArrayList<>();
 		orders.add(order);
+		orders.add(new Order(2,5,itemQuants));
+		orders.add(new Order(7,2,itemQuants));
+		orders.add(new Order(100,50,itemQuants));
+
 		Mockito.when(orderService.readAll()).thenReturn(orders);
 		assertEquals(orders, orderController.readAll());
 	}
