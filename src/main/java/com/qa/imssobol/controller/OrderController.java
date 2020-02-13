@@ -37,7 +37,6 @@ public class OrderController implements CrudController<Order> {
 		HashMap<Item, Integer> itemQuants = new HashMap<>();
 		if (itemService == null) itemService = new ItemServices(new MysqlItemDao(connection));
 		Item itemToAdd;
-		LOGGER.info("At any point, type in (Q) to Quit.");
 		boolean breaker = true;
 		while (breaker) {
 			LOGGER.info("To continue, press any key. To quit, (Q)uit.");
@@ -73,6 +72,7 @@ public class OrderController implements CrudController<Order> {
 		LOGGER.info("Please enter the customer's ID. ");
 		int customerId = getIntInput();
 		Map<Item, Integer> itemQuants = createItemHashMap();
+		System.out.println(itemQuants.size());
 		Order order = orderService.create(new Order(customerId, itemQuants));
 		LOGGER.info("Order was created.");
 		return order;

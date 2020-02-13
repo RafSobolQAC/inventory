@@ -29,7 +29,7 @@ public class MysqlCustomerDao implements Dao<Customer> {
 	
 	/**
 	 * Reads the latest Customer from the database (one with the highest ID).
-	 * @return a Customer
+	 * @return the latest Customer
 	 */
 	public Customer readLatest() {
 		Customer customer = new Customer();

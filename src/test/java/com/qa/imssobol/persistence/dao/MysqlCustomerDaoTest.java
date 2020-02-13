@@ -70,37 +70,73 @@ public class MysqlCustomerDaoTest {
 		assertEquals("One!",custDaoMock.create(customer).getName());
 		
 	}
+	@Test
+	public void customerDaoCreateExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		custDaoMock.create(customer);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
 
 	@Test
 	public void customerDaoReadByIdTest() throws SQLException {
 		when(mockRs.next()).thenReturn(true);
 		assertEquals(customer,custDaoMock.readById(Mockito.anyInt()));
 	}
-	
+	@Test
+	public void customerDaoReadByIdExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		custDaoMock.readById(1);
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+
 	@Test
 	public void customerDaoReadLatestTest() throws SQLException {
 		when(mockRs.next()).thenReturn(true);
 		assertEquals(customer,custDaoMock.readLatest());
 	}
-	
+	@Test
+	public void customerDaoReadLatestExceptionTest() throws SQLException {
+		when(mockConn.createStatement()).thenThrow(SQLException.class);
+		custDaoMock.readLatest();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+
 	@Test
 	public void customerDaoReadAllTest() throws SQLException {
 		Mockito.doReturn(true).doReturn(true).doReturn(false).when(mockRs).next();
 		assertEquals(2,custDaoMock.readAll().size());
 	}
-	
+	@Test
+	public void customerDaoReadAllExceptionTest() throws SQLException {
+		when(mockConn.createStatement()).thenThrow(SQLException.class);
+		custDaoMock.readAll();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+
 	@Test
 	public void customerDaoUpdateTest() {
 		Mockito.doReturn(other).when(custDaoMock).readById(Mockito.anyInt());
 		assertEquals(other,custDaoMock.update(1, other));
 		
 	}
-	
+	@Test
+	public void customerDaoUpdateExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		custDaoMock.update(1,customer);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
+
 	
 	@Test
 	public void customerDaoDeleteTest() {
 		assertTrue(custDaoMock.delete(Mockito.anyInt()));
 	}
-	
+	@Test
+	public void customerDaoDeleteExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		custDaoMock.delete(1);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
+
 
 }

@@ -98,7 +98,13 @@ public class MysqlOrderDaoTest {
 
 		assertEquals(order,orderDaoMock.create(order));
 	}
-	
+	@Test
+	public void orderDaoCreateExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		orderDaoMock.create(order);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
+
 	@Test
 	public void orderDaoReadAllTest() throws SQLException {
 		Mockito.doReturn(true).doReturn(false).when(mockRs).next();
@@ -108,7 +114,13 @@ public class MysqlOrderDaoTest {
 		order.setItems(itemQuants);
 		assertEquals(1, orderDaoMock.readAll().get(0).getId());
 	}
-	
+	@Test
+	public void orderDaoReadAllExceptionTest() throws SQLException {
+		when(mockConn.createStatement()).thenThrow(SQLException.class);
+		orderDaoMock.readAll();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+
 	@Test
 	public void orderDaoReadLatestTest() throws SQLException {
 		Mockito.doReturn(true).when(mockRs).next();
@@ -116,16 +128,37 @@ public class MysqlOrderDaoTest {
 		Mockito.doReturn(order).when(orderDaoMock).readById(Mockito.anyInt());
 		assertEquals(order,orderDaoMock.readLatest());
 	}
-	
+	@Test
+	public void orderDaoReadLatestExceptionTest() throws SQLException {
+		when(mockConn.createStatement()).thenThrow(SQLException.class);
+		orderDaoMock.readLatest();
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+
 	@Test
 	public void orderDaoReadByIdTest() throws SQLException {
 		when(mockPs.executeQuery()).thenReturn(mockRs);
-		Mockito.doReturn(true).when(mockRs).next();
 		when(mockRs.getInt("id")).thenReturn(1);
 		when(mockRs.getInt("customer_id_fk")).thenReturn(1);
 		when(mockRs.getBigDecimal("total_price")).thenReturn(BigDecimal.valueOf(100.0));
+		Mockito.doReturn(true).doReturn(true).doReturn(false).when(mockRs).next();
+//		Mockito.doReturn(order).when(mockOrder).setItems(itemQuants);
 
 		assertEquals(order.getPrice(),orderDaoMock.readById(1).getPrice());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void orderDaoReadByIdNoSuchItemTest() throws SQLException {
+		when(mockPs.executeQuery()).thenReturn(mockRs);
+		Mockito.doReturn(false).when(mockRs).next();
+		orderDaoMock.readById(1);
+	}
+	
+	@Test
+	public void orderDaoReadByIdExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		orderDaoMock.readById(1);
+		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
 	}
 	
 	@Test
@@ -133,9 +166,22 @@ public class MysqlOrderDaoTest {
 		Mockito.doReturn(order).when(orderDaoMock).readById(Mockito.anyInt());
 		assertEquals(order,orderDaoMock.update(1, order));
 	}
-	
+	@Test
+	public void orderDaoUpdateExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		orderDaoMock.update(1,order);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
+
 	@Test
 	public void orderDaoDeleteTest() {
 		assertEquals(true,orderDaoMock.delete(Mockito.anyInt()));
 	}
+	@Test
+	public void orderDaoDeleteExceptionTest() throws SQLException {
+		when(mockConn.prepareStatement(Mockito.anyString())).thenThrow(SQLException.class);
+		orderDaoMock.delete(1);
+		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
+	}
+
 }

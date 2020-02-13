@@ -29,9 +29,8 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 	/**
 	 * Reads the latest Item from the database (one with the highest ID).
-	 * @return an Item
+	 * @return the latest Item
 	 */
-
 	public Item readLatest() {
 		Item item = new Item();
 		try (Statement statement = connection.createStatement();

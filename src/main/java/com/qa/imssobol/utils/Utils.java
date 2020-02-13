@@ -44,7 +44,7 @@ public class Utils {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			String string = scanner.nextLine();
-			if (string.matches("[A-Za-z0-9. ]+")) {
+			if (string.matches("[A-Za-z0-9. ]+") || string.isEmpty()) {
 				return string;
 			} else {
 				LOGGER.info("Please only use alphanumerics, spaces, and full stops.");

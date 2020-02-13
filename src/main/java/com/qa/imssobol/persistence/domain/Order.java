@@ -88,10 +88,15 @@ public class Order {
 		return items;
 	}
 
-	public void setItems(Map<Item,Integer> items) {
+	public Order setItems(Map<Item,Integer> items) {
 		this.items = items;
+		return this;
 	}
 
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", price=" + price + ", customerId=" + customerId + ", items=" + items + "]";
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -22,22 +23,26 @@ public class MysqlOrderDao implements Dao<Order> {
 	private static final String INSERTORDERLINE = "INSERT INTO orders_items (order_id_fk, item_id_fk, quantity) VALUES (?,?,?)";
 	private static final String UPDATEPRICE = "UPDATE orders SET total_price=? WHERE id=?";
 	private static final String UPDATEORDERLINE = "UPDATE orders_items SET quantity=? WHERE order_id_fk=? AND item_id_fk=?";
-	private static final String READBYID = "select `id` as order_id, `customer_id_fk` as customer_id, `item_id_fk` as item_id, `quantity` from orders inner join orders_items on orders.`id` = orders_items.`order_id_fk` where orders.`id` = ?";
+	private static final String READORDER = "select * from orders where id=?";
+	private static final String READBYID = "select `id` as order_id, `customer_id_fk` as customer_id, `item_id_fk` as item_id, `quantity`, `total_price` from orders inner join orders_items on orders.`id` = orders_items.`order_id_fk` where orders.`id` = ?";
+	private static final String READORDERLINE = "select * from (select order_id_fk as order_id, item_id_fk as item_id, quantity, price as item_price, name as item_name from orders_items inner join items on orders_items.item_id_fk = items.id) orderjoin where order_id = ?";
 	private static final String DELETE = "DELETE FROM orders WHERE id=?";
 	private static final String DELETEORDERLINE = "DELETE FROM orders_items WHERE order_id_fk=?";
 	private static final String READALL = "SELECT * FROM orders";
 	private static final String GETPRICE = "SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?";
 	private static final String GETLASTID = "SELECT(SELECT id FROM orders ORDER BY id DESC LIMIT 1) as id";
-	
+
 	public MysqlOrderDao(Connection connection) {
 		this.connection = connection;
 	}
+
 	public Connection getConnection() {
 		return this.connection;
 	}
-	
+
 	/**
 	 * Reads the latest Order from the database (one with the highest ID).
+	 * 
 	 * @return the latest Order
 	 */
 	public Order readLatest() {
@@ -60,13 +65,13 @@ public class MysqlOrderDao implements Dao<Order> {
 	@Override
 	/**
 	 * Sends an Order to the database.
+	 * 
 	 * @param order the order to be created
 	 * @return the Order created
 	 */
 	public Order create(Order order) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
-				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);
-				PreparedStatement getLastps = connection.prepareStatement(GETLASTID)) {
+				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE)) {
 
 			ps.setInt(1, order.getCustomerId());
 			ps.setBigDecimal(2, order.getPrice());
@@ -84,7 +89,7 @@ public class MysqlOrderDao implements Dao<Order> {
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} 
+		}
 		return order;
 
 	}
@@ -92,7 +97,8 @@ public class MysqlOrderDao implements Dao<Order> {
 	@Override
 	public ArrayList<Order> readAll() {
 		ArrayList<Order> orders = new ArrayList<>();
-		try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(READALL);) {
+		try (Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery(READALL);) {
 			while (resultSet.next()) {
 				Order order = new Order();
 				int id = resultSet.getInt("id");
@@ -114,7 +120,11 @@ public class MysqlOrderDao implements Dao<Order> {
 	public Order readById(int id) {
 		Order order = null;
 		ResultSet resultSet = null;
-		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {
+		ResultSet resultSet2 = null;
+		Map<Item, Integer> itemQuants = new HashMap<>();
+		Item itemToAdd = new Item();
+		try (PreparedStatement ps = connection.prepareStatement(READORDER);
+				PreparedStatement ps2 = connection.prepareStatement(READORDERLINE)) {
 
 			ps.setInt(1, id);
 			resultSet = ps.executeQuery();
@@ -123,8 +133,16 @@ public class MysqlOrderDao implements Dao<Order> {
 				order.setId(resultSet.getInt("id"));
 				order.setCustomerId(resultSet.getInt("customer_id_fk"));
 				order.setPrice(resultSet.getBigDecimal("total_price"));
-				// TODO: read items from orderline
-				
+
+				ps2.setInt(1, id);
+				resultSet2 = ps2.executeQuery();
+				while (resultSet2.next()) {
+					itemToAdd.setId(resultSet2.getInt("item_id"));
+					itemToAdd.setName(resultSet2.getString("item_name"));
+					itemToAdd.setPrice(resultSet2.getBigDecimal("item_price"));
+					itemQuants.put(itemToAdd, resultSet2.getInt("quantity"));
+				}
+				order = order.setItems(itemQuants);
 			} else {
 				LOGGER.warn("Order with ID does not exist!");
 				throw new IllegalArgumentException();
@@ -136,6 +154,8 @@ public class MysqlOrderDao implements Dao<Order> {
 			try {
 				if (resultSet != null)
 					resultSet.close();
+				if (resultSet2 != null)
+					resultSet2.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
 			}
@@ -146,14 +166,14 @@ public class MysqlOrderDao implements Dao<Order> {
 
 	@Override
 	public Order update(int id, Order order) {
-		HashMap<Item,Integer> itemsQuants;
+		HashMap<Item, Integer> itemsQuants;
 		BigDecimal price = order.getPrice();
 		int itemId;
 		int itemQuantity;
-		try(PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);
+		try (PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);
 				PreparedStatement ps2 = connection.prepareStatement(UPDATEORDERLINE)) {
-			
-			itemsQuants = (HashMap<Item,Integer>) order.getItems();
+
+			itemsQuants = (HashMap<Item, Integer>) order.getItems();
 			for (Item item : itemsQuants.keySet()) {
 				itemId = item.getId();
 				itemQuantity = itemsQuants.get(item);
@@ -162,16 +182,16 @@ public class MysqlOrderDao implements Dao<Order> {
 				ps2.setInt(3, itemId);
 				ps2.executeUpdate();
 			}
-			ps.setBigDecimal(1,price);
+			ps.setBigDecimal(1, price);
 			ps.setInt(2, id);
 			ps.executeUpdate();
-			
+
 			return readById(id);
-			
+
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
-		} 		
-		
+		}
+
 		return null;
 	}
 
@@ -183,7 +203,6 @@ public class MysqlOrderDao implements Dao<Order> {
 			ps2.setInt(1, id);
 			ps.executeUpdate();
 			ps2.executeUpdate();
-
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);
