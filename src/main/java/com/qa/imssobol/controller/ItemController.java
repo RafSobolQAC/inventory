@@ -39,8 +39,10 @@ public class ItemController implements CrudController<Item>{
 
 	public Item create() {
 		LOGGER.info("Please enter the name of the item.");
+		LOGGER.info("Please only use alphanumeric characters!");
 		String name = getInput();
 		LOGGER.info("What price should it have? ");
+		LOGGER.info("Please only use numbers and full stops.");
 		BigDecimal price = getBigDecimalInput();
 		Item item = itemService.create(new Item(name,price));
 		LOGGER.info("Item created.");
@@ -49,10 +51,16 @@ public class ItemController implements CrudController<Item>{
 
 	public Item update() {
 		LOGGER.info("Which item to update? (ID)");
+		LOGGER.info("Please only use numbers.");
+
 		int id = getIntInput();
 		LOGGER.info("What's their new name? ");
+		LOGGER.info("Please only use alphanumeric characters!");
+
 		String newName = getInput();
 		LOGGER.info("What's their new price? ");
+		LOGGER.info("Please only use numbers and full stops.");
+
 		BigDecimal newPrice = getBigDecimalInput();
 		
 		Item item = itemService.update(id, new Item(newName,newPrice));
@@ -62,6 +70,8 @@ public class ItemController implements CrudController<Item>{
 
 	public boolean delete() {
 		LOGGER.info("Please enter the id of the item you would like to delete: ");
+		LOGGER.info("Please only use numbers.");
+
 		int id = getIntInput();
 		boolean wasDeleted = itemService.delete(id);
 		LOGGER.info("Item was deleted!");
@@ -72,6 +82,8 @@ public class ItemController implements CrudController<Item>{
 	@Override
 	public Item readById() {
 		LOGGER.info("Which item ID to access? ");
+		LOGGER.info("Please only use numbers.");
+
 		int id = getIntInput();
 		Item item = itemService.readById(id);
 		LOGGER.info(item.toString());

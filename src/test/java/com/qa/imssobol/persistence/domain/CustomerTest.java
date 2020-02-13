@@ -109,8 +109,12 @@ public class CustomerTest {
 	}
 	@Test
 	public void hashCodeTestWithNull() {
-		customer = new Customer(0, null);
-		other = new Customer(0, null);
+		customer = new Customer();
+		customer.setId(5);
+		customer.setName("Bobby");
+		other = new Customer();
+		customer.setId(5);
+		customer.setName("Bobby");
 		assertEquals(customer.hashCode(), other.hashCode());
 	}
 	
