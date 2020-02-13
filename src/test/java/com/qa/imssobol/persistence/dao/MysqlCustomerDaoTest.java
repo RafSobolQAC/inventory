@@ -2,18 +2,23 @@ package com.qa.imssobol.persistence.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.when;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
@@ -25,59 +30,77 @@ public class MysqlCustomerDaoTest {
 	public static final Logger LOGGER = Logger.getLogger(MysqlCustomerDaoTest.class);
 
 	private Customer customer;
-	private static Connection conn;
+	private Customer other;
+	
+	@Mock
+	private PreparedStatement mockPs;
+	
+	@Mock
+	private Statement mockStmt;
+	
+	@Mock
+	private ResultSet mockRs;
+	
+	@Mock
+	private Connection mockConn;
+
 	
 	@Spy
 	@InjectMocks
-	private MysqlCustomerDao custDao;
+	private MysqlCustomerDao custDaoMock;
 
-	
-	@BeforeClass
-	public static void login() throws SQLException {
-
-		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ims", "root", "root");
-		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage());
-		}
-	}
-	
+		
 	@Before
-	public void setUpCustomer() {
-		customer = new Customer();
-		custDao = new MysqlCustomerDao(conn);
+	public void setUpCustomer() throws SQLException {
+        MockitoAnnotations.initMocks(this);
+        when(mockConn.prepareStatement(Mockito.anyString())).thenReturn(mockPs);
+		when(mockConn.createStatement()).thenReturn(mockStmt);
+		when(mockStmt.executeQuery(Mockito.anyString())).thenReturn(mockRs);
+		when(mockPs.executeQuery()).thenReturn(mockRs);
+		when(mockRs.getString("name")).thenReturn("Thomas");
+		when(mockRs.getInt("id")).thenReturn(1);
+
+		customer = new Customer(1,"Thomas");
+		other = new Customer(2,"Bobby");
 	}
 
 	@Test
-	public void customerDaoAddTest() {
+	public void customerDaoCreateTest() {
 		customer.setName("One!");
-		Customer otherCustomer = new Customer("One!");
-		custDao.create(customer);
-		assertEquals(otherCustomer.getName(), custDao.readLatest().getName());
-
+		Mockito.doReturn(customer).when(custDaoMock).readLatest();
+		assertEquals("One!",custDaoMock.create(customer).getName());
+		
 	}
 
 	@Test
-	public void customerDaoReadByIdTest() {
-		assertEquals(null, custDao.readById(1000000).getName());
+	public void customerDaoReadByIdTest() throws SQLException {
+		when(mockRs.next()).thenReturn(true);
+		assertEquals(customer,custDaoMock.readById(Mockito.anyInt()));
+	}
+	
+	@Test
+	public void customerDaoReadLatestTest() throws SQLException {
+		when(mockRs.next()).thenReturn(true);
+		assertEquals(customer,custDaoMock.readLatest());
+	}
+	
+	@Test
+	public void customerDaoReadAllTest() throws SQLException {
+		Mockito.doReturn(true).doReturn(true).doReturn(false).when(mockRs).next();
+		assertEquals(2,custDaoMock.readAll().size());
 	}
 	
 	@Test
 	public void customerDaoUpdateTest() {
-		custDao.create(new Customer("Bobby Tables"));
-		ArrayList<Customer> customers = custDao.readAll();
-		int idLast = customers.get(customers.size()-1).getId();
-		custDao.update(idLast, new Customer("Billy Tables"));
-		assertEquals("Billy Tables",custDao.readById(idLast).getName());
+		Mockito.doReturn(other).when(custDaoMock).readById(Mockito.anyInt());
+		assertEquals(other,custDaoMock.update(1, other));
+		
 	}
 	
 	
 	@Test
 	public void customerDaoDeleteTest() {
-		custDao.create(new Customer("Bobby T."));
-		ArrayList<Customer> customers = custDao.readAll();
-		int idLast = customers.get(customers.size()-1).getId();
-		assertTrue(custDao.delete(idLast));
+		assertTrue(custDaoMock.delete(Mockito.anyInt()));
 	}
 	
 

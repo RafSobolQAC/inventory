@@ -2433,3 +2433,139 @@
 2020-02-12 18:50:53 INFO  MysqlOrderDao:77 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
 2020-02-12 18:51:34 INFO  MysqlOrderDao:77 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
 2020-02-12 18:51:47 INFO  MysqlOrderDao:77 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:03:57 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:04:16 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:09:12 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:09:29 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:10:22 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:10:36 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:12:02 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:12:11 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:16:29 INFO  MysqlOrderDao:75 - Added order: com.qa.imssobol.persistence.domain.Order@870a2c2a
+2020-02-13 09:17:10 INFO  CustomerController:33 - -1 Chris
+2020-02-13 09:17:10 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 09:17:10 INFO  CustomerController:33 - -1 Nic
+2020-02-13 09:17:10 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 09:17:10 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 09:17:10 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 09:17:10 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 09:17:10 INFO  CustomerController:53 - Update complete!
+2020-02-13 09:17:10 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 09:17:10 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 09:17:10 INFO  CustomerController:43 - Creation complete!
+2020-02-13 09:19:57 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-13 09:20:16 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-13 09:20:24 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-13 09:22:55 INFO  MysqlCustomerDao:55 - Added customer: -1 One!
+2020-02-13 09:25:31 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:10 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:19 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:41 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:48 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:52 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:03:58 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:04:38 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:04:44 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:04:48 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:04:54 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:06:02 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:06:38 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:06:48 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:06:48 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:06:48 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:06:48 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:06:48 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:06:48 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:06:48 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:06:48 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:06:48 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 10:06:48 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 10:06:48 INFO  CustomerController:43 - Creation complete!
+2020-02-13 10:06:49 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:10:33 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:10:33 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:10:33 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:10:33 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:10:33 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:10:33 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:10:33 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:10:33 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:10:33 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 10:10:33 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 10:10:33 INFO  CustomerController:43 - Creation complete!
+2020-02-13 10:10:33 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:13:04 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:13:04 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:13:04 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:13:04 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:13:04 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:13:04 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:14:02 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:14:02 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:14:02 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:14:02 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:14:02 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:14:02 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:14:52 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:14:52 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:14:52 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:14:52 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:14:52 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:14:52 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:14:52 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 10:14:52 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 10:14:52 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 10:14:52 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 10:14:52 INFO  CustomerController:43 - Creation complete!
+2020-02-13 10:14:52 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:14:52 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:43:55 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 10:43:55 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 10:43:55 INFO  ItemController:53 - What's their new name? 
+2020-02-13 10:43:55 INFO  ItemController:55 - What's their new price? 
+2020-02-13 10:43:55 INFO  ItemController:59 - Update complete!
+2020-02-13 10:43:55 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 10:43:55 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 10:43:55 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 10:43:55 INFO  ItemController:43 - What price should it have? 
+2020-02-13 10:43:55 INFO  ItemController:46 - Item created.
+2020-02-13 10:43:55 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:43:55 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:45:13 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 10:45:13 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 10:45:13 INFO  ItemController:53 - What's their new name? 
+2020-02-13 10:45:13 INFO  ItemController:55 - What's their new price? 
+2020-02-13 10:45:13 INFO  ItemController:59 - Update complete!
+2020-02-13 10:45:13 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 10:45:13 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 10:45:13 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 10:45:13 INFO  ItemController:43 - What price should it have? 
+2020-02-13 10:45:13 INFO  ItemController:46 - Item created.
+2020-02-13 10:45:13 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:45:13 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:46:15 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 10:46:15 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 10:46:15 INFO  ItemController:53 - What's their new name? 
+2020-02-13 10:46:15 INFO  ItemController:55 - What's their new price? 
+2020-02-13 10:46:15 INFO  ItemController:59 - Update complete!
+2020-02-13 10:46:15 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 10:46:15 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 10:46:15 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 10:46:15 INFO  ItemController:43 - What price should it have? 
+2020-02-13 10:46:15 INFO  ItemController:46 - Item created.
+2020-02-13 10:46:15 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:46:15 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:46:16 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:46:16 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:46:16 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:46:16 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:46:16 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:46:16 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:46:16 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 10:46:16 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 10:46:16 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 10:46:16 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 10:46:16 INFO  CustomerController:43 - Creation complete!
+2020-02-13 10:46:16 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:46:16 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:46:16 INFO  MysqlCustomerDao:55 - Added customer: 1 One!

@@ -36,13 +36,10 @@ public class MysqlOrderDao implements Dao<Order> {
 		return this.connection;
 	}
 	public Order readLatest() {
-		System.out.println("Here!");
 		try (Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY id DESC LIMIT 1");) {
 			if (resultSet.next()) {
-				System.out.println("Next?");
 				int id = resultSet.getInt("id");
-				LOGGER.info("Debugger ID: "+id);
 				return readById(id);
 			} else {
 				LOGGER.warn("There is no order yet!");
@@ -74,7 +71,6 @@ public class MysqlOrderDao implements Dao<Order> {
 				ps2.executeUpdate();
 			}
 
-			LOGGER.info(("Added order: " + t.toString()));
 			return readLatest();
 
 		} catch (SQLException e) {
@@ -123,8 +119,10 @@ public class MysqlOrderDao implements Dao<Order> {
 			if (resultSet.next()) {
 				order = new Order();
 				order.setId(resultSet.getInt("id"));
-
-				// needs work!!!!!
+				order.setCustomerId(resultSet.getInt("customer_id_fk"));
+				order.setPrice(resultSet.getBigDecimal("total_price"));
+				// TODO: read items from orderline
+				
 			} else {
 				LOGGER.warn("Order with ID does not exist!");
 				throw new IllegalArgumentException();
@@ -183,7 +181,6 @@ public class MysqlOrderDao implements Dao<Order> {
 			ps.executeUpdate();
 			ps2.executeUpdate();
 
-			LOGGER.info("Deleted order with ID " + id);
 
 		} catch (SQLException e) {
 			Utils.exceptionLogger(e, LOGGER);

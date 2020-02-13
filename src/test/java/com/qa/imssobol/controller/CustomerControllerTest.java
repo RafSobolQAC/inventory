@@ -71,20 +71,16 @@ public class CustomerControllerTest {
 		assertEquals(customer, customerController.update());
 	}
 	
-
-	/**
-	 * Delete doesn't return anything, so we can just verify that it calls the delete method
-	 */
-//	@Test
-//	public void deleteTest() {
-//		String id = "1";
-//		Mockito.doReturn(id).when(customerController).getInput();
-//		customerController.delete();
-//		Mockito.verify(customerServices, Mockito.times(1)).delete(1);
-//	}
+	@Test
+	public void readByIdTest() {
+		Customer customer = new Customer(1,"Bobby");
+		Mockito.doReturn(1).when(customerController).getIntInput();
+		Mockito.when(customerService.readById(Mockito.anyInt())).thenReturn(customer);
+		assertEquals(customer,customerController.readById());
+	}
 	
 	@Test
-	public void delete2Test() {
+	public void deleteTest() {
 		int id = 1;
 		Mockito.doReturn(id).when(customerController).getIntInput();
 		customerController.delete();
