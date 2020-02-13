@@ -35,6 +35,11 @@ public class MysqlOrderDao implements Dao<Order> {
 	public Connection getConnection() {
 		return this.connection;
 	}
+	
+	/**
+	 * Reads the latest Order from the database (one with the highest ID).
+	 * @return the latest Order
+	 */
 	public Order readLatest() {
 		try (Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY id DESC LIMIT 1");) {
@@ -53,6 +58,11 @@ public class MysqlOrderDao implements Dao<Order> {
 	}
 
 	@Override
+	/**
+	 * Sends an Order to the database.
+	 * @param order the order to be created
+	 * @return the Order created
+	 */
 	public Order create(Order order) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE);

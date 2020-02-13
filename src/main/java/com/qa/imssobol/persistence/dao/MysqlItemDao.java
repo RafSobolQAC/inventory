@@ -27,6 +27,10 @@ public class MysqlItemDao implements Dao<Item> {
 	public MysqlItemDao(Connection connection) {
 		this.connection = connection;
 	}
+	/**
+	 * Reads the latest Item from the database (one with the highest ID).
+	 * @return an Item
+	 */
 
 	public Item readLatest() {
 		Item item = new Item();
@@ -49,6 +53,11 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
+	/**
+	 * Sends an Item to the database.
+	 * @param item the item to be created
+	 * @return the Item created
+	 */
 	public Item create(Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {
 
@@ -67,6 +76,11 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
+	/**
+	 * Reads an Item with the given ID from the database.
+	 * @param id item's ID (in the database)
+	 * @return the Item
+	 */
 	public Item readById(int id) {
 		Item item = null;
 		ResultSet resultSet = null;
@@ -96,6 +110,10 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
+	/**
+	 * Reads all items from the database, and stores them in an arraylist.
+	 * @return an arraylist of Items
+	 */
 	public ArrayList<Item> readAll() {
 		ArrayList<Item> items = new ArrayList<>();
 		ResultSet resultSet = null;
@@ -121,7 +139,13 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
-	public Item update(int id, Item item) {
+	/**
+	 * Updates an item with the provided id, changing their details into those from the new item.
+	 * @param id item's id in the database to be modified
+	 * @param item new item's details (the ID of that item doesn't affect anything)
+	 * @return the new Item
+	 */
+public Item update(int id, Item item) {
 		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
 
 			ps.setString(1, item.getName());
@@ -140,7 +164,12 @@ public class MysqlItemDao implements Dao<Item> {
 	}
 
 	@Override
-	public boolean delete(int id) {
+	/**
+	 * Deletes an item with the specified ID.
+	 * @param id the item's id
+	 * @return true if no exceptions (whether deleted or not), false otherwise
+	 */
+public boolean delete(int id) {
 		try (PreparedStatement ps = connection.prepareStatement(DELETE)) {
 
 			ps.setInt(1, id);

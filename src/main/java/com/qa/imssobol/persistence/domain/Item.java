@@ -4,17 +4,31 @@ public class Item {
 	private String name;
 	private BigDecimal price;
 	private int id;
-	
+	/**
+	 * Create an empty Item instance.
+	 */
 	public Item() {
 		this.name = null;
 		this.id = -1;
 	}
+	
+	/**
+	 * Create an Item with a name and BigDecimal price, but no ID.
+	 * @param name
+	 * @param price
+	 */
 	public Item(String name, BigDecimal price) {
 		this.name = name;
 		this.price = price;
 		this.id = -1;
 	}
 	
+	/**
+	 * Create an Item with an ID, name, and BigDecimal price.
+	 * @param id
+	 * @param name
+	 * @param price
+	 */
 	public Item(int id, String name, BigDecimal price) {
 		this.name = name;
 		this.price = price;

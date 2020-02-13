@@ -10,20 +10,34 @@ public class Order {
 	private BigDecimal price;
 	private int customerId;
 	private Map<Item,Integer> items;
-	
+	/**
+	 * Create an Order with an ID, customer ID, and a map of (Item, quantity). The price is calculated automatically (if the items in the map have no prices, it will be 0).
+	 * @param id
+	 * @param customerId
+	 * @param items
+	 */
 	public Order(int id, int customerId, Map<Item,Integer> items) {
 		this.id = id;
 		this.customerId = customerId;
 		this.items = items;
 		this.price = calcPrice(); 
 	}
-	
+	/**
+	 * Create an empty Order.
+	 */
 	public Order() {
 		this.id = 0;
 		this.customerId = 0;
 		this.price = new BigDecimal(0);
 		this.items = new HashMap<>();
 	}
+	
+	
+	/**
+	 * Create an Order with a customer ID and a map of (Item, quantity). The price is calculated automatically (if the items in the map have no prices, it will be 0).
+	 * @param customerId
+	 * @param items
+	 */
 	public Order(int customerId, Map<Item,Integer> items) {
 		this.customerId = customerId;
 		this.items = items;
@@ -40,6 +54,10 @@ public class Order {
 		this.id = id;
 	}
 
+	/**
+	 * Calculates price of the order based on the Items inside it.
+	 * @return the total price of the order
+	 */
 	public BigDecimal calcPrice() {
 		BigDecimal runningTotal = new BigDecimal(0);
 		for (Item item : items.keySet()) {

@@ -5,16 +5,28 @@ public class Customer {
 	private int id;
 
 	
-	
+	/**
+	 * Create an empty customer.
+	 */
 	public Customer() {
 		this.name = null;
 		this.id = -1;
 	}
+	/**
+	 * Create a customer w/ ID and name.
+	 * @param id
+	 * @param name
+	 */
 	public Customer(int id, String name) {
 		this.name = name;
 		this.id = id;
 		
 	}
+	
+	/**
+	 * Create a customer w/ a name only.
+	 * @param name
+	 */
 	public Customer(String name) {
 		this.name = name;
 		this.id = -1;
