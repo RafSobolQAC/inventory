@@ -2569,3 +2569,55 @@
 2020-02-13 10:46:16 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
 2020-02-13 10:46:16 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
 2020-02-13 10:46:16 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 10:47:12 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 10:47:12 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 10:47:12 INFO  ItemController:53 - What's their new name? 
+2020-02-13 10:47:12 INFO  ItemController:55 - What's their new price? 
+2020-02-13 10:47:12 INFO  ItemController:59 - Update complete!
+2020-02-13 10:47:12 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 10:47:12 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 10:47:12 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 10:47:12 INFO  ItemController:43 - What price should it have? 
+2020-02-13 10:47:12 INFO  ItemController:46 - Item created.
+2020-02-13 10:47:12 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:47:12 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 10:47:12 INFO  CustomerController:33 - -1 Chris
+2020-02-13 10:47:12 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 10:47:12 INFO  CustomerController:33 - -1 Nic
+2020-02-13 10:47:12 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 10:47:12 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 10:47:12 INFO  CustomerController:53 - Update complete!
+2020-02-13 10:47:12 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 10:47:12 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 10:47:12 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 10:47:12 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 10:47:12 INFO  CustomerController:43 - Creation complete!
+2020-02-13 10:47:12 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:47:12 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 10:47:13 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 11:19:42 INFO  CustomerController:33 - -1 Chris
+2020-02-13 11:19:42 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 11:19:42 INFO  CustomerController:33 - -1 Nic
+2020-02-13 11:19:42 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 11:19:42 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 11:19:42 INFO  CustomerController:53 - Update complete!
+2020-02-13 11:19:42 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 11:19:42 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 11:19:42 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 11:19:42 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 11:19:42 INFO  CustomerController:43 - Creation complete!
+2020-02-13 11:19:42 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 11:19:42 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 11:19:42 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 11:19:44 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 11:19:44 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 11:19:44 INFO  ItemController:53 - What's their new name? 
+2020-02-13 11:19:44 INFO  ItemController:55 - What's their new price? 
+2020-02-13 11:19:44 INFO  ItemController:59 - Update complete!
+2020-02-13 11:19:44 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 11:19:44 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 11:19:44 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 11:19:44 INFO  ItemController:43 - What price should it have? 
+2020-02-13 11:19:44 INFO  ItemController:46 - Item created.
+2020-02-13 11:19:44 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 11:19:44 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
