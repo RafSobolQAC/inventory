@@ -21,7 +21,10 @@ public class Connector {
 	public Connector(String url) {
 		this.url = url;
 	}
-
+/**
+ * Sets up the connector. If no password is passed to the system at runtime, it asks for user input.
+ * @throws SQLException
+ */
 	public void setUpConnector() throws SQLException {
 		Loginner loginner;
 		String pd = "root";
@@ -42,11 +45,21 @@ public class Connector {
 		}
 
 	}
-
+/**
+ * Creates a connection based on the url and password provided.
+ * @param url
+ * @param username
+ * @param password
+ * @return the Connection
+ * @throws SQLException
+ */
 	protected Connection setUpConnection(String url, String username, String password) throws SQLException {
 		return DriverManager.getConnection(url, username, password);
 	}
-
+/**
+ *
+ * @return a connection to the database
+ */
 	public Connection getConnection() {
 		return this.connection;
 	}

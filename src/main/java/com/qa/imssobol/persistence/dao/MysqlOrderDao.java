@@ -62,13 +62,13 @@ public class MysqlOrderDao implements Dao<Order> {
 		return null;
 	}
 
-	@Override
 	/**
 	 * Sends an Order to the database.
 	 * 
 	 * @param order the order to be created
 	 * @return the Order created
 	 */
+	@Override
 	public Order create(Order order) {
 		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);
 				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE)) {
@@ -94,6 +94,10 @@ public class MysqlOrderDao implements Dao<Order> {
 
 	}
 
+	/**
+	 * Reads all orders from the database.
+	 * @return an ArrayList of Orders from the database (0 price - read by int to get the price of each item!)
+	 */
 	@Override
 	public ArrayList<Order> readAll() {
 		ArrayList<Order> orders = new ArrayList<>();
@@ -115,7 +119,11 @@ public class MysqlOrderDao implements Dao<Order> {
 		return orders;
 
 	}
-
+/**
+ * Reads an order based on its ID.
+ * @param id the order's ID in the database
+ * @return the Order
+ */
 	@Override
 	public Order readById(int id) {
 		Order order = null;
@@ -135,13 +143,13 @@ public class MysqlOrderDao implements Dao<Order> {
 
 				ps2.setInt(1, id);
 				try (ResultSet resultSet2 = ps2.executeQuery()) {
-				while (resultSet2.next()) {
-					itemToAdd.setId(resultSet2.getInt("item_id"));
-					itemToAdd.setName(resultSet2.getString("item_name"));
-					itemToAdd.setPrice(resultSet2.getBigDecimal("item_price"));
-					itemQuants.put(itemToAdd, resultSet2.getInt("quantity"));
-				}
-				order = order.setItems(itemQuants);
+					while (resultSet2.next()) {
+						itemToAdd.setId(resultSet2.getInt("item_id"));
+						itemToAdd.setName(resultSet2.getString("item_name"));
+						itemToAdd.setPrice(resultSet2.getBigDecimal("item_price"));
+						itemQuants.put(itemToAdd, resultSet2.getInt("quantity"));
+					}
+					order = order.setItems(itemQuants);
 				} catch (SQLException e) {
 					throw e;
 				}
@@ -163,7 +171,12 @@ public class MysqlOrderDao implements Dao<Order> {
 
 		return order;
 	}
-
+/**
+ * Updates an order with id ID, to the details of the order provided. The ID doesn't matter.
+ * @param id the order's ID in the database
+ * @param order the new order's details
+ * @return the new order
+ */
 	@Override
 	public Order update(int id, Order order) {
 		HashMap<Item, Integer> itemsQuants;
@@ -194,7 +207,11 @@ public class MysqlOrderDao implements Dao<Order> {
 
 		return null;
 	}
-
+/**
+ * Deletes an order from the database, with the provided ID.
+ * @param id the order's ID in the database
+ * @return true if no exception was caught, false otherwise
+ */
 	@Override
 	public boolean delete(int id) {
 		try (PreparedStatement ps = connection.prepareStatement(DELETE);

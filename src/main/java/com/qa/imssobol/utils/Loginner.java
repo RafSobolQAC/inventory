@@ -10,14 +10,17 @@ public class Loginner {
 	public String setPassword() {
 		return Utils.getPassword();
 	}
-
-	public String logIn() {
+	
+/**
+ * Gets an user-input password.
+ * @return the password
+ */
+	protected String logIn() {
 
 		if (this.password == null) {
 			LOGGER.info("What is your password? ");
 
 			this.password = setPassword();
-			return this.password;
 		}
 		return this.password;
 	}
