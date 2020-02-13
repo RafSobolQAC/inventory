@@ -190,4 +190,8 @@ public class MysqlOrderDaoTest {
 		Mockito.verify(mockPs, Mockito.times(0)).executeUpdate();
 	}
 
+	@Test
+	public void getConnectionTest() {
+		assertEquals(mockConn, orderDaoMock.getConnection());
+	}
 }

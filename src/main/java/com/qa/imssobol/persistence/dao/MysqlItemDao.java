@@ -106,6 +106,7 @@ public class MysqlItemDao implements Dao<Item> {
 					resultSet.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
+				item = new Item();
 			}
 
 		}
@@ -137,6 +138,7 @@ public class MysqlItemDao implements Dao<Item> {
 					resultSet.close();
 			} catch (Exception e) {
 				Utils.exceptionLogger(e, LOGGER);
+				items = new ArrayList<>();
 			}
 		}
 		return items;

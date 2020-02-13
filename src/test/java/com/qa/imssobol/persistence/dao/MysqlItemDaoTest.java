@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
@@ -90,6 +91,11 @@ public class MysqlItemDaoTest {
 	}
 
 	@Test
+	public void itemDaoReadByIdRSCloseExceptionTest() throws SQLException {
+		Mockito.doThrow(SQLException.class).when(mockRs).close();
+		assertEquals(new Item(), itemDaoMock.readById(1));
+	}
+	@Test
 	public void itemDaoReadLatestTest() throws SQLException {
 		when(mockRs.next()).thenReturn(true);
 		assertEquals(item.getName(),itemDaoMock.readLatest().getName());
@@ -118,6 +124,11 @@ public class MysqlItemDaoTest {
 		when(mockConn.createStatement()).thenThrow(SQLException.class);
 		itemDaoMock.readAll();
 		Mockito.verify(mockPs, Mockito.times(0)).executeQuery();
+	}
+	@Test
+	public void itemDaoReadAllRSCloseExceptionTest() throws SQLException {
+		Mockito.doThrow(SQLException.class).when(mockRs).close();
+		assertEquals(new ArrayList<Item>(), itemDaoMock.readAll());
 	}
 
 	@Test
