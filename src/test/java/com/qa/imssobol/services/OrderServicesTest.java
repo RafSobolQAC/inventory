@@ -1,7 +1,9 @@
 package com.qa.imssobol.services;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,10 +14,10 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import com.qa.imssobol.persistence.dao.MysqlOrderDao;
-import com.qa.imssobol.persistence.domain.Customer;
 import com.qa.imssobol.persistence.domain.Item;
 import com.qa.imssobol.persistence.domain.Order;
 
@@ -26,6 +28,10 @@ public class OrderServicesTest {
 	@Mock
 	private MysqlOrderDao orderDaoMock;
 	
+	@Mock
+	private Connection mockConn;
+	
+	@Spy
 	@InjectMocks
 	private OrderServices orderService;
 	
@@ -41,6 +47,13 @@ public class OrderServicesTest {
 		orders.add(order);
 		Mockito.when(orderDaoMock.readAll()).thenReturn(orders);
 		assertEquals(orders,orderService.readAll());
+	}
+	
+	@Test
+	public void getConnectionTest() {
+		Mockito.when(orderDaoMock.getConnection()).thenReturn(mockConn);
+		OrderServices testOS = new OrderServices(orderDaoMock);
+		assertEquals(mockConn,testOS.getConnection());
 	}
 	
 	@Test

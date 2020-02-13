@@ -2621,3 +2621,141 @@
 2020-02-13 11:19:44 INFO  ItemController:46 - Item created.
 2020-02-13 11:19:44 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
 2020-02-13 11:19:44 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 11:20:36 INFO  CustomerController:33 - -1 Chris
+2020-02-13 11:20:36 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 11:20:36 INFO  CustomerController:33 - -1 Nic
+2020-02-13 11:20:36 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 11:20:36 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 11:20:36 INFO  CustomerController:53 - Update complete!
+2020-02-13 11:20:36 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 11:20:36 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 11:20:36 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 11:20:36 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 11:20:36 INFO  CustomerController:43 - Creation complete!
+2020-02-13 11:20:36 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 11:20:36 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 11:20:36 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 11:20:38 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 11:20:38 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 11:20:38 INFO  ItemController:53 - What's their new name? 
+2020-02-13 11:20:38 INFO  ItemController:55 - What's their new price? 
+2020-02-13 11:20:38 INFO  ItemController:59 - Update complete!
+2020-02-13 11:20:38 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 11:20:38 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 11:20:38 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 11:20:38 INFO  ItemController:43 - What price should it have? 
+2020-02-13 11:20:38 INFO  ItemController:46 - Item created.
+2020-02-13 11:20:38 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 11:20:38 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 11:35:59 INFO  Loginner:13 - What is your password? 
+2020-02-13 11:44:32 INFO  Loginner:13 - What is your password? 
+2020-02-13 11:44:34 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 11:44:34 ERROR Connector:23 - The url cannot be null
+2020-02-13 11:44:34 ERROR Connector:24 - 
+2020-02-13 11:44:34 INFO  Loginner:13 - What is your password? 
+2020-02-13 11:48:33 INFO  Loginner:13 - What is your password? 
+2020-02-13 11:57:54 INFO  Loginner:13 - What is your password? 
+2020-02-13 11:58:15 INFO  Loginner:13 - What is your password? 
+2020-02-13 12:04:10 INFO  Loginner:13 - What is your password? 
+2020-02-13 12:05:24 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:05:36 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:07:13 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:07:25 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:07:31 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:08:16 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:08:49 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:09:02 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:09:24 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:11:05 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:11:15 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:11:24 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:11:43 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:15:26 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:18:23 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:21:52 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:22:52 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:22:59 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:23:28 INFO  Loginner:20 - What is your password? 
+2020-02-13 12:23:31 INFO  Loginner:20 - What is your password? 
+2020-02-13 12:24:16 INFO  Loginner:20 - What is your password? 
+2020-02-13 12:27:56 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:28:13 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:28:35 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:28:41 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:56:50 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 12:56:50 ERROR Connector:23 - The url cannot be null
+2020-02-13 12:56:50 ERROR Connector:24 - 
+2020-02-13 12:56:50 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:57:21 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 12:57:21 ERROR Connector:23 - The url cannot be null
+2020-02-13 12:57:21 ERROR Connector:24 - 
+2020-02-13 12:57:21 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:58:09 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 12:58:09 ERROR Connector:23 - The url cannot be null
+2020-02-13 12:58:09 ERROR Connector:24 - 
+2020-02-13 12:58:09 INFO  Loginner:17 - What is your password? 
+2020-02-13 12:59:57 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 12:59:57 ERROR Connector:23 - The url cannot be null
+2020-02-13 12:59:57 ERROR Connector:24 - 
+2020-02-13 12:59:57 INFO  Loginner:17 - What is your password? 
+2020-02-13 13:00:47 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:00:47 ERROR Connector:23 - The url cannot be null
+2020-02-13 13:00:47 ERROR Connector:24 - 
+2020-02-13 13:00:47 INFO  Loginner:17 - What is your password? 
+2020-02-13 13:03:11 ERROR Connector:22 - Error in Utils.exceptionLogger: 
+2020-02-13 13:03:11 ERROR Connector:23 - The url cannot be null
+2020-02-13 13:03:11 ERROR Connector:24 - 
+2020-02-13 13:03:11 INFO  Loginner:17 - What is your password? 
+2020-02-13 13:07:05 INFO  Loginner:17 - What is your password? 
+2020-02-13 13:10:25 INFO  CustomerController:33 - -1 Chris
+2020-02-13 13:10:25 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 13:10:25 INFO  CustomerController:33 - -1 Nic
+2020-02-13 13:10:25 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 13:10:25 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 13:10:25 INFO  CustomerController:53 - Update complete!
+2020-02-13 13:10:25 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 13:10:25 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 13:10:25 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 13:10:25 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 13:10:25 INFO  CustomerController:43 - Creation complete!
+2020-02-13 13:10:25 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:10:25 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:10:25 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 13:10:26 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 13:10:26 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 13:10:26 INFO  ItemController:53 - What's their new name? 
+2020-02-13 13:10:26 INFO  ItemController:55 - What's their new price? 
+2020-02-13 13:10:26 INFO  ItemController:59 - Update complete!
+2020-02-13 13:10:26 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 13:10:26 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 13:10:26 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 13:10:26 INFO  ItemController:43 - What price should it have? 
+2020-02-13 13:10:26 INFO  ItemController:46 - Item created.
+2020-02-13 13:10:26 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:10:26 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:11:29 INFO  CustomerController:33 - -1 Chris
+2020-02-13 13:11:29 INFO  CustomerController:33 - -1 Rhys
+2020-02-13 13:11:29 INFO  CustomerController:33 - -1 Nic
+2020-02-13 13:11:29 INFO  CustomerController:48 - Which customer to update? (ID)
+2020-02-13 13:11:29 INFO  CustomerController:50 - What's their new name? 
+2020-02-13 13:11:29 INFO  CustomerController:53 - Update complete!
+2020-02-13 13:11:29 INFO  CustomerController:67 - Which customer ID to access? 
+2020-02-13 13:11:29 INFO  CustomerController:70 - 1 Bobby
+2020-02-13 13:11:29 INFO  CustomerController:39 - Please enter a first name
+2020-02-13 13:11:29 INFO  CustomerController:41 - Customer being created. 
+2020-02-13 13:11:29 INFO  CustomerController:43 - Creation complete!
+2020-02-13 13:11:29 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:11:29 INFO  CustomerController:58 - Please enter the id of the customer you would like to delete
+2020-02-13 13:11:30 INFO  MysqlCustomerDao:55 - Added customer: 1 One!
+2020-02-13 13:11:31 INFO  ItemController:35 - -1 A 5.0
+2020-02-13 13:11:31 INFO  ItemController:51 - Which item to update? (ID)
+2020-02-13 13:11:31 INFO  ItemController:53 - What's their new name? 
+2020-02-13 13:11:31 INFO  ItemController:55 - What's their new price? 
+2020-02-13 13:11:31 INFO  ItemController:59 - Update complete!
+2020-02-13 13:11:31 INFO  ItemController:73 - Which item ID to access? 
+2020-02-13 13:11:31 INFO  ItemController:76 - -1 Beer 5.0
+2020-02-13 13:11:31 INFO  ItemController:41 - Please enter the name of the item.
+2020-02-13 13:11:31 INFO  ItemController:43 - What price should it have? 
+2020-02-13 13:11:31 INFO  ItemController:46 - Item created.
+2020-02-13 13:11:31 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 
+2020-02-13 13:11:31 INFO  ItemController:64 - Please enter the id of the item you would like to delete: 

@@ -25,16 +25,25 @@ public class Ims {
 	public static final Logger LOGGER = Logger.getLogger(Ims.class);
 	protected Connection connection;
 
-	public Ims(String url) {
-		try {
-			connector = new Connector(url);
-			connection = connector.getConnection();
-		} catch (SQLException e) {
-			Utils.exceptionLogger(e, LOGGER);
-		}
+	public Ims(Connector connector) {
+		if (this.connector == null)	this.connector = connector;
+	}
+//	public Ims(String url) {
+//		try {
+//			connector = makeConnector(url);
+//			connection = connector.getConnection();
+//		} catch (SQLException e) {
+//			Utils.exceptionLogger(e, LOGGER);
+//		}
+//	}
+	
+	public Connector makeConnector(String url) throws SQLException {
+		return new Connector(url);
 	}
 
-	public void imsRunner() {
+	public void imsRunner() throws SQLException {
+		connector.setUpConnector();
+		this.connection = connector.getConnection();
 		boolean breaker = true;
 		while (breaker) {
 			LOGGER.info("Which entity would you like to use? ");

@@ -8,37 +8,41 @@ import org.apache.log4j.Logger;
 
 public class Connector {
 	private Connection connection;
-	private String password = "";
+	private String password = "root";
+	private String url = "jdbc:mysql://localhost:3306/";
 	private Loginner loginner;
-	private Login login;
 	public static final Logger LOGGER = Logger.getLogger(Connector.class);
-	
-	public Connector() throws SQLException {
-		try {
-			this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
-		} catch (SQLException e) {
-			Utils.exceptionLogger(e, LOGGER);
-		}
+
+	public Connector() {
 	}
 
-	public Connector(String url) throws SQLException {
-		password = System.getProperty("env.PWD");
-		while (true) {
-			if (password == null) {
-				login = new Login();
-				loginner = new Loginner(login);
-				loginner.logIn();
-				password = login.getPassword();
+	public String getSystemPwd() {
+		return System.getProperty("env.PWD");
+	}
+
+	public Connector(String url) {
+		this.url = url;
+	}
+	public void setUpConnector() throws SQLException {
+			password = getSystemPwd();
+			while (true) {
+				if (password == null) {
+					loginner = new Loginner();
+					password = loginner.logIn();
+				}
+				try {
+					this.connection = setUpConnection(url, "root", password);
+					password = null;
+					break;
+				} catch (SQLException e) {
+					Utils.exceptionLogger(e, LOGGER);
+					password = null;
+				}
 			}
-			try {
-				this.connection = DriverManager.getConnection(url, "root", password);
-				password = null;
-				break;
-			} catch (SQLException e) {
-				Utils.exceptionLogger(e, LOGGER);
-				password = null;
-			}
-		}
+
+	}
+	protected Connection setUpConnection(String url, String username, String password) throws SQLException {
+		return DriverManager.getConnection(url, username, password);
 	}
 
 	public Connection getConnection() {
