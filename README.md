@@ -56,33 +56,48 @@ Here, the advantages of running it on a cloud-based VM are clear - you want to m
 ```
 
 
-End with an example of getting some data out of the system or using it for a little demo
+When you run the program, it will default to the author's own database - ensure you change it in the Runner-main method (in the call to the IMS instance) to refer to your database.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+To run the tests:
+```
+mvn test
+```
+To run IT tests, you will have to
+```
+mvn clean integration-test
+```
 
 ### Unit Tests 
 
 Unit tests run on each individual class to make sure it works as expected. Mockito is used to stub other classes for those that are reliant on them.
-```
 
+```
+	//This test mocks the creation of a customer in a MysqlCustomerDao class, and thus unit tests the customerService class.
+	@Test
+	public void createTest() {
+		Mockito.when(custDaoMock.create(Mockito.any(Customer.class))).thenReturn(customer);
+		assertEquals(customer,customerService.create(customer));
+	}
+
+	
 ```
 
 ### Integration Tests 
-Explain what these tests test, why and how to run them
+The integration tests are used to ensure the system works as expected when all connected.
+```
+	//This test asserts that MysqlCustomerDao class connects fine to the database.
+	@Test
+	public void customerDaoAddTest() {
+		customer.setName("One!");
+		Customer otherCustomer = new Customer("One!");
+		custDao.create(customer);
+		assertEquals(otherCustomer.getName(), custDao.readLatest().getName());
+	}
 
 ```
-Give an example
-```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
@@ -93,9 +108,12 @@ Install Jenkins on a cloud VM. Let it poll SCM (your fork of this repo, perhaps?
 To build locally: terminal in the project's main folder:
 
 ```
-mvn deploy
+mvn install
 cd target/
-java -jar 
+```
+Then to run: 
+```
+java -jar Inventory.jar
 ```
 
 
@@ -108,18 +126,13 @@ java -jar
 
 We use [SemVer](http://semver.org/) for versioning.
 
+## Kanban board
+[Trello](https://trello.com/b/0CFQHp3N/sobol-r-insert-item-here-inventory-management-system-temp-name) was used to plan out the work for the project.
+
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
-
-## License
-
-This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
-
-*For help in [Choosing a license](https://choosealicense.com/)*
+* **Rafal Sobol** - *Main author* - [RafSobolQAC](https://github.com/RafSobolQAC)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* A great thank-you goes to [ChristophPerrins](https://github.com/ChristophPerrins) & Rhys Thompson, my fantastic trainers.

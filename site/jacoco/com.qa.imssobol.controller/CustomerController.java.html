@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.controller</a> &gt; <span class="el_source">CustomerController.java</span></div><h1>CustomerController.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.controller;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.persistence.domain.Customer;
+import com.qa.imssobol.services.CrudServices;
+import com.qa.imssobol.utils.Utils;
+
+public class CustomerController implements CrudController&lt;Customer&gt;{
+	
+<span class="fc" id="L13">	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);</span>
+	
+	private CrudServices&lt;Customer&gt; customerService;
+	/**
+	 * Controller - takes user input, sends it over to the customerService.
+	 * @param customerService
+	 */
+<span class="fc" id="L20">	public CustomerController(CrudServices&lt;Customer&gt; customerService) {</span>
+<span class="fc" id="L21">		this.customerService = customerService;</span>
+<span class="fc" id="L22">	}</span>
+	
+	/**
+	 * Local implementation of the Utils.getInput method, which provides user-input sanitised strings.
+	 * @return a sanitised String
+	 */
+	public String getInput() {
+<span class="nc" id="L29">		return Utils.getInput();</span>
+	}
+	
+	/**
+	 * Local implementation of the Utils.getIntInput method, which provides user-input integers
+	 * @return an integer
+	 */
+	public int getIntInput() {
+<span class="nc" id="L37">		return Utils.getIntInput(LOGGER);</span>
+	}
+	
+	
+	/**
+	 * Reads all customers from the database, via the customerService class.
+	 * @return a list of Customers
+	 */
+	public List&lt;Customer&gt; readAll() {
+<span class="fc" id="L46">		List&lt;Customer&gt; customers = customerService.readAll();</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">		for(Customer customer: customers) {</span>
+<span class="fc" id="L48">			LOGGER.info(customer.toString());</span>
+<span class="fc" id="L49">		}</span>
+<span class="fc" id="L50">		return customers;</span>
+	}
+	/**
+	 * Creates a new customer with user-input data.
+	 * @return the Customer created
+	 */
+	public Customer create() {
+<span class="fc" id="L57">		LOGGER.info(&quot;Please enter a first name&quot;);</span>
+<span class="fc" id="L58">		String name = getInput();</span>
+<span class="fc" id="L59">		LOGGER.info(&quot;Customer being created. &quot;);</span>
+<span class="fc" id="L60">		Customer customer = customerService.create(new Customer(name));</span>
+<span class="fc" id="L61">		LOGGER.info(&quot;Creation complete!&quot;);</span>
+<span class="fc" id="L62">		return customer;</span>
+	}
+
+	/**
+	 * Updates a customer based on user-input data.
+	 * @return the newly-updated customer
+	 */
+	public Customer update() {
+<span class="fc" id="L70">		LOGGER.info(&quot;Which customer to update? (ID)&quot;);</span>
+<span class="fc" id="L71">		Integer id = getIntInput();</span>
+<span class="fc" id="L72">		LOGGER.info(&quot;What's their new name? &quot;);</span>
+<span class="fc" id="L73">		String newName = getInput();</span>
+<span class="fc" id="L74">		Customer customer = customerService.update(id, new Customer(newName));</span>
+<span class="fc" id="L75">		LOGGER.info(&quot;Update complete!&quot;);</span>
+<span class="fc" id="L76">		return customer;</span>
+	}
+
+	/**
+	 * Deletes a customer with the provided id.
+	 * @return true if no exceptions were caught, false otherwise
+	 */
+	public boolean delete() {
+<span class="fc" id="L84">		LOGGER.info(&quot;Please enter the id of the customer you would like to delete&quot;);</span>
+<span class="fc" id="L85">		int id = getIntInput();</span>
+<span class="fc" id="L86">		boolean wasDeleted = customerService.delete(id);</span>
+<span class="fc" id="L87">		LOGGER.info(&quot;Customer was deleted!&quot;);</span>
+<span class="fc" id="L88">		return wasDeleted;</span>
+
+	}
+/**
+ * Reads a customer with the user-input ID from the database.
+ * @return the Customer
+ */
+	@Override
+	public Customer readById() {
+<span class="fc" id="L97">		LOGGER.info(&quot;Which customer ID to access? &quot;);</span>
+<span class="fc" id="L98">		int id = getIntInput();</span>
+<span class="fc" id="L99">		Customer customer = customerService.readById(id);</span>
+<span class="fc" id="L100">		LOGGER.info(customer.toString());</span>
+<span class="fc" id="L101">		return customer;</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
