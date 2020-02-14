@@ -10,10 +10,6 @@ public class Utils {
 
 	public static final Logger LOGGER = Logger.getLogger(Utils.class);
 
-	private Utils() {
-		throw new IllegalStateException("Utility class");
-	}
-
 	/**
 	 * Returns standard messages in case of an exception.
 	 * 
@@ -23,10 +19,9 @@ public class Utils {
 	public static void exceptionLogger(Exception e, Logger LOGGER) {
 		LOGGER.error("Error in Utils.exceptionLogger: ");
 		LOGGER.error(e.getMessage());
-		LOGGER.error(e.getCause());
 		LOGGER.debug(e.getStackTrace());
 	}
-
+	
 	public static String getPassword() {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
@@ -44,11 +39,8 @@ public class Utils {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			String string = scanner.nextLine();
-			if (string.matches("[A-Za-z0-9. ]+") || string.isEmpty()) {
-				return string;
-			} else {
-				LOGGER.info("Please only use alphanumerics, spaces, and full stops.");
-			}
+			if (string.matches("[A-Za-z0-9. ]+") || string.isEmpty()) return string; 
+			else LOGGER.info("Please only use alphanumerics, spaces, and full stops.");
 		}
 	}
 
@@ -83,6 +75,7 @@ public class Utils {
 	 * @return a decimal BigDecimal
 	 */
 	public static BigDecimal getBigDecimalInput(Logger LOGGER) {
+		LOGGER.info("Your number:");
 		boolean done = false;
 		BigDecimal price = BigDecimal.valueOf(0.0);
 		do {
