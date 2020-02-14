@@ -126,18 +126,13 @@ java -jar Inventory.jar
 
 We use [SemVer](http://semver.org/) for versioning.
 
+## Kanban board
+[Trello](https://trello.com/b/0CFQHp3N/sobol-r-insert-item-here-inventory-management-system-temp-name) was used to plan out the work for the project.
+
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
-
-## License
-
-This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
-
-*For help in [Choosing a license](https://choosealicense.com/)*
+* **Rafal Sobol** - *Main author* - [RafSobolQAC](https://github.com/RafSobolQAC)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* A great thank-you goes to [ChristophPerrins](https://github.com/ChristophPerrins) & Rhys Thompson, my fantastic trainers.
