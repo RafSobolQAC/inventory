@@ -72,7 +72,6 @@ public class OrderController implements CrudController<Order> {
 		LOGGER.info("Please enter the customer's ID. ");
 		int customerId = getIntInput();
 		Map<Item, Integer> itemQuants = createItemHashMap();
-		System.out.println(itemQuants.size());
 		Order order = orderService.create(new Order(customerId, itemQuants));
 		LOGGER.info("Order was created.");
 		return order;
