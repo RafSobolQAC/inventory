@@ -45,9 +45,12 @@ public class OrderController implements CrudController<Order> {
 				breaker = false;
 			}
 			if (breaker) {
-				LOGGER.info("Item ID: ");
-				int itemId = getIntInput();
-				itemToAdd = itemService.readById(itemId);
+				while(true) {
+					LOGGER.info("Item ID: ");
+					int itemId = getIntInput();
+					itemToAdd = itemService.readById(itemId);
+					if (itemToAdd.getId() != -1) break;
+					}
 
 				LOGGER.info("How many of this item? ");
 				int itemQuant = getIntInput();

@@ -96,6 +96,9 @@ public class MysqlItemDao implements Dao<Item> {
 				item.setName(resultSet.getString("name"));
 				item.setId(resultSet.getInt("id"));
 				item.setPrice(resultSet.getBigDecimal("price"));
+			} else {
+				LOGGER.warn("Item with this ID doesn't exist!");
+				return new Item();
 			}
 
 		} catch (SQLException e) {
