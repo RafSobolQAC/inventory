@@ -69,7 +69,6 @@ public class MysqlCustomerDaoTest {
 		customer.setName("One!");
 		Mockito.doReturn(customer).when(custDaoMock).readLatest();
 		assertEquals("One!",custDaoMock.create(customer).getName());
-		
 	}
 	@Test
 	public void customerDaoCreateExceptionTest() throws SQLException {

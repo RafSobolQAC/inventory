@@ -64,10 +64,9 @@ Explain how to run the automated tests for this system. Break down into which te
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
-
+Unit tests run on each individual class to make sure it works as expected. Mockito is used to stub other classes for those that are reliant on them.
 ```
-Give an example
+
 ```
 
 ### Integration Tests 
@@ -91,6 +90,13 @@ The simplest way to deploy this is to use Jenkins.
 
 Install Jenkins on a cloud VM. Let it poll SCM (your fork of this repo, perhaps?) every minute, or however frequently you like; then, make it run a Maven script of testing it, sending it to SonarQube, and then finally deploying it to an artifact repository. 
 
+To build locally: terminal in the project's main folder:
+
+```
+mvn deploy
+cd target/
+java -jar 
+```
 
 
 
