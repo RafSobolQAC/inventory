@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.imssobol.persistence.domain.CustomerTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec

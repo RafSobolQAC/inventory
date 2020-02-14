@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_8rmroEwVEeqF4oejhgerEg">
+  <modelElement href="rafal-ims2.uml#_9Av1MkwVEeqF4oejhgerEg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_BzvqIEwWEeqF4oejhgerEg" source="_BzwRMEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9G0A8UwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_BzvqIUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G0A80wVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_BzvqIkwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_BzvqI0wWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9G0A8kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_BzvqJEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_BzvqJUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_BzvqJkwWEeqF4oejhgerEg" aggregationKind="NONE" name="connection" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GOyIEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_BzvqJ0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_BzvqKEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B1Ef0EwWEeqF4oejhgerEg" source="_B1KmdUwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9G12IUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B1Ef0UwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G2dMEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B1Ef0kwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B1Ef00wWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9G12IkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1Ef1EwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1Ef1UwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B1Ef1kwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GQnUEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1Ef10wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1Ef2EwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B1JYUEwWEeqF4oejhgerEg" sourceAnchor="158.0,213.0" targetAnchor="151.0,0.0" target="_B4zwUEwWEeqF4oejhgerEg" source="_B1KmdUwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9G2dMUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B1JYUUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G2dM0wVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B1JYUkwWEeqF4oejhgerEg" text="">
+      <visualProperties xmi:id="_CVGDsEwWEeqF4oejhgerEg" position="-18.5,-2.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_B1JYU0wWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9G2dMkwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVFcoEwWEeqF4oejhgerEg" position="5.5,5.5"/>
+      <visibility xmi:id="_B1JYVEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1JYVUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B1JYVkwWEeqF4oejhgerEg" aggregationKind="NONE" name="customer" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GQnUkwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVGDsUwWEeqF4oejhgerEg" position="-71.5,-50.0"/>
+      <visibility xmi:id="_B1JYV0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B1JYWEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B1J_YEwWEeqF4oejhgerEg" sourceAnchor="0.0,107.0" targetAnchor="319.0,145.0" target="_B2DXQEwWEeqF4oejhgerEg" source="_B1KmdUwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9G3EQEwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B1J_YUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G3EQkwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B1J_YkwWEeqF4oejhgerEg" text="">
+      <visualProperties xmi:id="_CVHR0EwWEeqF4oejhgerEg" position="7.5,-8.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_B1J_Y0wWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9G3EQUwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVGqwEwWEeqF4oejhgerEg" position="-20.0,3.5"/>
+      <visibility xmi:id="_B1KmcEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmcUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B1KmckwWEeqF4oejhgerEg" aggregationKind="NONE" name="custDao" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GROYEwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVHR0UwWEeqF4oejhgerEg" position="5.5,-48.500000000000114"/>
+      <visibility xmi:id="_B1Kmc0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B1KmdEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_B1eIcEwWEeqF4oejhgerEg" sourceAnchor="160.0,0.0" targetAnchor="114.0,164.0" dashed="true" superClass="_B1wcUEwWEeqF4oejhgerEg" subClass="_B2DXQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9FZrsEwVEeqF4oejhgerEg"/>
+    <bendpoints xmi:id="_CVEOgEwWEeqF4oejhgerEg" sourceY="-24" targetX="351" targetY="178"/>
+    <bendpoints xmi:id="_CVEOgUwWEeqF4oejhgerEg" sourceX="-351" sourceY="-24" targetY="178"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B1q8wEwWEeqF4oejhgerEg" source="_B2DXQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gq3AUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B1unI0wWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GreEEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B1unIEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B1unIUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gq3AkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1v1QEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1vOMkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B1unIkwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GFBIEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1v1QkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1v1QUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B1rj0EwWEeqF4oejhgerEg" source="_B2DXQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gt6UEwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B1vOMUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GvIcEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B1unJEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B1unJUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gt6UUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1v1REwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1v1Q0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B1vOMEwWEeqF4oejhgerEg" aggregationKind="NONE" name="connection" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GFBIkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1v1RkwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B1v1RUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_B2y-IEwWEeqF4oejhgerEg" sourceAnchor="163.0,0.0" targetAnchor="114.0,164.0" dashed="true" superClass="_B1wcUEwWEeqF4oejhgerEg" subClass="_B3bQQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Fd9IEwVEeqF4oejhgerEg"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B3IVUEwWEeqF4oejhgerEg" source="_B3bQQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GvIcUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B3ZbEUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GvvgEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B3Y0AEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B3Y0AUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GvIckwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3aCIUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3aCIEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B3ZbEEwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GGPREwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3aCI0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3aCIkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B3SGUEwWEeqF4oejhgerEg" source="_B3bQQEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gw9oEwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B3ZbFUwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GxksEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B3ZbEkwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B3ZbE0wWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gw9oUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3aCJUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3aCJEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B3ZbFEwWEeqF4oejhgerEg" aggregationKind="NONE" name="connection" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GG2UUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3apMUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3apMEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_B3044EwWEeqF4oejhgerEg" sourceAnchor="181.0,0.0" targetAnchor="114.0,164.0" dashed="true" superClass="_B1wcUEwWEeqF4oejhgerEg" subClass="_B4YSgEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9FjcsUwVEeqF4oejhgerEg"/>
+    <bendpoints xmi:id="_CVE1kEwWEeqF4oejhgerEg" sourceY="-18" targetX="-364" targetY="178"/>
+    <bendpoints xmi:id="_CVE1kUwWEeqF4oejhgerEg" sourceX="364" sourceY="-18" targetY="178"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B4HMwEwWEeqF4oejhgerEg" source="_B4YSgEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GxksUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B4XEYEwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GyLwEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B4WdUEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B4WdUUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GxkskwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4XrcUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4XrcEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B4WdUkwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GIEc0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4Xrc0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4XrckwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B4OhgEwWEeqF4oejhgerEg" source="_B4YSgEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GyLwUwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B4XEZEwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9Gyy0EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B4XEYUwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B4XEYkwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GyLwkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4XrdUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4XrdEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B4XEY0wWEeqF4oejhgerEg" aggregationKind="NONE" name="connection" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GIrgUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4Xrd0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4XrdkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B6l5AEwWEeqF4oejhgerEg" source="_B7JSo0wWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gyy0UwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B7Irk0wWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GzZ4EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B7IrkEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B7IrkUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gyy0kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B7IrlUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7IrlEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B7IrkkwWEeqF4oejhgerEg" aggregationKind="NONE" name="items" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GM88kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B7JSoUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSoEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B7vvkEwWEeqF4oejhgerEg" source="_B8hLokwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9G0oAEwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B8gkk0wWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G12IEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B8gkkEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_B8gkkUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9G0oAUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B8gklUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B8gklEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B8gkkkwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GQAQUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B8hLoUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B8hLoEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B9rpQEwWEeqF4oejhgerEg" sourceAnchor="174.0,0.0" targetAnchor="127.0,164.0" target="_B1wcUEwWEeqF4oejhgerEg" source="_B-SGMEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GzZ4UwVEeqF4oejhgerEg"/>
+    <bendpoints xmi:id="_CVE1kkwWEeqF4oejhgerEg" sourceY="-13" targetX="520" targetY="22"/>
+    <bendpoints xmi:id="_CVE1k0wWEeqF4oejhgerEg" sourceX="-520" sourceY="-13" targetY="22"/>
+    <stereotypes xmi:id="_B-MmoEwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9G0A8EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B-L_kEwWEeqF4oejhgerEg" text="">
+      <visualProperties xmi:id="_CVH44UwWEeqF4oejhgerEg" position="-18.5,-8.499999999999972"/>
+    </nameVisual>
+    <sourceRole xmi:id="_B-L_kUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GzZ4kwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVH44EwWEeqF4oejhgerEg" position="-194.0,-9.499999999999886"/>
+      <visibility xmi:id="_B-QRAUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-QRAEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B-L_kkwWEeqF4oejhgerEg" aggregationKind="NONE" name="customerDao" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GNkAUwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVH44kwWEeqF4oejhgerEg" position="105.5,-26.499999999999943"/>
+      <visibility xmi:id="_B-Q4EUwWEeqF4oejhgerEg" label="~"/>
+      <cardinality xmi:id="_B-Q4EEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_B98H8EwWEeqF4oejhgerEg" sourceAnchor="187.0,0.0" targetAnchor="88.0,145.0" dashed="true" superClass="_B9D-MEwWEeqF4oejhgerEg" subClass="_B-SGMEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9FqxcEwVEeqF4oejhgerEg"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B-80kEwWEeqF4oejhgerEg" sourceAnchor="153.0,0.0" targetAnchor="126.0,80.0" target="_BzwRMEwWEeqF4oejhgerEg" source="_CAY_AEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GoawEwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_B_8TEEwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GpB0EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_B_7sAEwWEeqF4oejhgerEg" text="">
+      <visualProperties xmi:id="_CVIf8UwWEeqF4oejhgerEg" position="-18.5,-5.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_B_7sAUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GoawUwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVIf8EwWEeqF4oejhgerEg" position="-20.5,-50.0"/>
+      <visibility xmi:id="_CAXJ0UwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAXJ0EwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_B_7sAkwWEeqF4oejhgerEg" aggregationKind="NONE" name="connector" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GDL8EwVEeqF4oejhgerEg"/>
+      <visualProperties xmi:id="_CVIf8kwWEeqF4oejhgerEg" position="4.5,5.0"/>
+      <visibility xmi:id="_CAXJ00wWEeqF4oejhgerEg" label="#"/>
+      <cardinality xmi:id="_CAXJ0kwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_B_8TEUwWEeqF4oejhgerEg" source="_CAY_AEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gpo4EwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_CAXw5EwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9Gpo4kwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_CAXw4UwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_CAXw4kwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gpo4UwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CAXw6kwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAXw6UwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_CAXw40wWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GDzAUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CAYX8UwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAYX8EwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_CANY0EwWEeqF4oejhgerEg" source="_CAY_AEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9Gpo40wVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_CAXw6EwWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9GqP8EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_CAXw5UwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_CAXw5kwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9Gpo5EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CAYX80wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAYX8kwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_CAXw50wWEeqF4oejhgerEg" aggregationKind="NONE" name="connection" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GDzA0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CAYX9UwWEeqF4oejhgerEg" label="#"/>
+      <cardinality xmi:id="_CAYX9EwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_CAtvIEwWEeqF4oejhgerEg" source="_CBNeYUwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9GqP8UwVEeqF4oejhgerEg"/>
+    <stereotypes xmi:id="_CBM3U0wWEeqF4oejhgerEg" name="Reference">
+      <modelElement href="rafal-ims2.uml#_9Gq3AEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_CBM3UEwWEeqF4oejhgerEg" text=""/>
+    <sourceRole xmi:id="_CBM3UUwWEeqF4oejhgerEg" aggregationKind="NONE" name="">
+      <modelElement href="rafal-ims2.uml#_9GqP8kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CBM3VUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CBM3VEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_CBM3UkwWEeqF4oejhgerEg" aggregationKind="NONE" name="LOGGER" navigable="true">
+      <modelElement href="rafal-ims2.uml#_9GEaEUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CBNeYEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CBM3VkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_BzwRMEwWEeqF4oejhgerEg" name="Connector" associationsIn="_B-80kEwWEeqF4oejhgerEg" associationsOut="_BzvqIEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DN6YEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_BzwRMUwWEeqF4oejhgerEg" position="40.0,1060.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_BzwRMkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_BzwRM0wWEeqF4oejhgerEg" name="connection">
+      <modelElement href="rafal-ims2.uml#_9GOyIEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_BzwRNEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_BzwRNUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_BzwRNkwWEeqF4oejhgerEg" name="Connection">
+        <modelElement href="rafal-ims2.uml#_9FNecEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_BzwRN0wWEeqF4oejhgerEg" name="Connector">
+      <modelElement href="rafal-ims2.uml#_9DOhcEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_BzwROEwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_BzwROUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_BzwROkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_BzwRO0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DPIgUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_BzwRPEwWEeqF4oejhgerEg" name="Connector">
+          <modelElement href="rafal-ims2.uml#_9DN6YEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_BzwRPUwWEeqF4oejhgerEg" name="url">
+        <modelElement href="rafal-ims2.uml#_9DOhcUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_BzwRPkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_BzwRP0wWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B0zaEEwWEeqF4oejhgerEg" name="MysqlTableCreatable">
+    <modelElement href="rafal-ims2.uml#_9DPvkEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B0zaEUwWEeqF4oejhgerEg" position="974.0,1515.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B0zaEkwWEeqF4oejhgerEg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B1KmdUwWEeqF4oejhgerEg" name="CustomerTest" associationsOut="_B1Ef0EwWEeqF4oejhgerEg _B1JYUEwWEeqF4oejhgerEg _B1J_YEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DSL0UwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B1KmdkwWEeqF4oejhgerEg" position="1295.0,434.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B1Kmd0wWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B1KmeEwWEeqF4oejhgerEg" defaultValue="Logger.getLogger(CustomerTest.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GQnUEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1KmeUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmekwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B1Kme0wWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B1KmfEwWEeqF4oejhgerEg" defaultValue="new Customer()" name="customer">
+      <modelElement href="rafal-ims2.uml#_9GQnUkwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmfUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GQnVEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmfkwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B1Kmf0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B1KmgEwWEeqF4oejhgerEg" name="Customer">
+        <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B1KmgUwWEeqF4oejhgerEg" name="custDao">
+      <modelElement href="rafal-ims2.uml#_9GROYEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmgkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GROYUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1Kmg0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B1KmhEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B1KmhUwWEeqF4oejhgerEg" name="MysqlCustomerDao">
+        <modelElement href="rafal-ims2.uml#_9CapIEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B1KmhkwWEeqF4oejhgerEg" name="login" staticOperation="true">
+      <modelElement href="rafal-ims2.uml#_9DTZ8kwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1Kmh0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DUBAEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmiEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DUBAUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmiUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmikwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1Kmi0wWEeqF4oejhgerEg" name="init">
+      <modelElement href="rafal-ims2.uml#_9DVPIEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmjEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DV2MEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmjUwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DV2MUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmjkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1Kmj0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1KmkEwWEeqF4oejhgerEg" name="customerAddTest">
+      <modelElement href="rafal-ims2.uml#_9DV2M0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmkUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DWdQEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmkkwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DWdQUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1Kmk0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmlEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1KmlUwWEeqF4oejhgerEg" name="customerToStringTest">
+      <modelElement href="rafal-ims2.uml#_9DWdQ0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmlkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DXEUEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1Kml0wWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DXEUUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmmEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmmUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1KmmkwWEeqF4oejhgerEg" name="customerDaoAddTest">
+      <modelElement href="rafal-ims2.uml#_9DXEU0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1Kmm0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DXEVEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmnEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DXrYEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmnUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmnkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1Kmn0wWEeqF4oejhgerEg" name="customerDaoReadByIntTest">
+      <modelElement href="rafal-ims2.uml#_9DXrYkwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmoEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DYScEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmoUwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DYScUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmokwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1Kmo0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1KmpEwWEeqF4oejhgerEg" name="customerUpdateTest">
+      <modelElement href="rafal-ims2.uml#_9DYSc0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmpUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DY5gEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1KmpkwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DY5gUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1Kmp0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmqEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_B1KmqUwWEeqF4oejhgerEg" name="customerDeleteTest">
+      <modelElement href="rafal-ims2.uml#_9DY5g0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1KmqkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DY5hEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B1Kmq0wWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DZgkEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1KmrEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1KmrUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_B1wcUEwWEeqF4oejhgerEg" name="Dao" associationsIn="_B9rpQEwWEeqF4oejhgerEg" subclassedBy="_B1eIcEwWEeqF4oejhgerEg _B2y-IEwWEeqF4oejhgerEg _B3044EwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CUigEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B1wcUUwWEeqF4oejhgerEg" position="442.0,30.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_B1wcUkwWEeqF4oejhgerEg" name="Generics">
+      <modelElement href="rafal-ims2.uml#_9CWXsEwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <visibility xmi:id="_B1wcU0wWEeqF4oejhgerEg" label="+"/>
+    <operations xmi:id="_B1wcVEwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9CW-wEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B1wcVUwWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9CXl0EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B1wcVkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1wcV0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B1wcWEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F3lwUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B1wcWUwWEeqF4oejhgerEg" name="ArrayList">
+          <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B1wcWkwWEeqF4oejhgerEg" name="readById">
+      <modelElement href="rafal-ims2.uml#_9CYM4EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1wcW0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1wcXEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B1wcXUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F3lwkwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B1wcXkwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F2XoEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B1wcX0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9CYM4UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B1wcYEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B1wcYUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B1wcYkwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9CZbAEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1wcY0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1wcZEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B1wcZUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9CZbAkwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B1wcZkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B1wcZ0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9CZbAUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B1wcaEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B1wcaUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B1wcakwWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9F2-sUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1wca0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1wcbEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B1wcbUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F3lwEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B1wcbkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B1wcb0wWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9F2-skwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B1wccEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B1wccUwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F2XoEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B1wcckwWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9F4M0EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B1wcc0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B1wcdEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B1wcdUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F4M00wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B1wcdkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B1wcd0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9F4M0UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B1wceEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B1wceUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B1wcekwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9F4M0kwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B1wce0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B1wcfEwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F2XoEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B4zwUEwWEeqF4oejhgerEg" name="Customer" associationsIn="_B1JYUEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B4zwUUwWEeqF4oejhgerEg" position="1302.0,840.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B4zwUkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B4zwU0wWEeqF4oejhgerEg" name="name">
+      <modelElement href="rafal-ims2.uml#_9GLu0EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4zwVEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwVUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4zwVkwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4zwV0wWEeqF4oejhgerEg" name="id">
+      <modelElement href="rafal-ims2.uml#_9GLu0UwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4zwWEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwWUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4zwWkwWEeqF4oejhgerEg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B4zwW0wWEeqF4oejhgerEg" name="Customer">
+      <modelElement href="rafal-ims2.uml#_9C6_cEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B4zwXEwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B4zwXUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwXkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4zwX0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9C9bsUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4zwYEwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B4zwYUwWEeqF4oejhgerEg" name="Customer">
+      <modelElement href="rafal-ims2.uml#_9C-CwEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B4zwYkwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B4zwY0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwZEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4zwZUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9C-p0UwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4zwZkwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4zwZ0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9C-CwUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4zwaEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4zwaUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B4zwakwWEeqF4oejhgerEg" name="name">
+        <modelElement href="rafal-ims2.uml#_9C-CwkwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4zwa0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4zwbEwWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B4zwbUwWEeqF4oejhgerEg" name="Customer">
+      <modelElement href="rafal-ims2.uml#_9C-p0kwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B4zwbkwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B4zwb0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwcEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4zwcUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9C_Q4kwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4zwckwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4zwc0wWEeqF4oejhgerEg" name="name">
+        <modelElement href="rafal-ims2.uml#_9C-p00wVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4zwdEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4zwdUwWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B4zwdkwWEeqF4oejhgerEg" name="toString">
+      <modelElement href="rafal-ims2.uml#_9C_Q40wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4zwd0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9C_38UwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4zweEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9C_38kwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4zweUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4zwekwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4zwe0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9C_38EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4zwfEwWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B5nooEwWEeqF4oejhgerEg" name="Item">
+    <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B5nooUwWEeqF4oejhgerEg" position="381.0,1064.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B5nookwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B5noo0wWEeqF4oejhgerEg" name="name">
+      <modelElement href="rafal-ims2.uml#_9GLu0kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B5nopEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5nopUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B5nopkwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B5nop0wWEeqF4oejhgerEg" defaultValue="new BigDecimal(0)" name="price">
+      <modelElement href="rafal-ims2.uml#_9GMV4EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B5noqEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5noqUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B5noqkwWEeqF4oejhgerEg" name="BigDecimal">
+        <modelElement href="rafal-ims2.uml#_9FcvAEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B5noq0wWEeqF4oejhgerEg" name="id">
+      <modelElement href="rafal-ims2.uml#_9GMV4kwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B5norEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5norUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B5norkwWEeqF4oejhgerEg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B5nor0wWEeqF4oejhgerEg" name="Item">
+      <modelElement href="rafal-ims2.uml#_9DBtIEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B5nosEwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B5nosUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5noskwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B5nos0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DBtI0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B5notEwWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B5notUwWEeqF4oejhgerEg" name="toString">
+      <modelElement href="rafal-ims2.uml#_9DCUMEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B5notkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9DC7QUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B5not0wWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9DC7QkwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B5nouEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5nouUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B5noukwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DC7QEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B5nou0wWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B5novEwWEeqF4oejhgerEg" name="Item">
+      <modelElement href="rafal-ims2.uml#_9F7QIEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B5novUwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B5novkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5nov0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B5nowEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F73M0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B5nowUwWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B5nowkwWEeqF4oejhgerEg" name="name">
+        <modelElement href="rafal-ims2.uml#_9F7QIUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B5now0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B5noxEwWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B5noxUwWEeqF4oejhgerEg" name="price">
+        <modelElement href="rafal-ims2.uml#_9F73MEwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B5noxkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B5nox0wWEeqF4oejhgerEg" name="BigDecimal">
+          <modelElement href="rafal-ims2.uml#_9FcvAEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B5noyEwWEeqF4oejhgerEg" name="Item">
+      <modelElement href="rafal-ims2.uml#_9F73NEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B5noyUwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B5noykwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B5noy0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B5nozEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F8eQ0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B5nozUwWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B5nozkwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9F73NUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B5noz0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B5no0EwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B5no0UwWEeqF4oejhgerEg" name="name">
+        <modelElement href="rafal-ims2.uml#_9F73NkwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B5no0kwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B5no00wWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B5no1EwWEeqF4oejhgerEg" name="price">
+        <modelElement href="rafal-ims2.uml#_9F8eQEwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B5no1UwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B5no1kwWEeqF4oejhgerEg" name="BigDecimal">
+          <modelElement href="rafal-ims2.uml#_9FcvAEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B7JSo0wWEeqF4oejhgerEg" name="Order" associationsOut="_B6l5AEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B7JSpEwWEeqF4oejhgerEg" position="790.0,1061.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B7JSpUwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B7JSpkwWEeqF4oejhgerEg" name="id">
+      <modelElement href="rafal-ims2.uml#_9GMV40wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B7JSp0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSqEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B7JSqUwWEeqF4oejhgerEg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B7JSqkwWEeqF4oejhgerEg" name="price">
+      <modelElement href="rafal-ims2.uml#_9GM88EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B7JSq0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSrEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B7JSrUwWEeqF4oejhgerEg" name="BigDecimal">
+        <modelElement href="rafal-ims2.uml#_9FcvAEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B7JSrkwWEeqF4oejhgerEg" name="customerId">
+      <modelElement href="rafal-ims2.uml#_9GM88UwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B7JSr0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSsEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B7JSsUwWEeqF4oejhgerEg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B7JSskwWEeqF4oejhgerEg" name="items">
+      <modelElement href="rafal-ims2.uml#_9GM88kwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B7JSs0wWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9GNkAEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B7JStEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JStUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B7JStkwWEeqF4oejhgerEg" name="ArrayList">
+        <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B7JSt0wWEeqF4oejhgerEg" name="Order">
+      <modelElement href="rafal-ims2.uml#_9DF-kEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B7JSuEwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B7JSuUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSukwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B7JSu0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DGloUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B7JSvEwWEeqF4oejhgerEg" name="Order">
+          <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B7JSvUwWEeqF4oejhgerEg" name="Order">
+      <modelElement href="rafal-ims2.uml#_9F9FUEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B7JSvkwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B7JSv0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7JSwEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B7JSwUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F9sYEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B7JSwkwWEeqF4oejhgerEg" name="Order">
+          <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B7JSw0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9F9FUUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B7JSxEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B7JSxUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B7JSxkwWEeqF4oejhgerEg" name="customerId">
+        <modelElement href="rafal-ims2.uml#_9F9FUkwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B7JSx0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B7JSyEwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B7JSyUwWEeqF4oejhgerEg" name="items">
+        <modelElement href="rafal-ims2.uml#_9F9FU0wVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B7JSykwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B7JSy0wWEeqF4oejhgerEg" name="ArrayList">
+          <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B7eCwEwWEeqF4oejhgerEg" name="Login">
+    <modelElement href="rafal-ims2.uml#_9DQWoEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B7eCwUwWEeqF4oejhgerEg" position="755.0,1528.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B7eCwkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B7eCw0wWEeqF4oejhgerEg" name="password" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GOyIUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B7eCxEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GOyIkwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B7eCxUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B7eCxkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B7eCx0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_B9D-MEwWEeqF4oejhgerEg" name="CrudServices" subclassedBy="_B98H8EwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DHzwEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B9D-MUwWEeqF4oejhgerEg" position="1014.0,52.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_B9D-MkwWEeqF4oejhgerEg" name="Generics">
+      <modelElement href="rafal-ims2.uml#_9DJB4EwVEeqF4oejhgerEg"/>
+    </stereotypes>
+    <visibility xmi:id="_B9D-M0wWEeqF4oejhgerEg" label="+"/>
+    <operations xmi:id="_B9D-NEwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9DJo8EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B9D-NUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B9D-NkwWEeqF4oejhgerEg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_B9D-N0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DJo8UwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B9D-OEwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F-6gEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B9D-OUwWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9F_hkEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B9D-OkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B9D-O0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B9D-PEwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9F_hkUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B9D-PUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B9D-PkwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F-6gEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B9D-P0wWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9F_hkkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B9D-QEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B9D-QUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B9D-QkwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9F_hk0wVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B9D-Q0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B9D-REwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B9D-RUwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9F_hlEwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B9D-RkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B9D-R0wWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F-6gEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B9D-SEwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9GAIoEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B9D-SUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B9D-SkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B9D-S0wWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9GAIoUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B9D-TEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B9D-TUwWEeqF4oejhgerEg" name="T">
+          <modelElement href="rafal-ims2.uml#_9F-6gEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B-SGMEwWEeqF4oejhgerEg" name="CustomerServices" associationsOut="_B9rpQEwWEeqF4oejhgerEg" generalizations="_B98H8EwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DK3EEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B-SGMUwWEeqF4oejhgerEg" position="915.0,229.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B-SGMkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B-SGM0wWEeqF4oejhgerEg" name="customerDao">
+      <modelElement href="rafal-ims2.uml#_9GNkAUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B-SGNEwWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9GOLEEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B-SGNUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GOLEUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B-SGNkwWEeqF4oejhgerEg" label="~"/>
+      <cardinality xmi:id="_B-SGN0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B-SGOEwWEeqF4oejhgerEg" name="Dao">
+        <modelElement href="rafal-ims2.uml#_9CUigEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B-SGOUwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9DMFMEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B-SGOkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-SGO0wWEeqF4oejhgerEg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_B-SGPEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9DMFMUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B-SGPUwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B-SGPkwWEeqF4oejhgerEg" name="CustomerServices">
+      <modelElement href="rafal-ims2.uml#_9Fr_kEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B-SGP0wWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B-SGQEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-SGQUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B-SGQkwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fr_lEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B-SGQ0wWEeqF4oejhgerEg" name="CustomerServices">
+          <modelElement href="rafal-ims2.uml#_9DK3EEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B-SGREwWEeqF4oejhgerEg" name="customerDao">
+        <modelElement href="rafal-ims2.uml#_9Fr_kUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B-SGRUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B-SGRkwWEeqF4oejhgerEg" name="Dao">
+          <modelElement href="rafal-ims2.uml#_9CUigEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B-SGR0wWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9FsmoUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B-SGSEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-SGSUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B-SGSkwWEeqF4oejhgerEg" name="customer">
+        <modelElement href="rafal-ims2.uml#_9FsmokwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B-SGS0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B-SGTEwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B-SGTUwWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9FtNsEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B-SGTkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9FtNs0wVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B-SGT0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-SGUEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B-StQEwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9FtNsUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B-StQUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B-StQkwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B-StQ0wWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9FtNskwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B-StREwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B-StRUwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B-StRkwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9Ft0wEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B-StR0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9Ft0wkwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B-StSEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B-StSUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_B-StSkwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9Ft0wUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B-StS0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B-StTEwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_CAY_AEwWEeqF4oejhgerEg" name="Ims" associationsOut="_B-80kEwWEeqF4oejhgerEg _B_8TEUwWEeqF4oejhgerEg _CANY0EwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CEq4EwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_CAY_AUwWEeqF4oejhgerEg" position="13.0,1340.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_CAY_AkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_CAY_A0wWEeqF4oejhgerEg" name="connector">
+      <modelElement href="rafal-ims2.uml#_9GDL8EwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_CAY_BEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GDzAEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_CAY_BUwWEeqF4oejhgerEg" label="#"/>
+      <cardinality xmi:id="_CAY_BkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_CAY_B0wWEeqF4oejhgerEg" name="Connector">
+        <modelElement href="rafal-ims2.uml#_9DN6YEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_CAY_CEwWEeqF4oejhgerEg" defaultValue="Logger.getLogger(Ims.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GDzAUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CAY_CUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAY_CkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_CAY_C0wWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_CAY_DEwWEeqF4oejhgerEg" name="connection">
+      <modelElement href="rafal-ims2.uml#_9GDzA0wVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_CAY_DUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GEaEEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_CAY_DkwWEeqF4oejhgerEg" label="#"/>
+      <cardinality xmi:id="_CAY_D0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_CAY_EEwWEeqF4oejhgerEg" name="Connection">
+        <modelElement href="rafal-ims2.uml#_9FNecEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_CAY_EUwWEeqF4oejhgerEg" name="Ims">
+      <modelElement href="rafal-ims2.uml#_9CMmsEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_CAY_EkwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_CAY_E0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAY_FEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_CAY_FUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9CN00kwVEeqF4oejhgerEg"/>
+        <type xmi:id="_CAY_FkwWEeqF4oejhgerEg" name="Ims">
+          <modelElement href="rafal-ims2.uml#_9CEq4EwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_CAY_F0wWEeqF4oejhgerEg" name="imsRunner">
+      <modelElement href="rafal-ims2.uml#_9COb4EwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_CAY_GEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9CPC8EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_CAY_GUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CAY_GkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B8hLokwWEeqF4oejhgerEg" name="Loginner" associationsOut="_B7vvkEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9DRkwEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B8hLo0wWEeqF4oejhgerEg" position="11.0,1528.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B8hLpEwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B8hLpUwWEeqF4oejhgerEg" defaultValue="Logger.getLogger(Loginner.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GQAQUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B8hLpkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B8hLp0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B8hLqEwWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B8hLqUwWEeqF4oejhgerEg" name="LogIn" staticOperation="true">
+      <modelElement href="rafal-ims2.uml#_9DSL0EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B8hLqkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B8hLq0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_CBNeYUwWEeqF4oejhgerEg" name="Runner" associationsOut="_CAtvIEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CRfMEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_CBNeYkwWEeqF4oejhgerEg" position="387.0,1528.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_CBNeY0wWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_CBNeZEwWEeqF4oejhgerEg" defaultValue="Logger.getLogger(Runner.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GEaEUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CBNeZUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CBNeZkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_CBNeZ0wWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_CBNeaEwWEeqF4oejhgerEg" name="main" staticOperation="true">
+      <modelElement href="rafal-ims2.uml#_9CStUEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_CBNeaUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_CBNeakwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_CBNea0wWEeqF4oejhgerEg" name="args">
+        <modelElement href="rafal-ims2.uml#_9CStUUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_CBNebEwWEeqF4oejhgerEg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_CBNebUwWEeqF4oejhgerEg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B4YSgEwWEeqF4oejhgerEg" name="MysqlOrderDao" associationsOut="_B4HMwEwWEeqF4oejhgerEg _B4OhgEwWEeqF4oejhgerEg" generalizations="_B3044EwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CwnYEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B4YSgUwWEeqF4oejhgerEg" position="11.0,390.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B4YSgkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B4YSg0wWEeqF4oejhgerEg" defaultValue="Logger.getLogger(MysqlOrderDao.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GIEc0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YShEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YShUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YShkwWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSh0wWEeqF4oejhgerEg" name="connection">
+      <modelElement href="rafal-ims2.uml#_9GIrgUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YSiEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GIrgkwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YSiUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSikwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSi0wWEeqF4oejhgerEg" name="Connection">
+        <modelElement href="rafal-ims2.uml#_9FNecEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSjEwWEeqF4oejhgerEg" defaultValue="&quot;INSERT INTO orders (total_price) VALUES (?)&quot;" name="INSERTORDER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GIrg0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSjUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSjkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSj0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSkEwWEeqF4oejhgerEg" defaultValue="&quot;INSERT INTO orders_items (order_id_fk, item_id_fk, quantity) VALUES (?,?,?)&quot;" name="INSERTORDERLINE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GJSkUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSkUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSkkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSk0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSlEwWEeqF4oejhgerEg" defaultValue="&quot;UPDATE orders SET total_price=? WHERE id=?&quot;" name="UPDATEPRICE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GJSk0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSlUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSlkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSl0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSmEwWEeqF4oejhgerEg" defaultValue="&quot;UPDATE orders_items SET quantity=? WHERE order_id_fk=? AND item_id_fk=?&quot;" name="UPDATEORDERLINE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GJ5oEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSmUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSmkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSm0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSnEwWEeqF4oejhgerEg" defaultValue="&quot;select orders.id as order_id, customer_id_fk as customer_id, item_id_fk as item_id, quantity from orders  inner join orders_items on orders.id = orders_items.order_id_fk where id = ?&quot;" name="READBYID" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GJ5okwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSnUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSnkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSn0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSoEwWEeqF4oejhgerEg" defaultValue="&quot;DELETE FROM customers WHERE id=?&quot;" name="DELETE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GKgsUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSoUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSokwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSo0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSpEwWEeqF4oejhgerEg" defaultValue="&quot;SELECT * FROM orders&quot;" name="READALL" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GLHwEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSpUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSpkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSp0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B4YSqEwWEeqF4oejhgerEg" defaultValue="&quot;SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?&quot;" name="GETPRICE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GLHwkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B4YSqUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B4YSqkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B4YSq0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B4YSrEwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9CyckEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YSrUwWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9CzDoEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YSrkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9CzqsEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YSr0wWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9C0RwEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YSsEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YSsUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4YSskwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F6pEEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4YSs0wWEeqF4oejhgerEg" name="ArrayList">
+          <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B4YStEwWEeqF4oejhgerEg" name="readById">
+      <modelElement href="rafal-ims2.uml#_9C040EwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YStUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9C040kwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YStkwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9C1f4EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YSt0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YSuEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4YSuUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fl48EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4YSukwWEeqF4oejhgerEg" name="Order">
+          <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4YSu0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9C040UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4YSvEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4YSvUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B4YSvkwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9C2G8EwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YSv0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9C2uAEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YSwEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9C2uAUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YSwUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YSwkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4YSw0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9C2G8kwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4YSxEwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4YSxUwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9C2G8UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4YSxkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4YSx0wWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B4YSyEwWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9FkDwUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YSyUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9Fkq0kwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YSykwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9FlR4EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YSy0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YSzEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4YSzUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fkq0UwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4YSzkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4YSz0wWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9Fkq0EwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4YS0EwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4YS0UwWEeqF4oejhgerEg" name="Order">
+          <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B4YS0kwWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9Fl48UwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B4YS00wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9FmgAEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B4YS1EwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9FmgAUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B4YS1UwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B4YS1kwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B4YS10wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fl49EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B4YS2EwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B4YS2UwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9Fl48kwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4YS2kwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4YS20wWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B4YS3EwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9Fl480wVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B4YS3UwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B4YS3kwWEeqF4oejhgerEg" name="Order">
+          <modelElement href="rafal-ims2.uml#_9DEJYEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B3bQQEwWEeqF4oejhgerEg" name="MysqlItemDao" associationsOut="_B3IVUEwWEeqF4oejhgerEg _B3SGUEwWEeqF4oejhgerEg" generalizations="_B2y-IEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CloQEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B3bQQUwWEeqF4oejhgerEg" position="393.0,409.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B3bQQkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B3bQQ0wWEeqF4oejhgerEg" defaultValue="Logger.getLogger(MysqlItemDao.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GGPREwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQREwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQRUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQRkwWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQR0wWEeqF4oejhgerEg" name="connection">
+      <modelElement href="rafal-ims2.uml#_9GG2UUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQSEwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GG2UkwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQSUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQSkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQS0wWEeqF4oejhgerEg" name="Connection">
+        <modelElement href="rafal-ims2.uml#_9FNecEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQTEwWEeqF4oejhgerEg" defaultValue="&quot;INSERT INTO items (name, price) VALUES (?, ?)&quot;" name="INSERT" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GG2U0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQTUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQTkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQT0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQUEwWEeqF4oejhgerEg" defaultValue="&quot;UPDATE items SET name=?, price=? WHERE id=?&quot;" name="UPDATE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GHdYUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQUUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQUkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQU0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQVEwWEeqF4oejhgerEg" defaultValue="&quot;SELECT * FROM items WHERE id=?&quot;" name="READBYID" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GHdY0wVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQVUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQVkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQV0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQWEwWEeqF4oejhgerEg" defaultValue="&quot;DELETE FROM items WHERE id=?&quot;" name="DELETE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GHdZUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQWUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQWkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQW0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B3bQXEwWEeqF4oejhgerEg" defaultValue="&quot;SELECT * FROM items&quot;" name="READALL" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GIEcUwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B3bQXUwWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B3bQXkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B3bQX0wWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B3bQYEwWEeqF4oejhgerEg" name="MysqlItemDao">
+      <modelElement href="rafal-ims2.uml#_9CndcEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B3bQYUwWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B3bQYkwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQY0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQZEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Cndc0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQZUwWEeqF4oejhgerEg" name="MysqlItemDao">
+          <modelElement href="rafal-ims2.uml#_9CloQEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B3bQZkwWEeqF4oejhgerEg" name="readById">
+      <modelElement href="rafal-ims2.uml#_9CoEgEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQZ0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9CorkUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQaEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9Cp5sEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQaUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQakwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQa0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9FfyU0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQbEwWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B3bQbUwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9CorkEwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B3bQbkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B3bQb0wWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B3bQcEwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9CqgwEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQcUwWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9CrH0EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQckwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9Cru4EwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQc0wWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9Cru4UwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQdEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQdUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQdkwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F5a8EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQd0wWEeqF4oejhgerEg" name="ArrayList">
+          <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B3bQeEwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9CsV8EwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQeUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9Cs9AUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQekwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9CtkEEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQe0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQfEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQfUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Cs9AEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQfkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B3bQf0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9CsV8UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B3bQgEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B3bQgUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B3bQgkwWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9FekMUwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQg0wWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9FfyUEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQhEwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9FfyUUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQhUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQhkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQh0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9FfLQUwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQiEwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B3bQiUwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9FfLQEwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B3bQikwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B3bQi0wWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B3bQjEwWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9FgZYEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B3bQjUwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9FhAcEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_B3bQjkwWEeqF4oejhgerEg" name="Annotations">
+        <modelElement href="rafal-ims2.uml#_9FhAcUwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B3bQj0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B3bQkEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B3bQkUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9FgZY0wVEeqF4oejhgerEg"/>
+        <type xmi:id="_B3bQkkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B3bQk0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9FgZYUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B3bQlEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B3bQlUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B3bQlkwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9FgZYkwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B3bQl0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B3bQmEwWEeqF4oejhgerEg" name="Item">
+          <modelElement href="rafal-ims2.uml#_9DBGEEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_B2DXQEwWEeqF4oejhgerEg" name="MysqlCustomerDao" associationsIn="_B1J_YEwWEeqF4oejhgerEg" associationsOut="_B1q8wEwWEeqF4oejhgerEg _B1rj0EwWEeqF4oejhgerEg" generalizations="_B1eIcEwWEeqF4oejhgerEg">
+    <modelElement href="rafal-ims2.uml#_9CapIEwVEeqF4oejhgerEg"/>
+    <visualProperties xmi:id="_B2DXQUwWEeqF4oejhgerEg" position="747.0,396.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_B2DXQkwWEeqF4oejhgerEg" label="+"/>
+    <attributes xmi:id="_B2DXQ0wWEeqF4oejhgerEg" defaultValue="Logger.getLogger(MysqlCustomerDao.class)" name="LOGGER" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GFBIEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2DXREwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2DXRUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-UEwWEeqF4oejhgerEg" name="Logger">
+        <modelElement href="rafal-ims2.uml#_9FP6sEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-UUwWEeqF4oejhgerEg" name="connection">
+      <modelElement href="rafal-ims2.uml#_9GFBIkwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B2D-UkwWEeqF4oejhgerEg" name="LegacyStyledElement">
+        <modelElement href="rafal-ims2.uml#_9GFBI0wVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B2D-U0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-VEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-VUwWEeqF4oejhgerEg" name="Connection">
+        <modelElement href="rafal-ims2.uml#_9FNecEwVEeqF4oejhgerEg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-VkwWEeqF4oejhgerEg" defaultValue="&quot;INSERT INTO customers (name) VALUES (?)&quot;" name="INSERT" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GFoMEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-V0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-WEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-WUwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-WkwWEeqF4oejhgerEg" defaultValue="&quot;UPDATE customers SET name=? WHERE id=?&quot;" name="UPDATE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GFoMkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-W0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-XEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-XUwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-XkwWEeqF4oejhgerEg" defaultValue="&quot;SELECT * FROM customers WHERE id=?&quot;" name="READBYID" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GFoNEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-X0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-YEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-YUwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-YkwWEeqF4oejhgerEg" defaultValue="&quot;DELETE FROM customers WHERE id=?&quot;" name="DELETE" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GGPQEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-Y0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-ZEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-ZUwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_B2D-ZkwWEeqF4oejhgerEg" defaultValue="&quot;SELECT * FROM customers&quot;" name="READALL" staticAttribute="true">
+      <modelElement href="rafal-ims2.uml#_9GGPQkwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-Z0wWEeqF4oejhgerEg" label="-"/>
+      <cardinality xmi:id="_B2D-aEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <type xmi:id="_B2D-aUwWEeqF4oejhgerEg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_B2D-akwWEeqF4oejhgerEg" name="MysqlCustomerDao">
+      <modelElement href="rafal-ims2.uml#_9CdFYEwVEeqF4oejhgerEg"/>
+      <keywords xmi:id="_B2D-a0wWEeqF4oejhgerEg" keyword="create"/>
+      <visibility xmi:id="_B2D-bEwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-bUwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-bkwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9CdscEwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-b0wWEeqF4oejhgerEg" name="MysqlCustomerDao">
+          <modelElement href="rafal-ims2.uml#_9CapIEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B2D-cEwWEeqF4oejhgerEg" name="readById">
+      <modelElement href="rafal-ims2.uml#_9CeTgEwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-cUwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-ckwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-c0wWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fbg4EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-dEwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B2D-dUwWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9CeTgUwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B2D-dkwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B2D-d0wWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B2D-eEwWEeqF4oejhgerEg" name="readAll">
+      <modelElement href="rafal-ims2.uml#_9Ce6kEwVEeqF4oejhgerEg"/>
+      <stereotypes xmi:id="_B2D-eUwWEeqF4oejhgerEg" name="Generics">
+        <modelElement href="rafal-ims2.uml#_9CgIsEwVEeqF4oejhgerEg"/>
+      </stereotypes>
+      <visibility xmi:id="_B2D-ekwWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-e0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-fEwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9F4z4EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-fUwWEeqF4oejhgerEg" name="ArrayList">
+          <modelElement href="rafal-ims2.uml#_9FRv4EwVEeqF4oejhgerEg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_B2D-fkwWEeqF4oejhgerEg" name="delete">
+      <modelElement href="rafal-ims2.uml#_9ChW0EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-f0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-gEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-gUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9ChW0kwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-gkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B2D-g0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9ChW0UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B2D-hEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B2D-hUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B2D-hkwWEeqF4oejhgerEg" name="create">
+      <modelElement href="rafal-ims2.uml#_9Fa50EwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-h0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-iEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-iUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fa50kwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-ikwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B2D-i0wWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9Fa50UwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B2D-jEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B2D-jUwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_B2D-jkwWEeqF4oejhgerEg" name="update">
+      <modelElement href="rafal-ims2.uml#_9Fbg4UwVEeqF4oejhgerEg"/>
+      <visibility xmi:id="_B2D-j0wWEeqF4oejhgerEg" label="+"/>
+      <cardinality xmi:id="_B2D-kEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_B2D-kUwWEeqF4oejhgerEg">
+        <modelElement href="rafal-ims2.uml#_9Fbg5EwVEeqF4oejhgerEg"/>
+        <type xmi:id="_B2D-kkwWEeqF4oejhgerEg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_B2D-k0wWEeqF4oejhgerEg" name="id">
+        <modelElement href="rafal-ims2.uml#_9Fbg4kwVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B2D-lEwWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B2D-lUwWEeqF4oejhgerEg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_B2D-lkwWEeqF4oejhgerEg" name="t">
+        <modelElement href="rafal-ims2.uml#_9Fbg40wVEeqF4oejhgerEg"/>
+        <cardinality xmi:id="_B2D-l0wWEeqF4oejhgerEg" label="1" max="1" min="1"/>
+        <type xmi:id="_B2D-mEwWEeqF4oejhgerEg" name="Customer">
+          <modelElement href="rafal-ims2.uml#_9C5xUEwVEeqF4oejhgerEg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

@@ -5,12 +5,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qa.ims</groupId>
 	<artifactId>rafal-ims</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
+		<project.id>
+			my.server
+		</project.id>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 	</properties>
 
@@ -28,18 +32,131 @@
 			<scope>test</scope>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>3.2.4</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-
-
-
 	</dependencies>
 
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://35.189.123.196/nexus/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshots</name>
+			<url>http://35.189.123.196/nexus/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<db.password>root</db.password>
+			</properties>
+		</profile>
+	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+				<configuration>
+					<systemPropertyVariables>
+						<env.PWD>${env.PWD}</env.PWD>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<!-- attached to Maven test phase -->
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<finalName>Inventory</finalName>
+
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.qa.imssobol.Runner</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.qa.imssobol.Runner</mainClass>
+						</manifest>
+					</archive>
+
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.15</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
 
 </project>
 

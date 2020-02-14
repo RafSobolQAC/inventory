@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.controller</a> &gt; <span class="el_source">OrderController.java</span></div><h1>OrderController.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.controller;
+
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.persistence.dao.MysqlItemDao;
+import com.qa.imssobol.persistence.domain.Item;
+import com.qa.imssobol.persistence.domain.Order;
+import com.qa.imssobol.services.CrudServices;
+import com.qa.imssobol.services.ItemServices;
+import com.qa.imssobol.services.OrderServices;
+import com.qa.imssobol.utils.Utils;
+
+public class OrderController implements CrudController&lt;Order&gt; {
+<span class="fc" id="L19">	public static final Logger LOGGER = Logger.getLogger(OrderController.class);</span>
+	private Connection connection;
+	private CrudServices&lt;Order&gt; orderService;
+	private ItemServices itemService;
+<span class="fc" id="L23">	public OrderController(OrderServices orderService) {</span>
+<span class="fc" id="L24">		this.orderService = orderService;</span>
+<span class="fc" id="L25">		this.connection = orderService.getConnection();</span>
+<span class="fc" id="L26">	}</span>
+
+	public String getInput() {
+<span class="nc" id="L29">		return Utils.getInput();</span>
+	}
+
+	public Integer getIntInput() {
+<span class="nc" id="L33">		return Utils.getIntInput(LOGGER);</span>
+	}
+
+	public Map&lt;Item, Integer&gt; createItemHashMap() {
+<span class="fc" id="L37">		HashMap&lt;Item, Integer&gt; itemQuants = new HashMap&lt;&gt;();</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">		if (itemService == null) itemService = new ItemServices(new MysqlItemDao(connection));</span>
+		Item itemToAdd;
+<span class="fc" id="L40">		boolean breaker = true;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		while (breaker) {</span>
+<span class="fc" id="L42">			LOGGER.info(&quot;To continue, press any key. To quit, (Q)uit.&quot;);</span>
+<span class="fc" id="L43">			String input = getInput();</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">			if (input.toLowerCase().startsWith(&quot;q&quot;)) {</span>
+<span class="fc" id="L45">				breaker = false;</span>
+			}
+<span class="fc bfc" id="L47" title="All 2 branches covered.">			if (breaker) {</span>
+<span class="fc" id="L48">				LOGGER.info(&quot;Item ID: &quot;);</span>
+<span class="fc" id="L49">				int itemId = getIntInput();</span>
+<span class="fc" id="L50">				itemToAdd = itemService.readById(itemId);</span>
+
+<span class="fc" id="L52">				LOGGER.info(&quot;How many of this item? &quot;);</span>
+<span class="fc" id="L53">				int itemQuant = getIntInput();</span>
+<span class="fc" id="L54">				itemQuants.put(itemToAdd, itemQuant);</span>
+			}
+<span class="fc" id="L56">		}</span>
+<span class="fc" id="L57">		return itemQuants;</span>
+
+	}
+
+	@Override
+	public List&lt;Order&gt; readAll() {
+<span class="fc" id="L63">		List&lt;Order&gt; orders = orderService.readAll();</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">		for (Order order : orders) {</span>
+<span class="fc" id="L65">			LOGGER.info(order.toString());</span>
+<span class="fc" id="L66">		}</span>
+<span class="fc" id="L67">		return orders;</span>
+	}
+
+	@Override
+	public Order create() {
+<span class="fc" id="L72">		LOGGER.info(&quot;Please enter the customer's ID. &quot;);</span>
+<span class="fc" id="L73">		int customerId = getIntInput();</span>
+<span class="fc" id="L74">		Map&lt;Item, Integer&gt; itemQuants = createItemHashMap();</span>
+<span class="fc" id="L75">		Order order = orderService.create(new Order(customerId, itemQuants));</span>
+<span class="fc" id="L76">		LOGGER.info(&quot;Order was created.&quot;);</span>
+<span class="fc" id="L77">		return order;</span>
+
+	}
+
+	@Override
+	public Order update() {
+<span class="fc" id="L83">		LOGGER.info(&quot;Which order would you like to update? (ID)&quot;);</span>
+<span class="fc" id="L84">		int orderId = getIntInput();</span>
+<span class="fc" id="L85">		LOGGER.info(&quot;Which customer made the order? (ID)&quot;);</span>
+<span class="fc" id="L86">		int customerId = getIntInput();</span>
+<span class="fc" id="L87">		Map&lt;Item, Integer&gt; itemQuants = createItemHashMap();</span>
+<span class="fc" id="L88">		Order order = orderService.update(orderId, new Order(customerId, itemQuants));</span>
+<span class="fc" id="L89">		LOGGER.info(&quot;Order was updated.&quot;);</span>
+<span class="fc" id="L90">		return order;</span>
+
+	}
+
+	@Override
+	public boolean delete() {
+<span class="fc" id="L96">		LOGGER.info(&quot;Which order would you like to delete? (ID)&quot;);</span>
+<span class="fc" id="L97">		int orderId = getIntInput();</span>
+<span class="fc" id="L98">		boolean wasRemoved = orderService.delete(orderId);</span>
+<span class="fc" id="L99">		LOGGER.info(&quot;Order &quot; + orderId + &quot; was removed.&quot;);</span>
+<span class="fc" id="L100">		return wasRemoved;</span>
+	}
+
+	@Override
+	public Order readById() {
+<span class="fc" id="L105">		LOGGER.info(&quot;Which order ID to access? &quot;);</span>
+<span class="fc" id="L106">		int id = getIntInput();</span>
+<span class="fc" id="L107">		Order order = orderService.readById(id);</span>
+<span class="fc" id="L108">		LOGGER.info(order.toString());</span>
+<span class="fc" id="L109">		return order;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

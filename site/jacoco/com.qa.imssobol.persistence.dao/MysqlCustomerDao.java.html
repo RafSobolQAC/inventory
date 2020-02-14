@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MysqlCustomerDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.persistence.dao</a> &gt; <span class="el_source">MysqlCustomerDao.java</span></div><h1>MysqlCustomerDao.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.persistence.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.persistence.domain.Customer;
+import com.qa.imssobol.utils.Utils;
+
+public class MysqlCustomerDao implements Dao&lt;Customer&gt; {
+
+<span class="fc" id="L17">	public static final Logger LOGGER = Logger.getLogger(MysqlCustomerDao.class);</span>
+
+	private Connection connection;
+	private static final String INSERT = &quot;INSERT INTO customers (name) VALUES (?)&quot;;
+	private static final String UPDATE = &quot;UPDATE customers SET name=? WHERE id=?&quot;;
+	private static final String READBYID = &quot;SELECT * FROM customers WHERE id=?&quot;;
+	private static final String DELETE = &quot;DELETE FROM customers WHERE id=?&quot;;
+	private static final String READALL = &quot;SELECT * FROM customers&quot;;
+
+<span class="fc" id="L26">	public MysqlCustomerDao(Connection connection) {</span>
+<span class="fc" id="L27">		this.connection = connection;</span>
+<span class="fc" id="L28">	}</span>
+	
+	/**
+	 * Reads the latest Customer from the database (one with the highest ID).
+	 * @return the latest Customer
+	 */
+	public Customer readLatest() {
+<span class="fc" id="L35">		Customer customer = new Customer();</span>
+<span class="fc" id="L36">		try (Statement statement = connection.createStatement();</span>
+<span class="fc" id="L37">				ResultSet resultSet = statement.executeQuery(&quot;SELECT * FROM customers ORDER BY id DESC LIMIT 1&quot;);) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L39">				customer.setName(resultSet.getString(&quot;name&quot;));</span>
+<span class="fc" id="L40">				customer.setId(resultSet.getInt(&quot;id&quot;));</span>
+<span class="fc" id="L41">				return customer;</span>
+			} else {
+<span class="fc" id="L43">				LOGGER.warn(&quot;There is no customer yet!&quot;);</span>
+			}
+
+<span class="fc" id="L46">		} catch (Exception e) {</span>
+<span class="fc" id="L47">			LOGGER.debug(e.getStackTrace());</span>
+<span class="fc" id="L48">			LOGGER.error(e.getMessage());</span>
+<span class="fc" id="L49">		}</span>
+<span class="fc" id="L50">		return null;</span>
+	}
+	
+	
+	/**
+	 * Sends a Customer to the database.
+	 * @param customer the customer to be created
+	 * @return the Customer created
+	 */
+	public Customer create(Customer customer) {
+<span class="fc" id="L60">		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {</span>
+
+<span class="fc" id="L62">			ps.setString(1, customer.getName());</span>
+
+<span class="fc" id="L64">			ps.executeUpdate();</span>
+
+<span class="fc" id="L66">			LOGGER.info((&quot;Added customer: &quot; + customer.toString()));</span>
+<span class="fc" id="L67">			return readLatest();</span>
+
+<span class="fc" id="L69">		} catch (SQLException e) {</span>
+<span class="fc" id="L70">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+<span class="fc" id="L72">		return null;</span>
+
+	}
+
+	
+	/**
+	 * Reads a customer with the given ID from the database.
+	 * @param id customer's ID (in the database)
+	 * @return the Customer
+	 */
+	public Customer readById(int id) {
+<span class="fc" id="L83">		Customer customer = null;</span>
+<span class="fc" id="L84">		ResultSet resultSet = null;</span>
+<span class="fc" id="L85">		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {</span>
+
+<span class="fc" id="L87">			ps.setInt(1, id);</span>
+<span class="fc" id="L88">			resultSet = ps.executeQuery();</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L90">				customer = new Customer();</span>
+<span class="fc" id="L91">				customer.setName(resultSet.getString(&quot;name&quot;));</span>
+<span class="fc" id="L92">				customer.setId(resultSet.getInt(&quot;id&quot;));</span>
+			} else {
+<span class="fc" id="L94">				LOGGER.warn(&quot;Customer with ID does not exist!&quot;);</span>
+<span class="fc" id="L95">				return new Customer();</span>
+			}
+
+<span class="fc" id="L98">		} catch (SQLException e) {</span>
+<span class="fc" id="L99">			Utils.exceptionLogger(e, LOGGER);</span>
+		} finally {
+			try {
+<span class="fc bfc" id="L102" title="All 2 branches covered.">				if (resultSet != null)</span>
+<span class="fc" id="L103">					resultSet.close();</span>
+<span class="fc" id="L104">			} catch (Exception e) {</span>
+<span class="fc" id="L105">				Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L106">				customer = new Customer();</span>
+<span class="fc" id="L107">			}</span>
+		}
+<span class="fc" id="L109">		return customer;</span>
+	}
+
+	
+	/**
+	 * Reads all customers from the database, and stores them in an arraylist.
+	 * @return an arraylist of Customers 
+	 */
+	public ArrayList&lt;Customer&gt; readAll() {
+<span class="fc" id="L118">		ArrayList&lt;Customer&gt; customers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L119">		ResultSet resultSet = null;</span>
+<span class="fc" id="L120">		try (Statement statement = connection.createStatement()){</span>
+<span class="fc" id="L121">			resultSet = statement.executeQuery(READALL);</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">			while (resultSet.next()) {</span>
+<span class="fc" id="L123">				int id = resultSet.getInt(&quot;id&quot;);</span>
+<span class="fc" id="L124">				String name = resultSet.getString(&quot;name&quot;);</span>
+<span class="fc" id="L125">				customers.add(new Customer(id, name));</span>
+<span class="fc" id="L126">			}</span>
+<span class="fc" id="L127">		} catch (Exception e) {</span>
+<span class="fc" id="L128">			Utils.exceptionLogger(e, LOGGER);</span>
+		} finally {
+			try {
+<span class="fc bfc" id="L131" title="All 2 branches covered.">				if (resultSet != null)</span>
+<span class="fc" id="L132">					resultSet.close();</span>
+<span class="fc" id="L133">			} catch (Exception e) {</span>
+<span class="fc" id="L134">				Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L135">				customers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L136">			}</span>
+		}
+
+<span class="fc" id="L139">		return customers;</span>
+	}
+	
+	
+	/**
+	 * Updates a customer with the provided id, changing their details into those from the new customer.
+	 * @param id customer's id in the database to be modified
+	 * @param customer new customer's details (the ID of that customer doesn't affect anything)
+	 * @return the new customer
+	 */
+	public Customer update(int id, Customer t) {
+<span class="fc" id="L150">		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {</span>
+
+<span class="fc" id="L152">			ps.setString(1, t.getName());</span>
+<span class="fc" id="L153">			ps.setInt(2, id);</span>
+
+<span class="fc" id="L155">			ps.executeUpdate();</span>
+
+<span class="fc" id="L157">			return readById(id);</span>
+<span class="fc" id="L158">		} catch (Exception e) {</span>
+<span class="fc" id="L159">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+<span class="fc" id="L161">		return null;</span>
+	}
+	
+	
+	/**
+	 * Deletes a customer with the specified ID.
+	 * @param id the customer's id
+	 * @return true if no exceptions (whether deleted or not), false otherwise
+	 */
+	public boolean delete(int id) {
+<span class="fc" id="L171">		try (PreparedStatement ps = connection.prepareStatement(DELETE)) {</span>
+
+<span class="fc" id="L173">			ps.setInt(1, id);</span>
+
+<span class="fc" id="L175">			ps.executeUpdate();</span>
+<span class="fc" id="L176">			return true;</span>
+<span class="fc" id="L177">		} catch (Exception e) {</span>
+<span class="fc" id="L178">			Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L179">			return false;</span>
+		}
+
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
