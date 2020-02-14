@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" time="0.012" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -71,11 +71,11 @@
   <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadByIdExceptionTest" time="0"/>
   <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoDeleteExceptionTest" time="0"/>
   <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoUpdateExceptionTest" time="0"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllExceptionTest" time="0.001"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllTest" time="0.002"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadByIdTest" time="0.003"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllExceptionTest" time="0"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllTest" time="0"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadByIdTest" time="0"/>
   <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoUpdateTest" time="0"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoCreateExceptionTest" time="0.002"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllRSCloseExceptionTest" time="0.002"/>
-  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadLatestExceptionTest" time="0.002"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoCreateExceptionTest" time="0"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadAllRSCloseExceptionTest" time="0"/>
+  <testcase classname="com.qa.imssobol.persistence.dao.MysqlItemDaoTest" name="itemDaoReadLatestExceptionTest" time="0.003"/>
 </testsuite>
