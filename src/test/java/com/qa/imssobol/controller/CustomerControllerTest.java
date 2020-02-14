@@ -1,6 +1,7 @@
-package com.qa.controller;
+package com.qa.imssobol.controller;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,6 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.imssobol.controller.CustomerController;
 import com.qa.imssobol.persistence.domain.Customer;
 import com.qa.imssobol.services.CustomerServices;
 
@@ -35,12 +35,20 @@ public class CustomerControllerTest {
 	private CustomerController customerController;
 
 	@Test
+	public void getInputTest() {
+		Mockito.doReturn("TestInput").when(customerController).getInput();
+		assertEquals("TestInput",customerController.getInput());
+	}
+	@Test
 	public void readAllTest() {
 		CustomerController customerController = new CustomerController(customerService);
 		List<Customer> customers = new ArrayList<>();
 		customers.add(new Customer("Chris"));
 		customers.add(new Customer("Rhys"));
 		customers.add(new Customer("Nic"));
+		customers.add(new Customer("One"));
+		customers.add(new Customer("Two"));
+		customers.add(new Customer("Three"));
 		Mockito.when(customerService.readAll()).thenReturn(customers);
 		assertEquals(customers, customerController.readAll());
 	}
@@ -62,31 +70,25 @@ public class CustomerControllerTest {
 		Mockito.doReturn(id).when(customerController).getIntInput();
 		Mockito.doReturn(name).when(customerController).getInput();
 		Customer customer = new Customer(name);
-//		Mockito.doReturn(customer).when(customerService).update(id,customer);
-//		customerService.update(id, new Customer(newName));
 		Mockito.when(customerService.update(id, customer)).thenReturn(customer);
 		assertEquals(customer, customerController.update());
 	}
 	
-
-	/**
-	 * Delete doesn't return anything, so we can just verify that it calls the delete method
-	 */
-//	@Test
-//	public void deleteTest() {
-//		String id = "1";
-//		Mockito.doReturn(id).when(customerController).getInput();
-//		customerController.delete();
-//		Mockito.verify(customerServices, Mockito.times(1)).delete(1);
-//	}
+	@Test
+	public void readByIdTest() {
+		Customer customer = new Customer(1,"Bobby");
+		Mockito.doReturn(1).when(customerController).getIntInput();
+		Mockito.when(customerService.readById(Mockito.anyInt())).thenReturn(customer);
+		assertEquals(customer,customerController.readById());
+	}
 	
 	@Test
-	public void delete2Test() {
+	public void deleteTest() {
 		int id = 1;
 		Mockito.doReturn(id).when(customerController).getIntInput();
 		customerController.delete();
 		Mockito.when(customerService.delete(id)).thenReturn(true);
-		assertEquals(true,customerController.delete());
+		assertTrue(customerController.delete());
 	}
 	
 }

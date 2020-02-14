@@ -17,7 +17,18 @@ public class ItemController implements CrudController<Item>{
 	public ItemController(CrudServices<Item> itemService) {
 		this.itemService = itemService;
 	}
+	public String getInput() {
+		return Utils.getInput();
+	}
 	
+	public int getIntInput() {
+		return Utils.getIntInput(LOGGER);
+	}
+	
+	public BigDecimal getBigDecimalInput() {
+		return Utils.getBigDecimalInput(LOGGER);
+	}
+
 	public List<Item> readAll() {
 		List<Item> items = itemService.readAll();
 		for(Item item: items) {
@@ -28,9 +39,11 @@ public class ItemController implements CrudController<Item>{
 
 	public Item create() {
 		LOGGER.info("Please enter the name of the item.");
-		String name = Utils.getInput();
+		LOGGER.info("Please only use alphanumeric characters!");
+		String name = getInput();
 		LOGGER.info("What price should it have? ");
-		BigDecimal price = Utils.getBigDecimalInput(LOGGER);
+		LOGGER.info("Please only use numbers and full stops.");
+		BigDecimal price = getBigDecimalInput();
 		Item item = itemService.create(new Item(name,price));
 		LOGGER.info("Item created.");
 		return item;
@@ -38,11 +51,17 @@ public class ItemController implements CrudController<Item>{
 
 	public Item update() {
 		LOGGER.info("Which item to update? (ID)");
-		int id = Utils.getIntInput(LOGGER);
+		LOGGER.info("Please only use numbers.");
+
+		int id = getIntInput();
 		LOGGER.info("What's their new name? ");
-		String newName = Utils.getInput();
+		LOGGER.info("Please only use alphanumeric characters!");
+
+		String newName = getInput();
 		LOGGER.info("What's their new price? ");
-		BigDecimal newPrice = Utils.getBigDecimalInput(LOGGER);
+		LOGGER.info("Please only use numbers and full stops.");
+
+		BigDecimal newPrice = getBigDecimalInput();
 		
 		Item item = itemService.update(id, new Item(newName,newPrice));
 		LOGGER.info("Update complete!");
@@ -51,8 +70,11 @@ public class ItemController implements CrudController<Item>{
 
 	public boolean delete() {
 		LOGGER.info("Please enter the id of the item you would like to delete: ");
-		int id = Utils.getIntInput(LOGGER);
+		LOGGER.info("Please only use numbers.");
+
+		int id = getIntInput();
 		boolean wasDeleted = itemService.delete(id);
+		LOGGER.info("Item was deleted!");
 		return wasDeleted;
 
 	}
@@ -60,7 +82,9 @@ public class ItemController implements CrudController<Item>{
 	@Override
 	public Item readById() {
 		LOGGER.info("Which item ID to access? ");
-		int id = Utils.getIntInput(LOGGER);
+		LOGGER.info("Please only use numbers.");
+
+		int id = getIntInput();
 		Item item = itemService.readById(id);
 		LOGGER.info(item.toString());
 		return item;

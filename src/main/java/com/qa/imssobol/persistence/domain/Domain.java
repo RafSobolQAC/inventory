@@ -19,16 +19,21 @@ public enum Domain {
 		this.description = description;
 	}
 	
-	public String description() {
+	public String getDescription() {
 		return this.name() + ": " +this.description;
 	}
-	
+	/**
+	 * Output all domains from Domain.
+	 */
 	public static void printDomains() {
 		for (Domain domain : Domain.values()) {
-			LOGGER.info(domain.description());
+			LOGGER.info(domain.getDescription());
 		}
 	}
-	
+	/**
+	 * Get a specific domain from input.
+	 * @return one of the domains
+	 */
 	public static Domain getDomain() {
 		Domain domain;
 		while (true) {
