@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MysqlOrderDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.persistence.dao</a> &gt; <span class="el_source">MysqlOrderDao.java</span></div><h1>MysqlOrderDao.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.persistence.dao;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.persistence.domain.Item;
+import com.qa.imssobol.persistence.domain.Order;
+import com.qa.imssobol.utils.Utils;
+
+public class MysqlOrderDao implements Dao&lt;Order&gt; {
+<span class="fc" id="L20">	public static final Logger LOGGER = Logger.getLogger(MysqlOrderDao.class);</span>
+	private Connection connection;
+	private static final String INSERTORDER = &quot;INSERT INTO orders (customer_id_fk,total_price) VALUES (?,?)&quot;;
+	private static final String INSERTORDERLINE = &quot;INSERT INTO orders_items (order_id_fk, item_id_fk, quantity) VALUES (?,?,?)&quot;;
+	private static final String UPDATEPRICE = &quot;UPDATE orders SET total_price=? WHERE id=?&quot;;
+	private static final String UPDATEORDERLINE = &quot;UPDATE orders_items SET quantity=? WHERE order_id_fk=? AND item_id_fk=?&quot;;
+	private static final String READORDER = &quot;select * from orders where id=?&quot;;
+	private static final String READBYID = &quot;select `id` as order_id, `customer_id_fk` as customer_id, `item_id_fk` as item_id, `quantity`, `total_price` from orders inner join orders_items on orders.`id` = orders_items.`order_id_fk` where orders.`id` = ?&quot;;
+	private static final String READORDERLINE = &quot;select * from (select order_id_fk as order_id, item_id_fk as item_id, quantity, price as item_price, name as item_name from orders_items inner join items on orders_items.item_id_fk = items.id) orderjoin where order_id = ?&quot;;
+	private static final String DELETE = &quot;DELETE FROM orders WHERE id=?&quot;;
+	private static final String DELETEORDERLINE = &quot;DELETE FROM orders_items WHERE order_id_fk=?&quot;;
+	private static final String READALL = &quot;SELECT * FROM orders&quot;;
+	private static final String GETPRICE = &quot;SELECT item_id_fk as item_id, quantity FROM orders_items WHERE order_id_fk = ?&quot;;
+	private static final String GETLASTID = &quot;SELECT(SELECT id FROM orders ORDER BY id DESC LIMIT 1) as id&quot;;
+
+<span class="fc" id="L35">	public MysqlOrderDao(Connection connection) {</span>
+<span class="fc" id="L36">		this.connection = connection;</span>
+<span class="fc" id="L37">	}</span>
+
+	public Connection getConnection() {
+<span class="fc" id="L40">		return this.connection;</span>
+	}
+
+	/**
+	 * Reads the latest Order from the database (one with the highest ID).
+	 * 
+	 * @return the latest Order
+	 */
+	public Order readLatest() {
+<span class="fc" id="L49">		try (Statement statement = connection.createStatement();</span>
+<span class="fc" id="L50">				ResultSet resultSet = statement.executeQuery(&quot;SELECT * FROM orders ORDER BY id DESC LIMIT 1&quot;);) {</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L52">				int id = resultSet.getInt(&quot;id&quot;);</span>
+<span class="fc" id="L53">				return readById(id);</span>
+			} else {
+<span class="fc" id="L55">				LOGGER.warn(&quot;There is no order yet!&quot;);</span>
+			}
+
+<span class="fc" id="L58">		} catch (SQLException e) {</span>
+<span class="fc" id="L59">			LOGGER.debug(e.getStackTrace());</span>
+<span class="fc" id="L60">			LOGGER.error(e.getMessage());</span>
+<span class="fc" id="L61">		}</span>
+<span class="fc" id="L62">		return null;</span>
+	}
+
+	/**
+	 * Sends an Order to the database.
+	 * 
+	 * @param order the order to be created
+	 * @return the Order created
+	 */
+	@Override
+	public Order create(Order order) {
+<span class="fc" id="L73">		try (PreparedStatement ps = connection.prepareStatement(INSERTORDER);</span>
+<span class="fc" id="L74">				PreparedStatement ps2 = connection.prepareStatement(INSERTORDERLINE)) {</span>
+
+<span class="fc" id="L76">			ps.setInt(1, order.getCustomerId());</span>
+<span class="fc" id="L77">			ps.setBigDecimal(2, order.getPrice());</span>
+
+<span class="fc" id="L79">			ps.executeUpdate();</span>
+<span class="fc" id="L80">			int lastId = readLatest().getId();</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">			for (Item item : order.getItems().keySet()) {</span>
+<span class="fc" id="L82">				ps2.setInt(1, lastId);</span>
+<span class="fc" id="L83">				ps2.setInt(2, item.getId());</span>
+<span class="fc" id="L84">				ps2.setInt(3, order.getItems().get(item));</span>
+<span class="fc" id="L85">				ps2.executeUpdate();</span>
+<span class="fc" id="L86">			}</span>
+
+<span class="fc" id="L88">			return readLatest();</span>
+
+<span class="fc" id="L90">		} catch (SQLException e) {</span>
+<span class="fc" id="L91">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+<span class="fc" id="L93">		return order;</span>
+
+	}
+
+	/**
+	 * Reads all orders from the database.
+	 * @return an ArrayList of Orders from the database (0 price - read by int to get the price of each item!)
+	 */
+	@Override
+	public ArrayList&lt;Order&gt; readAll() {
+<span class="fc" id="L103">		ArrayList&lt;Order&gt; orders = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L104">		try (Statement statement = connection.createStatement();</span>
+<span class="fc" id="L105">				ResultSet resultSet = statement.executeQuery(READALL);) {</span>
+<span class="fc bfc" id="L106" title="All 2 branches covered.">			while (resultSet.next()) {</span>
+<span class="fc" id="L107">				Order order = new Order();</span>
+<span class="fc" id="L108">				int id = resultSet.getInt(&quot;id&quot;);</span>
+<span class="fc" id="L109">				BigDecimal price = resultSet.getBigDecimal(&quot;total_price&quot;);</span>
+<span class="fc" id="L110">				int custId = resultSet.getInt(&quot;customer_id_fk&quot;);</span>
+<span class="fc" id="L111">				order.setId(id);</span>
+<span class="fc" id="L112">				order.setCustomerId(custId);</span>
+<span class="fc" id="L113">				order.setPrice(price);</span>
+<span class="fc" id="L114">				orders.add(order);</span>
+<span class="fc" id="L115">			}</span>
+<span class="fc" id="L116">		} catch (SQLException e) {</span>
+<span class="fc" id="L117">			Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L118">		}</span>
+<span class="fc" id="L119">		return orders;</span>
+
+	}
+/**
+ * Reads an order based on its ID.
+ * @param id the order's ID in the database
+ * @return the Order
+ */
+	@Override
+	public Order readById(int id) {
+<span class="fc" id="L129">		Order order = null;</span>
+<span class="fc" id="L130">		ResultSet resultSet = null;</span>
+<span class="fc" id="L131">		Map&lt;Item, Integer&gt; itemQuants = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L132">		Item itemToAdd = new Item();</span>
+<span class="fc" id="L133">		try (PreparedStatement ps = connection.prepareStatement(READORDER);</span>
+<span class="fc" id="L134">				PreparedStatement ps2 = connection.prepareStatement(READORDERLINE)) {</span>
+
+<span class="fc" id="L136">			ps.setInt(1, id);</span>
+<span class="fc" id="L137">			resultSet = ps.executeQuery();</span>
+<span class="fc bfc" id="L138" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L139">				order = new Order();</span>
+<span class="fc" id="L140">				order.setId(resultSet.getInt(&quot;id&quot;));</span>
+<span class="fc" id="L141">				order.setCustomerId(resultSet.getInt(&quot;customer_id_fk&quot;));</span>
+<span class="fc" id="L142">				order.setPrice(resultSet.getBigDecimal(&quot;total_price&quot;));</span>
+
+<span class="fc" id="L144">				ps2.setInt(1, id);</span>
+<span class="fc" id="L145">				try (ResultSet resultSet2 = ps2.executeQuery()) {</span>
+<span class="fc bfc" id="L146" title="All 2 branches covered.">					while (resultSet2.next()) {</span>
+<span class="fc" id="L147">						itemToAdd.setId(resultSet2.getInt(&quot;item_id&quot;));</span>
+<span class="fc" id="L148">						itemToAdd.setName(resultSet2.getString(&quot;item_name&quot;));</span>
+<span class="fc" id="L149">						itemToAdd.setPrice(resultSet2.getBigDecimal(&quot;item_price&quot;));</span>
+<span class="fc" id="L150">						itemQuants.put(itemToAdd, resultSet2.getInt(&quot;quantity&quot;));</span>
+					}
+<span class="fc" id="L152">					order = order.setItems(itemQuants);</span>
+<span class="fc" id="L153">				} </span>
+			} else {
+<span class="fc" id="L155">				LOGGER.warn(&quot;Order with ID does not exist!&quot;);</span>
+<span class="fc" id="L156">				throw new IllegalArgumentException();</span>
+			}
+
+<span class="fc" id="L159">		} catch (SQLException e) {</span>
+<span class="fc" id="L160">			Utils.exceptionLogger(e, LOGGER);</span>
+		} finally {
+			try {
+<span class="fc bfc" id="L163" title="All 2 branches covered.">				if (resultSet != null)</span>
+<span class="fc" id="L164">					resultSet.close();</span>
+<span class="nc" id="L165">			} catch (Exception e) {</span>
+<span class="nc" id="L166">				Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L167">			}</span>
+		}
+
+<span class="fc" id="L170">		return order;</span>
+	}
+/**
+ * Updates an order with id ID, to the details of the order provided. The ID doesn't matter.
+ * @param id the order's ID in the database
+ * @param order the new order's details
+ * @return the new order
+ */
+	@Override
+	public Order update(int id, Order order) {
+		HashMap&lt;Item, Integer&gt; itemsQuants;
+<span class="fc" id="L181">		BigDecimal price = order.getPrice();</span>
+		int itemId;
+		int itemQuantity;
+<span class="fc" id="L184">		try (PreparedStatement ps = connection.prepareStatement(UPDATEPRICE);</span>
+<span class="fc" id="L185">				PreparedStatement ps2 = connection.prepareStatement(UPDATEORDERLINE)) {</span>
+
+<span class="fc" id="L187">			itemsQuants = (HashMap&lt;Item, Integer&gt;) order.getItems();</span>
+<span class="fc bfc" id="L188" title="All 2 branches covered.">			for (Item item : itemsQuants.keySet()) {</span>
+<span class="fc" id="L189">				itemId = item.getId();</span>
+<span class="fc" id="L190">				itemQuantity = itemsQuants.get(item);</span>
+<span class="fc" id="L191">				ps2.setInt(1, itemQuantity);</span>
+<span class="fc" id="L192">				ps2.setInt(2, id);</span>
+<span class="fc" id="L193">				ps2.setInt(3, itemId);</span>
+<span class="fc" id="L194">				ps2.executeUpdate();</span>
+<span class="fc" id="L195">			}</span>
+<span class="fc" id="L196">			ps.setBigDecimal(1, price);</span>
+<span class="fc" id="L197">			ps.setInt(2, id);</span>
+<span class="fc" id="L198">			ps.executeUpdate();</span>
+
+<span class="fc" id="L200">			return readById(id);</span>
+
+<span class="fc" id="L202">		} catch (SQLException e) {</span>
+<span class="fc" id="L203">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+
+<span class="fc" id="L206">		return null;</span>
+	}
+/**
+ * Deletes an order from the database, with the provided ID.
+ * @param id the order's ID in the database
+ * @return true if no exception was caught, false otherwise
+ */
+	@Override
+	public boolean delete(int id) {
+<span class="fc" id="L215">		try (PreparedStatement ps = connection.prepareStatement(DELETE);</span>
+<span class="fc" id="L216">				PreparedStatement ps2 = connection.prepareStatement(DELETEORDERLINE)) {</span>
+<span class="fc" id="L217">			ps.setInt(1, id);</span>
+<span class="fc" id="L218">			ps2.setInt(1, id);</span>
+<span class="fc" id="L219">			ps.executeUpdate();</span>
+<span class="fc" id="L220">			ps2.executeUpdate();</span>
+
+<span class="fc" id="L222">		} catch (SQLException e) {</span>
+<span class="fc" id="L223">			Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L224">			return false;</span>
+<span class="fc" id="L225">		}</span>
+<span class="fc" id="L226">		return true;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

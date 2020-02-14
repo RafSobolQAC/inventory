@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MysqlItemDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.persistence.dao</a> &gt; <span class="el_source">MysqlItemDao.java</span></div><h1>MysqlItemDao.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.persistence.dao;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.persistence.domain.Item;
+import com.qa.imssobol.utils.Utils;
+
+public class MysqlItemDao implements Dao&lt;Item&gt; {
+
+<span class="fc" id="L18">	public static final Logger LOGGER = Logger.getLogger(MysqlItemDao.class);</span>
+
+	private Connection connection;
+	private static final String INSERT = &quot;INSERT INTO items (name, price) VALUES (?, ?)&quot;;
+	private static final String UPDATE = &quot;UPDATE items SET name=?, price=? WHERE id=?&quot;;
+	private static final String READBYID = &quot;SELECT * FROM items WHERE id=?&quot;;
+	private static final String DELETE = &quot;DELETE FROM items WHERE id=?&quot;;
+	private static final String READALL = &quot;SELECT * FROM items&quot;;
+
+<span class="fc" id="L27">	public MysqlItemDao(Connection connection) {</span>
+<span class="fc" id="L28">		this.connection = connection;</span>
+<span class="fc" id="L29">	}</span>
+
+	/**
+	 * Reads the latest Item from the database (one with the highest ID).
+	 * 
+	 * @return the latest Item
+	 */
+	public Item readLatest() {
+<span class="fc" id="L37">		Item item = new Item();</span>
+<span class="fc" id="L38">		try (Statement statement = connection.createStatement();</span>
+<span class="fc" id="L39">				ResultSet resultSet = statement.executeQuery(&quot;SELECT * FROM items ORDER BY id DESC LIMIT 1&quot;);) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L41">				item.setName(resultSet.getString(&quot;name&quot;));</span>
+<span class="fc" id="L42">				item.setId(resultSet.getInt(&quot;id&quot;));</span>
+<span class="fc" id="L43">				item.setPrice(resultSet.getBigDecimal(&quot;price&quot;));</span>
+<span class="fc" id="L44">				return item;</span>
+			} else {
+<span class="fc" id="L46">				LOGGER.warn(&quot;There is no order yet!&quot;);</span>
+
+			}
+<span class="fc" id="L49">		} catch (Exception e) {</span>
+<span class="fc" id="L50">			Utils.exceptionLogger(e, LOGGER);</span>
+
+<span class="fc" id="L52">		}</span>
+<span class="fc" id="L53">		return null;</span>
+	}
+
+	/**
+	 * Sends an Item to the database.
+	 * 
+	 * @param item the item to be created
+	 * @return the Item created
+	 */
+	@Override
+	public Item create(Item item) {
+<span class="fc" id="L64">		try (PreparedStatement ps = connection.prepareStatement(INSERT)) {</span>
+
+<span class="fc" id="L66">			ps.setString(1, item.getName());</span>
+<span class="fc" id="L67">			ps.setBigDecimal(2, item.getPrice());</span>
+
+<span class="fc" id="L69">			ps.executeUpdate();</span>
+
+<span class="fc" id="L71">			return readLatest();</span>
+
+<span class="fc" id="L73">		} catch (SQLException e) {</span>
+
+<span class="fc" id="L75">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+<span class="fc" id="L77">		return null;</span>
+	}
+
+	/**
+	 * Reads an Item with the given ID from the database.
+	 * 
+	 * @param id item's ID (in the database)
+	 * @return the Item
+	 */
+	@Override
+	public Item readById(int id) {
+<span class="fc" id="L88">		Item item = null;</span>
+<span class="fc" id="L89">		ResultSet resultSet = null;</span>
+<span class="fc" id="L90">		try (PreparedStatement ps = connection.prepareStatement(READBYID)) {</span>
+
+<span class="fc" id="L92">			ps.setInt(1, id);</span>
+<span class="fc" id="L93">			resultSet = ps.executeQuery();</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">			if (resultSet.next()) {</span>
+<span class="fc" id="L95">				item = new Item();</span>
+<span class="fc" id="L96">				item.setName(resultSet.getString(&quot;name&quot;));</span>
+<span class="fc" id="L97">				item.setId(resultSet.getInt(&quot;id&quot;));</span>
+<span class="fc" id="L98">				item.setPrice(resultSet.getBigDecimal(&quot;price&quot;));</span>
+			}
+
+<span class="fc" id="L101">		} catch (SQLException e) {</span>
+<span class="fc" id="L102">			Utils.exceptionLogger(e, LOGGER);</span>
+		} finally {
+			try {
+<span class="fc bfc" id="L105" title="All 2 branches covered.">				if (resultSet != null)</span>
+<span class="fc" id="L106">					resultSet.close();</span>
+<span class="fc" id="L107">			} catch (Exception e) {</span>
+<span class="fc" id="L108">				Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L109">				item = new Item();</span>
+<span class="fc" id="L110">			}</span>
+
+		}
+<span class="fc" id="L113">		return item;</span>
+	}
+
+	/**
+	 * Reads all items from the database, and stores them in an arraylist.
+	 * 
+	 * @return an arraylist of Items
+	 */
+	@Override
+	public ArrayList&lt;Item&gt; readAll() {
+<span class="fc" id="L123">		ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L124">		ResultSet resultSet = null;</span>
+<span class="fc" id="L125">		try (Statement statement = connection.createStatement()) {</span>
+<span class="fc" id="L126">			resultSet = statement.executeQuery(READALL);</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">			while (resultSet.next()) {</span>
+<span class="fc" id="L128">				int id = resultSet.getInt(&quot;id&quot;);</span>
+<span class="fc" id="L129">				String name = resultSet.getString(&quot;name&quot;);</span>
+<span class="fc" id="L130">				BigDecimal price = resultSet.getBigDecimal(&quot;price&quot;);</span>
+<span class="fc" id="L131">				items.add(new Item(id, name, price));</span>
+<span class="fc" id="L132">			}</span>
+<span class="fc" id="L133">		} catch (Exception e) {</span>
+<span class="fc" id="L134">			Utils.exceptionLogger(e, LOGGER);</span>
+		} finally {
+			try {
+<span class="fc bfc" id="L137" title="All 2 branches covered.">				if (resultSet != null)</span>
+<span class="fc" id="L138">					resultSet.close();</span>
+<span class="fc" id="L139">			} catch (Exception e) {</span>
+<span class="fc" id="L140">				Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L141">				items = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L142">			}</span>
+		}
+<span class="fc" id="L144">		return items;</span>
+	}
+
+	/**
+	 * Updates an item with the provided id, changing their details into those from
+	 * the new item.
+	 * 
+	 * @param id   item's id in the database to be modified
+	 * @param item new item's details (the ID of that item doesn't affect anything)
+	 * @return the new Item
+	 */
+	@Override
+	public Item update(int id, Item item) {
+<span class="fc" id="L157">		try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {</span>
+
+<span class="fc" id="L159">			ps.setString(1, item.getName());</span>
+<span class="fc" id="L160">			ps.setBigDecimal(2, item.getPrice());</span>
+<span class="fc" id="L161">			ps.setInt(3, id);</span>
+
+<span class="fc" id="L163">			ps.executeUpdate();</span>
+
+<span class="fc" id="L165">			return readById(id);</span>
+
+<span class="fc" id="L167">		} catch (Exception e) {</span>
+<span class="fc" id="L168">			Utils.exceptionLogger(e, LOGGER);</span>
+		}
+<span class="fc" id="L170">		return null;</span>
+
+	}
+
+	/**
+	 * Deletes an item with the specified ID.
+	 * 
+	 * @param id the item's id
+	 * @return true if no exceptions (whether deleted or not), false otherwise
+	 */
+	@Override
+	public boolean delete(int id) {
+<span class="fc" id="L182">		try (PreparedStatement ps = connection.prepareStatement(DELETE)) {</span>
+
+<span class="fc" id="L184">			ps.setInt(1, id);</span>
+
+<span class="fc" id="L186">			ps.executeUpdate();</span>
+<span class="fc" id="L187">			return true;</span>
+<span class="fc" id="L188">		} catch (Exception e) {</span>
+<span class="fc" id="L189">			Utils.exceptionLogger(e, LOGGER);</span>
+<span class="fc" id="L190">			return false;</span>
+		}
+
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

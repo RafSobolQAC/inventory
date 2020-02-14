@@ -108,7 +108,7 @@ Install Jenkins on a cloud VM. Let it poll SCM (your fork of this repo, perhaps?
 To build locally: terminal in the project's main folder:
 
 ```
-mvn deploy
+mvn install
 cd target/
 ```
 Then to run: 

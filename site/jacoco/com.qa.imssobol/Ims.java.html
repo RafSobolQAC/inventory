@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ims.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol</a> &gt; <span class="el_source">Ims.java</span></div><h1>Ims.java</h1><pre class="source lang-java linenums">package com.qa.imssobol;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.apache.log4j.Logger;
+
+import com.qa.imssobol.controller.Action;
+import com.qa.imssobol.controller.CrudController;
+import com.qa.imssobol.controller.CustomerController;
+import com.qa.imssobol.controller.ItemController;
+import com.qa.imssobol.controller.OrderController;
+import com.qa.imssobol.persistence.dao.MysqlCustomerDao;
+import com.qa.imssobol.persistence.dao.MysqlItemDao;
+import com.qa.imssobol.persistence.dao.MysqlOrderDao;
+import com.qa.imssobol.persistence.domain.Domain;
+import com.qa.imssobol.services.CustomerServices;
+import com.qa.imssobol.services.ItemServices;
+import com.qa.imssobol.services.OrderServices;
+import com.qa.imssobol.utils.Connector;
+
+public class Ims {
+	protected Connector connector;
+<span class="fc" id="L24">	public static final Logger LOGGER = Logger.getLogger(Ims.class);</span>
+	protected Connection connection;
+
+<span class="fc" id="L27">	public Ims(Connector connector) {</span>
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">		if (this.connector == null)	this.connector = connector;</span>
+<span class="fc" id="L29">	}</span>
+	
+	public Connector makeConnector(String url)  {
+<span class="nc" id="L32">		return new Connector(url);</span>
+	}
+	public Domain getDomain() {
+<span class="nc" id="L35">		return Domain.getDomain();</span>
+	}
+	
+	public Action getAction() {
+<span class="nc" id="L39">		return Action.getAction();</span>
+	}
+	
+	public void imsRunner() throws SQLException {
+		while(true) {
+			try {
+<span class="fc" id="L45">				connector.setUpConnector();</span>
+<span class="fc" id="L46">				break;</span>
+<span class="nc" id="L47">			} catch (SQLException e) {</span>
+<span class="nc" id="L48">				LOGGER.warn(&quot;Please check your password, and if the problem persists, please check your Internet connection.&quot;);</span>
+<span class="nc" id="L49">			}</span>
+		}
+<span class="fc" id="L51">		this.connection = connector.getConnection();</span>
+<span class="fc" id="L52">		boolean breaker = true;</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">		while (breaker) {</span>
+<span class="fc" id="L54">			LOGGER.info(&quot;Which entity would you like to use? &quot;);</span>
+<span class="fc" id="L55">			Domain.printDomains();</span>
+
+<span class="fc" id="L57">			Domain domain = getDomain();</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">			if (domain.name().equals(&quot;STOP&quot;)) break;</span>
+<span class="fc" id="L59">			LOGGER.info(&quot;What would you like to do with &quot; + domain.name().toLowerCase() + &quot;:&quot;);</span>
+<span class="fc" id="L60">			Action.printActions();</span>
+<span class="fc" id="L61">			Action action = getAction();</span>
+<span class="pc bpc" id="L62" title="2 of 5 branches missed.">			switch (domain) {</span>
+			case CUSTOMER:
+<span class="fc" id="L64">				CustomerController customerController = new CustomerController(</span>
+						new CustomerServices(new MysqlCustomerDao(connection)));
+<span class="fc" id="L66">				doAction(customerController, action);</span>
+<span class="fc" id="L67">				break;</span>
+			case ITEM:
+<span class="fc" id="L69">				ItemController itemController = new ItemController(new ItemServices(new MysqlItemDao(connection)));</span>
+<span class="fc" id="L70">				doAction(itemController, action);</span>
+<span class="fc" id="L71">				break;</span>
+			case ORDER:
+<span class="fc" id="L73">				OrderController orderController = new OrderController(new OrderServices(new MysqlOrderDao(connection)));</span>
+<span class="fc" id="L74">				doAction(orderController, action);</span>
+<span class="fc" id="L75">				break;</span>
+			case STOP:
+<span class="nc" id="L77">				breaker = false;</span>
+<span class="nc" id="L78">				break;</span>
+			default:
+				break;
+			}
+<span class="fc" id="L82">		}</span>
+<span class="fc" id="L83">	}</span>
+
+	public void doAction(CrudController crudController, Action action) {
+<span class="pc bpc" id="L86" title="1 of 7 branches missed.">		switch (action) {</span>
+		case CREATE:
+<span class="fc" id="L88">			crudController.create();</span>
+<span class="fc" id="L89">			break;</span>
+		case READALL:
+<span class="fc" id="L91">			crudController.readAll();</span>
+<span class="fc" id="L92">			break;</span>
+		case READ:
+<span class="fc" id="L94">			crudController.readById();</span>
+<span class="fc" id="L95">			break;</span>
+		case UPDATE:
+<span class="fc" id="L97">			crudController.update();</span>
+<span class="fc" id="L98">			break;</span>
+		case DELETE:
+<span class="fc" id="L100">			crudController.delete();</span>
+<span class="fc" id="L101">			break;</span>
+		case RETURN:
+<span class="fc" id="L103">			break;</span>
+		default:
+			break;
+		}
+<span class="fc" id="L107">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

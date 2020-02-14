@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Order.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rafal-ims</a> &gt; <a href="index.source.html" class="el_package">com.qa.imssobol.persistence.domain</a> &gt; <span class="el_source">Order.java</span></div><h1>Order.java</h1><pre class="source lang-java linenums">package com.qa.imssobol.persistence.domain;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Order {
+	
+	private int id;
+	private BigDecimal price;
+	private int customerId;
+	private Map&lt;Item,Integer&gt; items;
+	/**
+	 * Create an Order with an ID, customer ID, and a map of (Item, quantity). The price is calculated automatically (if the items in the map have no prices, it will be 0).
+	 * @param id
+	 * @param customerId
+	 * @param items
+	 */
+<span class="fc" id="L19">	public Order(int id, int customerId, Map&lt;Item,Integer&gt; items) {</span>
+<span class="fc" id="L20">		this.id = id;</span>
+<span class="fc" id="L21">		this.customerId = customerId;</span>
+<span class="fc" id="L22">		this.items = items;</span>
+<span class="fc" id="L23">		this.price = calcPrice(); </span>
+<span class="fc" id="L24">	}</span>
+	/**
+	 * Create an empty Order.
+	 */
+<span class="fc" id="L28">	public Order() {</span>
+<span class="fc" id="L29">		this.id = 0;</span>
+<span class="fc" id="L30">		this.customerId = 0;</span>
+<span class="fc" id="L31">		this.price = new BigDecimal(0);</span>
+<span class="fc" id="L32">		this.items = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L33">	}</span>
+	
+	
+	/**
+	 * Create an Order with a customer ID and a map of (Item, quantity). The price is calculated automatically (if the items in the map have no prices, it will be 0).
+	 * @param customerId
+	 * @param items
+	 */
+<span class="fc" id="L41">	public Order(int customerId, Map&lt;Item,Integer&gt; items) {</span>
+<span class="fc" id="L42">		this.customerId = customerId;</span>
+<span class="fc" id="L43">		this.items = items;</span>
+<span class="fc" id="L44">		this.price = calcPrice();</span>
+<span class="fc" id="L45">		this.id = -1;</span>
+<span class="fc" id="L46">	}</span>
+	
+
+	public int getId() {
+<span class="fc" id="L50">		return id;</span>
+	}
+
+	public void setId(int id) {
+<span class="fc" id="L54">		this.id = id;</span>
+<span class="fc" id="L55">	}</span>
+
+	/**
+	 * Calculates price of the order based on the Items inside it.
+	 * @return the total price of the order
+	 */
+	public BigDecimal calcPrice() {
+<span class="fc" id="L62">		BigDecimal runningTotal = new BigDecimal(0);</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		for (Item item : items.keySet()) {</span>
+			
+<span class="fc" id="L65">			runningTotal = runningTotal.add(item.getPrice().multiply(new BigDecimal(items.get(item))));</span>
+<span class="fc" id="L66">		}</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">		runningTotal = (runningTotal.compareTo(new BigDecimal(10000))&gt; 0) ? runningTotal.multiply(BigDecimal.valueOf(0.9)) : runningTotal; </span>
+<span class="fc" id="L68">		return runningTotal;</span>
+	}
+	
+	public BigDecimal getPrice() {
+<span class="fc" id="L72">		return price;</span>
+	}
+
+	public void setPrice(BigDecimal price) {
+<span class="fc" id="L76">		this.price = price;</span>
+<span class="fc" id="L77">	}</span>
+
+	public int getCustomerId() {
+<span class="fc" id="L80">		return customerId;</span>
+	}
+
+	public void setCustomerId(int customerId) {
+<span class="fc" id="L84">		this.customerId = customerId;</span>
+<span class="fc" id="L85">	}</span>
+
+	public Map&lt;Item,Integer&gt; getItems() {
+<span class="fc" id="L88">		return items;</span>
+	}
+
+	public Order setItems(Map&lt;Item,Integer&gt; items) {
+<span class="fc" id="L92">		this.items = items;</span>
+<span class="fc" id="L93">		return this;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L98">		return &quot;Order [id=&quot; + id + &quot;, price=&quot; + price + &quot;, customerId=&quot; + customerId + &quot;, items=&quot; + items + &quot;]&quot;;</span>
+	}
+	@Override
+	public int hashCode() {
+<span class="fc" id="L102">		final int prime = 31;</span>
+<span class="fc" id="L103">		int result = 1;</span>
+<span class="fc" id="L104">		result = prime * result + customerId;</span>
+<span class="fc" id="L105">		result = prime * result + id;</span>
+<span class="pc bpc" id="L106" title="1 of 2 branches missed.">		result = prime * result + ((items == null) ? 0 : items.hashCode());</span>
+<span class="pc bpc" id="L107" title="1 of 2 branches missed.">		result = prime * result + ((price == null) ? 0 : price.hashCode());</span>
+<span class="fc" id="L108">		return result;</span>
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+<span class="fc bfc" id="L113" title="All 2 branches covered.">		if (this == obj)</span>
+<span class="fc" id="L114">			return true;</span>
+<span class="fc bfc" id="L115" title="All 2 branches covered.">		if (obj == null)</span>
+<span class="fc" id="L116">			return false;</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">		if (getClass() != obj.getClass())</span>
+<span class="fc" id="L118">			return false;</span>
+<span class="fc" id="L119">		Order other = (Order) obj;</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">		if (customerId != other.customerId)</span>
+<span class="fc" id="L121">			return false;</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">		if (id != other.id)</span>
+<span class="fc" id="L123">			return false;</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">		if (items == null) {</span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">			if (other.items != null)</span>
+<span class="fc" id="L126">				return false;</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">		} else if (!items.equals(other.items))</span>
+<span class="fc" id="L128">			return false;</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">		if (price == null) {</span>
+<span class="pc bpc" id="L130" title="1 of 2 branches missed.">			if (other.price != null)</span>
+<span class="fc" id="L131">				return false;</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">		} else if (!price.equals(other.price))</span>
+<span class="fc" id="L133">			return false;</span>
+<span class="fc" id="L134">		return true;</span>
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
