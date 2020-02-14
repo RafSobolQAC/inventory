@@ -7,19 +7,15 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.powermock.api.mockito.PowerMockito;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest(Utils.class)
+@RunWith(MockitoJUnitRunner.class)
 public class UtilsTest {
 private static final Logger LOGGER = Logger.getLogger(UtilsTest.class);
    @Test
-   public void shouldReturnTheCountOfEmployeesUsingTheDomainClass() throws Exception {
+   public void utilsInputTest() throws Exception {
 	   String input = "123";
 	   InputStream in = new ByteArrayInputStream(input.getBytes());
 	   System.setIn(in);
@@ -29,5 +25,9 @@ private static final Logger LOGGER = Logger.getLogger(UtilsTest.class);
       //      PowerMockito.when(utils.getInput()).thenReturn("123");
 //      PowerMockito.verifyStatic(Utils.class,Mockito.times(1));
       Assert.assertEquals("123",Utils.getInput());
+	   input = "***\n123";
+	   in = new ByteArrayInputStream(input.getBytes());
+	   System.setIn(in);
+	   Assert.assertEquals("123", Utils.getInput());
    }
 }
