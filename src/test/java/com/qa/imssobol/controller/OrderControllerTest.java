@@ -114,6 +114,7 @@ public class OrderControllerTest {
 		Item item = new Item(1,"TestItem",BigDecimal.valueOf(5.0));
 		Mockito.doReturn(" ").doReturn("q").when(orderController).getInput();
 		Mockito.doReturn(1).doReturn(2).when(orderController).getIntInput();
+		Mockito.doReturn(item).when(itemService).readById(Mockito.anyInt());
 		assertNotNull(orderController.createItemHashMap());
 	}
 }
