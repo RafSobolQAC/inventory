@@ -133,8 +133,8 @@ public class MysqlItemDaoTest {
 
 	@Test
 	public void itemDaoUpdateTest() {
-		
-		assertEquals(other,itemDaoMock.update(1, item));
+		other = new Item();
+		assertEquals(other.getName(),itemDaoMock.update(1, item).getName());
 		
 	}
 	@Test

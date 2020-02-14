@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.qa.imssobol.controller.ActionTest" time="0.073" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.qa.imssobol.controller.ActionTest" time="0.066" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.qa.imssobol.controller.ActionTest" name="readTest" time="0.07"/>
+  <testcase classname="com.qa.imssobol.controller.ActionTest" name="readTest" time="0.064"/>
   <testcase classname="com.qa.imssobol.controller.ActionTest" name="updateTest" time="0"/>
   <testcase classname="com.qa.imssobol.controller.ActionTest" name="returnTest" time="0"/>
-  <testcase classname="com.qa.imssobol.controller.ActionTest" name="createTest" time="0"/>
-  <testcase classname="com.qa.imssobol.controller.ActionTest" name="deleteTest" time="0.003"/>
+  <testcase classname="com.qa.imssobol.controller.ActionTest" name="createTest" time="0.002"/>
+  <testcase classname="com.qa.imssobol.controller.ActionTest" name="deleteTest" time="0"/>
 </testsuite>
