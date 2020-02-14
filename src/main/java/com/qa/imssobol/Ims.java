@@ -40,7 +40,14 @@ public class Ims {
 	}
 	
 	public void imsRunner() throws SQLException {
-		connector.setUpConnector();
+		while(true) {
+			try {
+				connector.setUpConnector();
+				break;
+			} catch (SQLException e) {
+				LOGGER.warn("Please check your password, and if the problem persists, please check your Internet connection.");
+			}
+		}
 		this.connection = connector.getConnection();
 		boolean breaker = true;
 		while (breaker) {
